@@ -14,6 +14,7 @@
 		21273A09221A8B770094933D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A08221A8B770094933D /* ViewController.swift */; };
 		21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */; };
 		21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */; };
+		21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		21273A08221A8B770094933D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryContentViewController.swift; sourceTree = "<group>"; };
 		21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDrawerContentViewController.swift; sourceTree = "<group>"; };
+		21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,17 @@
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
 				21273A08221A8B770094933D /* ViewController.swift */,
+				21273A24221AC44C0094933D /* Fonts */,
 			);
 			path = Moneywell;
+			sourceTree = "<group>";
+		};
+		21273A24221AC44C0094933D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				21273A19221AC4400094933D /* Avenir-Heavy.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4DB16132AED6F7896C516BFF /* Frameworks */ = {
@@ -154,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */,
 				21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */,
 				212739FE221A860A0094933D /* Assets.xcassets in Resources */,
 				212739FC221A86090094933D /* Main.storyboard in Resources */,
