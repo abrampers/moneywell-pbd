@@ -145,7 +145,7 @@
                                     <constraint firstAttribute="height" constant="5" id="mLz-bu-mBV"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-tZ-PMN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-tZ-PMN">
                                 <rect key="frame" x="0.0" y="31" width="380" height="266"/>
                                 <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -157,11 +157,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6p-bv-fth">
-                                                    <rect key="frame" x="16.000000000000004" y="8" width="47.333333333333343" height="15"/>
+                                                    <rect key="frame" x="15.999999999999996" y="8" width="55.666666666666657" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="ycq-jz-6yL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -187,15 +187,56 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.39373010400000003" green="0.85384505990000004" blue="0.69802397490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="balanceLabel" destination="jqt-xj-jhc" id="52g-hI-8Q6"/>
+                                            <outlet property="nameLabel" destination="F6p-bv-fth" id="2M4-6b-yNJ"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TransactionCell" rowHeight="63" id="r9A-tW-nSc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TransactionCell" rowHeight="63" id="r9A-tW-nSc" customClass="TransactionCell" customModule="Moneywell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="380" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r9A-tW-nSc" id="e5W-29-sTR">
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="62.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98c-l9-aTG">
+                                                    <rect key="frame" x="16" y="11" width="79.666666666666671" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Zmp-bQ-P14"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                    <color key="textColor" red="0.52549386024475098" green="0.52548360824584961" blue="0.52549058198928833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-Bp-iUJ">
+                                                    <rect key="frame" x="289" y="19.333333333333332" width="75" height="23.999999999999996"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.53333705659999997" green="0.53332668539999994" blue="0.53333371880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
+                                                    <rect key="frame" x="16" y="37" width="25.666666666666671" height="13.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <color key="textColor" red="0.53333705659999997" green="0.53332668539999994" blue="0.53333371880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dZR-Bp-iUJ" firstAttribute="centerY" secondItem="e5W-29-sTR" secondAttribute="centerY" id="BTi-Y8-qlB"/>
+                                                <constraint firstItem="98c-l9-aTG" firstAttribute="top" secondItem="e5W-29-sTR" secondAttribute="top" constant="11" id="Ba7-mB-pJR"/>
+                                                <constraint firstItem="98c-l9-aTG" firstAttribute="leading" secondItem="e5W-29-sTR" secondAttribute="leading" constant="16" id="Kuk-Gf-C06"/>
+                                                <constraint firstItem="jzv-XS-5gS" firstAttribute="leading" secondItem="e5W-29-sTR" secondAttribute="leading" constant="16" id="L3i-am-c2d"/>
+                                                <constraint firstItem="dZR-Bp-iUJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="98c-l9-aTG" secondAttribute="trailing" constant="16" id="Psu-LG-UwY"/>
+                                                <constraint firstAttribute="trailing" secondItem="dZR-Bp-iUJ" secondAttribute="trailing" constant="16" id="szy-yl-kyk"/>
+                                                <constraint firstItem="jzv-XS-5gS" firstAttribute="top" secondItem="98c-l9-aTG" secondAttribute="bottom" constant="2" id="z4a-x8-rxQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="dZR-Bp-iUJ" id="aCq-xs-Gvk"/>
+                                            <outlet property="companyLabel" destination="98c-l9-aTG" id="BUe-cz-sW0"/>
+                                            <outlet property="dateLabel" destination="jzv-XS-5gS" id="aoF-9S-N2E"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

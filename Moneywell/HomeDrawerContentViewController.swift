@@ -23,10 +23,23 @@ struct Transaction {
 
 let dummyFamilyData: [FamilyMember] = [
     FamilyMember(name: "Joanna", balance: 3472000, delta: 2400000),
-    FamilyMember(name: "Josh", balance: 1703000, delta: -830000)
+    FamilyMember(name: "Josh", balance: 1703000, delta: -830000),
+    FamilyMember(name: "Abram", balance: 160000, delta: -830000),
+    FamilyMember(name: "Faza", balance: 200000, delta: -830000),
+    FamilyMember(name: "Deryan", balance: 4000000, delta: -830000),
+    FamilyMember(name: "Nicho", balance: 30100000, delta: -830000)
 ]
 
 let dummyTransactionData: [Transaction] = [
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Allbirds, Inc.", amount: 1403000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "NVIDIA, LLC.", amount: 6159000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Apple, Inc.", amount: 12485000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Allbirds, Inc.", amount: 1403000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "NVIDIA, LLC.", amount: 6159000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Apple, Inc.", amount: 12485000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Allbirds, Inc.", amount: 1403000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "NVIDIA, LLC.", amount: 6159000),
+    Transaction(date: Date(timeIntervalSince1970: 0), company: "Apple, Inc.", amount: 12485000),
     Transaction(date: Date(timeIntervalSince1970: 0), company: "Allbirds, Inc.", amount: 1403000),
     Transaction(date: Date(timeIntervalSince1970: 0), company: "NVIDIA, LLC.", amount: 6159000),
     Transaction(date: Date(timeIntervalSince1970: 0), company: "Apple, Inc.", amount: 12485000)
@@ -103,61 +116,79 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberCell" : "TransactionCell"
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath)
-        
-        
-        // TODO: Shadow
-        // cell.layer.masksToBounds = false
-        // cell.layer.shadowRadius = ShadowRadius
-        // cell.layer.shadowOffset = ShadowOffset
-        // cell.layer.shadowColor = UIColor.black.cgColor
-        // cell.layer.shadowRadius = ShadowRadius
-        // cell.layer.masksToBounds = true
-        
-        // Rounded Corners
-        cell.layer.cornerRadius = CornerRadius
-        cell.clipsToBounds = true
-        
-        // Cell content
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
+//
+//
+//        // TODO: Shadow
+//        // cell.layer.masksToBounds = false
+//        // cell.layer.shadowRadius = ShadowRadius
+//        // cell.layer.shadowOffset = ShadowOffset
+//        // cell.layer.shadowColor = UIColor.black.cgColor
+//        // cell.layer.shadowRadius = ShadowRadius
+//        // cell.layer.masksToBounds = true
+//
+//        // Rounded Corners
+//        cell.layer.cornerRadius = CornerRadius
+//        cell.clipsToBounds = true
+//
+//        // Cell content
 //        cell.nameLabel?.text = dummyFamilyData[indexPath.row].name
 //        let balance = dummyFamilyData[indexPath.row].balance as NSNumber
 //        let formatter = NumberFormatter()
 //        formatter.locale = Locale(identifier: "id")
 //        formatter.numberStyle = .currency
 //        cell.balanceLabel?.text = formatter.string(from: balance)
+//
+//        return cell
         
-        return cell
-        
-//        if prototype == "FamilyMemberCell" {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
-//
-//            // TODO: Shadow
-//            // cell.layer.masksToBounds = false
-//            // cell.layer.shadowRadius = ShadowRadius
-//            // cell.layer.shadowOffset = ShadowOffset
-//            // cell.layer.shadowColor = UIColor.black.cgColor
-//            // cell.layer.shadowRadius = ShadowRadius
-//            // cell.layer.masksToBounds = true
-//
-//            // Rounded Corners
-//            cell.layer.cornerRadius = CornerRadius
-//            cell.clipsToBounds = true
-//
-//            // Cell content
-//            cell.nameLabel?.text = dummyFamilyData[indexPath.row].name
-//            let balance = dummyFamilyData[indexPath.row].balance as NSNumber
-//            let formatter = NumberFormatter()
-//            formatter.locale = Locale(identifier: "id")
-//            formatter.numberStyle = .currency
-//            cell.balanceLabel?.text = formatter.string(from: balance)
-//
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as? TransactionCell
-//
-//            return cell
-//        }
+        if prototype == "FamilyMemberCell" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
+
+            // TODO: Shadow
+            // cell.layer.masksToBounds = false
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.shadowOffset = ShadowOffset
+            // cell.layer.shadowColor = UIColor.black.cgColor
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.masksToBounds = true
+
+            // Rounded Corners
+            cell.layer.cornerRadius = CornerRadius
+            cell.clipsToBounds = true
+
+            // Cell content
+            let famMember = dummyFamilyData[indexPath.row]
+            cell.nameLabel?.text = famMember.name
+            let balance = famMember.balance as NSNumber
+            let formatter = NumberFormatter()
+            formatter.locale = Locale(identifier: "id_ID")
+            formatter.numberStyle = .currency
+            cell.balanceLabel?.text = formatter.string(from: balance)
+
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionCell
+            
+            // Rounded Corners
+            cell.layer.cornerRadius = CornerRadius
+            cell.clipsToBounds = true
+            
+            // Cell content
+            let transaction = dummyTransactionData[indexPath.row]
+            cell.companyLabel?.text = transaction.company
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyy"
+            cell.dateLabel?.text = formatter.string(from: transaction.date)
+            let amount = transaction.amount as NSNumber
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale(identifier: "id_ID")
+            numberFormatter.numberStyle = .currency
+            cell.amountLabel?.text = numberFormatter.string(from: amount)
+            
+
+            return cell
+        }
     }
 }
 
@@ -205,21 +236,24 @@ class FamilyMemberCell: UITableViewCell {
             super.frame = frame
         }
     }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        nameLabel.configure()
-//        balanceLabel.configure()
-//    }
 }
 
 class TransactionCell: UITableViewCell {
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
     
-}
-
-extension UILabel {
-    func configure() {
-        self.frame.size = CGSize.zero
-        self.sizeToFit()
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set(newFrame) {
+            var frame =  newFrame
+            frame.origin.y += RowSpacing
+            frame.size.height -= 2 * RowSpacing
+            frame.origin.x += InsetSpacing
+            frame.size.width -= 2 * InsetSpacing
+            super.frame = frame
+        }
     }
 }
