@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		276FB90931A4DF4F216048197C3C3AF9 /* Pulley-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		292A423F3B5D867B6B57C0DFC93CB63B /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */; };
+		4C7DCB34F24E58E7067DF2FA98C6695C /* Pods-Moneywell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2532E6DC57BEE5DE2C7CEA219B4CDDC /* Pods-Moneywell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636364E081EE39E47134EE66FF1C1B2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		6A218EAB05C80FB813E20B4289B31707 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		8A8B9326DA3F33714D0C90D764ECA2C3 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */; };
+		AAFAF48609C715482D775AC73CDA2BA9 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */; };
+		B1624ED2CB475F433F1BE8B17E59E488 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */; };
+		E13291163FBD2D563F2F852D1008D7A3 /* Pulley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */; };
+		ED957287F5EAC5D4D59FBED880F5C0BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		F3FA36561C0722D85B9B76B72FA84AE0 /* Pods-Moneywell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF27D2ACEDD08E226C826FF9C64F20EF /* Pods-Moneywell-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED4DB2D5C6B8C6A682B42BE7EA274C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 287E2D495868277A1317B8B378A680F1;
+			remoteInfo = Pulley;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "PulleyLib/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
+		089E4225FA04C93CF253FE29DFF4C1DC /* Pods-Moneywell-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Moneywell-frameworks.sh"; sourceTree = "<group>"; };
+		1B731538FB581C3DE44B44709285FDFC /* Pods-Moneywell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Moneywell-Info.plist"; sourceTree = "<group>"; };
+		236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = PulleyLib/PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4FB93F0D9D67BCFB9F891E4162F2A6AD /* Pods-Moneywell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Moneywell.modulemap"; sourceTree = "<group>"; };
+		5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
+		58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
+		69926D16891D5CA8ED385C62B287AD6A /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
+		75B458585DFEE27C58C63FFC5DA7B86C /* Pods-Moneywell-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Moneywell-acknowledgements.plist"; sourceTree = "<group>"; };
+		994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
+		AB742968A7BFDE2FC4B936BA0E19D1E4 /* Pods-Moneywell-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Moneywell-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B31F0F6DE8122CCA3890989644D30277 /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
+		CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = PulleyLib/PulleyViewController.swift; sourceTree = "<group>"; };
+		D2532E6DC57BEE5DE2C7CEA219B4CDDC /* Pods-Moneywell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Moneywell-umbrella.h"; sourceTree = "<group>"; };
+		D5D6E82C8D51AB6949BCAC4CB8CDA6D6 /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
+		E18267AE5D9A6D6779610B6AEE835229 /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Moneywell.framework; path = "Pods-Moneywell.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFCC04C252CEF4142C09991A6DD6099 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pulley.framework; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F0FA8F9F758CCEB6F6F0671B2B2F3D19 /* Pulley-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pulley-Info.plist"; sourceTree = "<group>"; };
+		FF27D2ACEDD08E226C826FF9C64F20EF /* Pods-Moneywell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Moneywell-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		391044A9E1BCB7708DAFEDBC93A45767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A218EAB05C80FB813E20B4289B31707 /* Foundation.framework in Frameworks */,
+				636364E081EE39E47134EE66FF1C1B2B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD620AD3DFFCD67F2A11D434DAF4808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED957287F5EAC5D4D59FBED880F5C0BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43A76C1B57022394B0BE10516A32279F /* Pulley */ = {
+			isa = PBXGroup;
+			children = (
+				236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */,
+				CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */,
+				A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */,
+				03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */,
+				90F77C2E3CE9042D66E9C7D7520CA32A /* Support Files */,
+			);
+			name = Pulley;
+			path = Pulley;
+			sourceTree = "<group>";
+		};
+		7A111F57410F17CE0B188F1141A885E7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2FD6A9B295FD8405E965FA26B1AFA76 /* Pods-Moneywell */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		90F77C2E3CE9042D66E9C7D7520CA32A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B31F0F6DE8122CCA3890989644D30277 /* Pulley.modulemap */,
+				58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */,
+				5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */,
+				F0FA8F9F758CCEB6F6F0671B2B2F3D19 /* Pulley-Info.plist */,
+				A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */,
+				994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pulley";
+			sourceTree = "<group>";
+		};
+		B2FD6A9B295FD8405E965FA26B1AFA76 /* Pods-Moneywell */ = {
+			isa = PBXGroup;
+			children = (
+				4FB93F0D9D67BCFB9F891E4162F2A6AD /* Pods-Moneywell.modulemap */,
+				AB742968A7BFDE2FC4B936BA0E19D1E4 /* Pods-Moneywell-acknowledgements.markdown */,
+				75B458585DFEE27C58C63FFC5DA7B86C /* Pods-Moneywell-acknowledgements.plist */,
+				FF27D2ACEDD08E226C826FF9C64F20EF /* Pods-Moneywell-dummy.m */,
+				089E4225FA04C93CF253FE29DFF4C1DC /* Pods-Moneywell-frameworks.sh */,
+				1B731538FB581C3DE44B44709285FDFC /* Pods-Moneywell-Info.plist */,
+				D2532E6DC57BEE5DE2C7CEA219B4CDDC /* Pods-Moneywell-umbrella.h */,
+				D5D6E82C8D51AB6949BCAC4CB8CDA6D6 /* Pods-Moneywell.debug.xcconfig */,
+				69926D16891D5CA8ED385C62B287AD6A /* Pods-Moneywell.release.xcconfig */,
+			);
+			name = "Pods-Moneywell";
+			path = "Target Support Files/Pods-Moneywell";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D0044BFBC53C18ED62741C52BCF3D3AE /* Pods */,
+				F342B3E28D2D5CC68B0CF7B0C5FE71AC /* Products */,
+				7A111F57410F17CE0B188F1141A885E7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0044BFBC53C18ED62741C52BCF3D3AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43A76C1B57022394B0BE10516A32279F /* Pulley */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F342B3E28D2D5CC68B0CF7B0C5FE71AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18267AE5D9A6D6779610B6AEE835229 /* Pods_Moneywell.framework */,
+				EBFCC04C252CEF4142C09991A6DD6099 /* Pulley.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AD27A4A89A226C5D991689F697FF200A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276FB90931A4DF4F216048197C3C3AF9 /* Pulley-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC8CB47251D70CFE8B7260CC131B912 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7DCB34F24E58E7067DF2FA98C6695C /* Pods-Moneywell-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		287E2D495868277A1317B8B378A680F1 /* Pulley */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 415AB996D85AAEFEFF7ABCA0A20CAD84 /* Build configuration list for PBXNativeTarget "Pulley" */;
+			buildPhases = (
+				AD27A4A89A226C5D991689F697FF200A /* Headers */,
+				EA6B56F6BE8DC56E8A4A2F91F7015F75 /* Sources */,
+				391044A9E1BCB7708DAFEDBC93A45767 /* Frameworks */,
+				FA55E302767D08E0E2B77E5E7CD9BFC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pulley;
+			productName = Pulley;
+			productReference = EBFCC04C252CEF4142C09991A6DD6099 /* Pulley.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2DA678261B108368A3E449BEFDB4F95 /* Pods-Moneywell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B3F3A0A5BC3A3ECAFA0293BD73F580 /* Build configuration list for PBXNativeTarget "Pods-Moneywell" */;
+			buildPhases = (
+				CBC8CB47251D70CFE8B7260CC131B912 /* Headers */,
+				16CEC78DC700218840BB6DF57D333971 /* Sources */,
+				CFD620AD3DFFCD67F2A11D434DAF4808 /* Frameworks */,
+				584A02255FB0481E02B28F8D033F071B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D53B260FF9DCF4926FA0BBD87CFC924 /* PBXTargetDependency */,
+			);
+			name = "Pods-Moneywell";
+			productName = "Pods-Moneywell";
+			productReference = E18267AE5D9A6D6779610B6AEE835229 /* Pods_Moneywell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F342B3E28D2D5CC68B0CF7B0C5FE71AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2DA678261B108368A3E449BEFDB4F95 /* Pods-Moneywell */,
+				287E2D495868277A1317B8B378A680F1 /* Pulley */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		584A02255FB0481E02B28F8D033F071B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA55E302767D08E0E2B77E5E7CD9BFC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16CEC78DC700218840BB6DF57D333971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FA36561C0722D85B9B76B72FA84AE0 /* Pods-Moneywell-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6B56F6BE8DC56E8A4A2F91F7015F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13291163FBD2D563F2F852D1008D7A3 /* Pulley-dummy.m in Sources */,
+				AAFAF48609C715482D775AC73CDA2BA9 /* PulleyPassthroughScrollView.swift in Sources */,
+				8A8B9326DA3F33714D0C90D764ECA2C3 /* PulleyViewController.swift in Sources */,
+				292A423F3B5D867B6B57C0DFC93CB63B /* UIView+constrainToParent.swift in Sources */,
+				B1624ED2CB475F433F1BE8B17E59E488 /* UIViewController+PulleyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D53B260FF9DCF4926FA0BBD87CFC924 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pulley;
+			target = 287E2D495868277A1317B8B378A680F1 /* Pulley */;
+			targetProxy = ED4DB2D5C6B8C6A682B42BE7EA274C9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24C74E6A1D7182315EEA3FD62C94ECD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D6E82C8D51AB6949BCAC4CB8CDA6D6 /* Pods-Moneywell.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Moneywell/Pods-Moneywell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Moneywell/Pods-Moneywell.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BA21D6EB997D6E4AF1CE9E8FBF3FC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
+				PRODUCT_MODULE_NAME = Pulley;
+				PRODUCT_NAME = Pulley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9650D957FDD0D80B4082C1A59E87759F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69926D16891D5CA8ED385C62B287AD6A /* Pods-Moneywell.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Moneywell/Pods-Moneywell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Moneywell/Pods-Moneywell.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CB00D35E43ECF931693FC5A43DAAF007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
+				PRODUCT_MODULE_NAME = Pulley;
+				PRODUCT_NAME = Pulley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		415AB996D85AAEFEFF7ABCA0A20CAD84 /* Build configuration list for PBXNativeTarget "Pulley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB00D35E43ECF931693FC5A43DAAF007 /* Debug */,
+				4BA21D6EB997D6E4AF1CE9E8FBF3FC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFA1578582149B7E24AD55CBA30F07A /* Debug */,
+				4CE281642D6EE9FAB113046B4B6328A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78B3F3A0A5BC3A3ECAFA0293BD73F580 /* Build configuration list for PBXNativeTarget "Pods-Moneywell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C74E6A1D7182315EEA3FD62C94ECD8 /* Debug */,
+				9650D957FDD0D80B4082C1A59E87759F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomePrimaryContentViewController.swift
 //  Moneywell
 //
 //  Created by Abram Situmorang on 18/02/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomePrimaryContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

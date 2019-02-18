@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		212739F7221A86090094933D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212739F6221A86090094933D /* AppDelegate.swift */; };
-		212739F9221A86090094933D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212739F8221A86090094933D /* ViewController.swift */; };
 		212739FC221A86090094933D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FA221A86090094933D /* Main.storyboard */; };
 		212739FE221A860A0094933D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212739FD221A860A0094933D /* Assets.xcassets */; };
 		21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FF221A860A0094933D /* LaunchScreen.storyboard */; };
+		21273A09221A8B770094933D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A08221A8B770094933D /* ViewController.swift */; };
+		21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */; };
+		21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */; };
+		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.release.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
+		1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.debug.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
+		115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneywell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		212739F3221A86090094933D /* Moneywell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneywell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		212739F6221A86090094933D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		212739F8221A86090094933D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		212739FB221A86090094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		212739FD221A860A0094933D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21273A00221A860A0094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21273A02221A860A0094933D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21273A08221A8B770094933D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryContentViewController.swift; sourceTree = "<group>"; };
+		21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDrawerContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				212739F5221A86090094933D /* Moneywell */,
 				212739F4221A86090094933D /* Products */,
+				DDA87BCC5B0CBEE5D45161B0 /* Pods */,
+				4DB16132AED6F7896C516BFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,33 @@
 		212739F5221A86090094933D /* Moneywell */ = {
 			isa = PBXGroup;
 			children = (
+				21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */,
 				212739F6221A86090094933D /* AppDelegate.swift */,
-				212739F8221A86090094933D /* ViewController.swift */,
 				212739FA221A86090094933D /* Main.storyboard */,
+				21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
+				21273A08221A8B770094933D /* ViewController.swift */,
 			);
 			path = Moneywell;
+			sourceTree = "<group>";
+		};
+		4DB16132AED6F7896C516BFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDA87BCC5B0CBEE5D45161B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */,
+				02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21273A05221A860A0094933D /* Build configuration list for PBXNativeTarget "Moneywell" */;
 			buildPhases = (
+				CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */,
 				212739EF221A86090094933D /* Sources */,
 				212739F0221A86090094933D /* Frameworks */,
 				212739F1221A86090094933D /* Resources */,
+				B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +162,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moneywell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		212739EF221A86090094933D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212739F9221A86090094933D /* ViewController.swift in Sources */,
+				21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */,
+				21273A09221A8B770094933D /* ViewController.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
+				21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +361,7 @@
 		};
 		21273A06221A860A0094933D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +380,7 @@
 		};
 		21273A07221A860A0094933D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
