@@ -59,6 +59,7 @@ let ShadowOffset = CGSize(width: 0, height: 0)
 
 class HomeDrawerContentViewController: UIViewController {
     @IBOutlet weak var gripperView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +94,11 @@ extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
         return CollapsedDrawerHeight + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
     }
+    
+    func drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat) {
+        // Handle tableview scrolling / searchbar editing
+        tableView.isScrollEnabled = drawer.drawerPosition == .partiallyRevealed
+    }
 }
 
 extension HomeDrawerContentViewController: UITableViewDataSource {
@@ -116,31 +122,6 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberCell" : "TransactionCell"
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
-//
-//
-//        // TODO: Shadow
-//        // cell.layer.masksToBounds = false
-//        // cell.layer.shadowRadius = ShadowRadius
-//        // cell.layer.shadowOffset = ShadowOffset
-//        // cell.layer.shadowColor = UIColor.black.cgColor
-//        // cell.layer.shadowRadius = ShadowRadius
-//        // cell.layer.masksToBounds = true
-//
-//        // Rounded Corners
-//        cell.layer.cornerRadius = CornerRadius
-//        cell.clipsToBounds = true
-//
-//        // Cell content
-//        cell.nameLabel?.text = dummyFamilyData[indexPath.row].name
-//        let balance = dummyFamilyData[indexPath.row].balance as NSNumber
-//        let formatter = NumberFormatter()
-//        formatter.locale = Locale(identifier: "id")
-//        formatter.numberStyle = .currency
-//        cell.balanceLabel?.text = formatter.string(from: balance)
-//
-//        return cell
         
         if prototype == "FamilyMemberCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
@@ -213,10 +194,6 @@ extension HomeDrawerContentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return SectionHeaderHeight
     }
-    
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return RowHeight
-//    }
 }
 
 class FamilyMemberCell: UITableViewCell {
