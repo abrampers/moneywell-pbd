@@ -45,14 +45,23 @@ let dummyTransactionData: [Transaction] = [
     Transaction(date: Date(timeIntervalSince1970: 0), company: "Apple, Inc.", amount: 12485000)
 ]
 
+// Drawer constants
+let DrawerCornerRadius = CGFloat(8.0)
+
+// TableView constants
+// Section constants
 let SectionHeaderHeight = CGFloat(50.0)
-let RowHeight = CGFloat(190.0)
-let CornerRadius = CGFloat(16)
-let RowSpacing = CGFloat(5)
-let InsetSpacing = CGFloat(14)
-let CollapsedDrawerHeight = CGFloat(200.00)
-let PartialRevealDrawerHeight = CGFloat(600.00)
 let SectionHeaderFontSize = CGFloat(24)
+// Row constants
+let RowHeight = CGFloat(190.0)
+let CollapsedDrawerHeight = CGFloat(360.00)
+let PartialRevealDrawerDistanceToTopSafeArea = CGFloat(70)
+// Cell constants
+let CellCornerRadius = CGFloat(16)
+let DeltaContainerCornerRadius = CGFloat(12)
+let RowSpacing = CGFloat(2)
+let InsetSpacing = CGFloat(14)
+// Shadow constants
 let ShadowRadius = CGFloat(10)
 let ShadowOpacity = CGFloat(0.23)
 let ShadowOffset = CGSize(width: 0, height: 0)
@@ -66,6 +75,7 @@ class HomeDrawerContentViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         gripperView.layer.cornerRadius = 2.5
+        
     }
     
 
@@ -83,12 +93,12 @@ class HomeDrawerContentViewController: UIViewController {
 
 extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     func supportedDrawerPositions() -> [PulleyPosition] {
-        return [PulleyPosition.collapsed, .partiallyRevealed]
+        return [PulleyPosition.collapsed, .open]
     }
     
-    func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-        return PartialRevealDrawerHeight
-    }
+//    func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
+//        return PartialRevealDrawerHeight
+//    }
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
@@ -97,7 +107,11 @@ extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     
     func drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat) {
         // Handle tableview scrolling / searchbar editing
-        tableView.isScrollEnabled = drawer.drawerPosition == .partiallyRevealed
+        tableView.isScrollEnabled = drawer.drawerPosition == .open
+        
+        if drawer.drawerPosition == .collapsed {
+            tableView.setContentOffset(.zero, animated: true)
+        }
     }
 }
 
@@ -135,7 +149,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
             // cell.layer.masksToBounds = true
 
             // Rounded Corners
-            cell.layer.cornerRadius = CornerRadius
+            cell.layer.cornerRadius = CellCornerRadius
             cell.clipsToBounds = true
 
             // Cell content
@@ -146,13 +160,28 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
             formatter.locale = Locale(identifier: "id_ID")
             formatter.numberStyle = .currency
             cell.balanceLabel?.text = formatter.string(from: balance)
+            cell.deltaContainer?.layer.cornerRadius = DeltaContainerCornerRadius
+
+            if famMember.delta > 0 {
+                cell.deltaLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+                let deltaString = "+" + famMember.delta.kmFormatted
+                cell.deltaLabel?.text = deltaString
+            } else if famMember.delta == 0 {
+                cell.deltaLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+                let deltaString = String(famMember.delta)
+                cell.deltaLabel?.text = deltaString
+            } else {
+                cell.deltaLabel?.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
+                let deltaString = "-" + abs(famMember.delta).kmFormatted
+                cell.deltaLabel?.text = deltaString
+            }
 
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionCell
             
             // Rounded Corners
-            cell.layer.cornerRadius = CornerRadius
+            cell.layer.cornerRadius = CellCornerRadius
             cell.clipsToBounds = true
             
             // Cell content
@@ -199,6 +228,8 @@ extension HomeDrawerContentViewController: UITableViewDelegate {
 class FamilyMemberCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var deltaContainer: UIView!
+    @IBOutlet weak var deltaLabel: UILabel!
     
     override var frame: CGRect {
         get {
@@ -232,5 +263,29 @@ class TransactionCell: UITableViewCell {
             frame.size.width -= 2 * InsetSpacing
             super.frame = frame
         }
+    }
+}
+
+extension Int64 {
+    var kmFormatted: String {
+        let locale = Locale(identifier: "id_ID")
+        
+        if self >= 10000 && self <= 999999 {
+            return String(format: "%.1fK", locale: locale, Double(self)/1000).replacingOccurrences(of: ",0", with: "")
+        }
+        
+        if self > 999999 && self <= 999999999 {
+            return String(format: "%.1fM", locale: locale, Double(self)/1000000).replacingOccurrences(of: ",0", with: "")
+        }
+        
+        if self > 999999999 && self <= 999999999999 {
+            return String(format: "%.1fB", locale: locale, Double(self)/1000000000).replacingOccurrences(of: ",0", with: "")
+        }
+        
+        if self > 999999999999 {
+            return String(format: "%.1fT", locale: locale, Double(self)/1000000000000).replacingOccurrences(of: ",0", with: "")
+        }
+        
+        return String(format: "%.0f", locale: Locale.current, Double(self))
     }
 }
