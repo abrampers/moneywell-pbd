@@ -55,7 +55,7 @@ let SectionHeaderFontSize = CGFloat(24)
 // Row constants
 let RowHeight = CGFloat(190.0)
 let CollapsedDrawerHeight = CGFloat(360.00)
-let PartialRevealDrawerDistanceToTopSafeArea = CGFloat(70)
+let PartialRevealDrawerDistanceToTopSafeArea = CGFloat(40)
 // Cell constants
 let CellCornerRadius = CGFloat(16)
 let DeltaContainerCornerRadius = CGFloat(12)
@@ -93,12 +93,13 @@ class HomeDrawerContentViewController: UIViewController {
 
 extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     func supportedDrawerPositions() -> [PulleyPosition] {
-        return [PulleyPosition.collapsed, .open]
+        return [PulleyPosition.collapsed, .partiallyRevealed]
     }
     
-//    func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-//        return PartialRevealDrawerHeight
-//    }
+    func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
+        let window = UIApplication.shared.windows[0]
+        return window.safeAreaLayoutGuide.layoutFrame.size.height - PartialRevealDrawerDistanceToTopSafeArea
+    }
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
@@ -107,7 +108,7 @@ extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     
     func drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat) {
         // Handle tableview scrolling / searchbar editing
-        tableView.isScrollEnabled = drawer.drawerPosition == .open
+        tableView.isScrollEnabled = drawer.drawerPosition == .partiallyRevealed
         
         if drawer.drawerPosition == .collapsed {
             tableView.setContentOffset(.zero, animated: true)
