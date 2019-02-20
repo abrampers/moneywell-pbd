@@ -114,6 +114,8 @@ extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
             tableView.setContentOffset(.zero, animated: true)
         }
     }
+    
+    // TODO: Upper section animation
 }
 
 extension HomeDrawerContentViewController: UITableViewDataSource {
