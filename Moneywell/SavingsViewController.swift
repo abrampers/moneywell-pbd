@@ -11,21 +11,17 @@ import UIKit
 struct Saving {
     var name: String
     var balance: Int64
-    var todayDelta: Int64
-    var thisWeekDelta: Int64
-    var thisMonthDelta: Int64
-    var recentTransactions: [Transaction]
 }
 
 // Dummy data
 let dummyPersonalSavings: [Saving] = [
-    Saving(name: "Food", balance: 539000, todayDelta: -15000, thisWeekDelta: -134000, thisMonthDelta: -1018050, recentTransactions: [Transaction(date: Date(timeIntervalSince1970: 0), company: "KFC", amount: 9000), Transaction(date: Date(timeIntervalSince1970: 0), company: "Fish Streat", amount: 100000), Transaction(date: Date(timeIntervalSince1970: 0), company: "Eastern", amount: 200000)]),
-    Saving(name: "Movie", balance: 92000, todayDelta: -50000, thisWeekDelta: -90000, thisMonthDelta: -545000, recentTransactions: [Transaction(date: Date(timeIntervalSince1970: 0), company: "XXI", amount: 50000), Transaction(date: Date(timeIntervalSince1970: 0), company: "XXI", amount: 75000), Transaction(date: Date(timeIntervalSince1970: 0), company: "CGV", amount: 40000)])
+    Saving(name: "Food", balance: 539000),
+    Saving(name: "Movie", balance: 92000)
 ]
 
 let dummyFamilySavings: [Saving] = [
-    Saving(name: "Holiday to Ibiza", balance: 10540000, todayDelta: 0, thisWeekDelta: 500000, thisMonthDelta: 2000000, recentTransactions: [Transaction(date: Date(timeIntervalSince1970: 0), company: "Coca cola company", amount: 500000), Transaction(date: Date(timeIntervalSince1970: 0), company: "Dans Multipro", amount: 5000000)]),
-    Saving(name: "Healthcare", balance: 21550000, todayDelta: -100000, thisWeekDelta: -100000, thisMonthDelta: -23050000, recentTransactions: [Transaction(date: Date(timeIntervalSince1970: 0), company: "Kimia Farma", amount: 100000), Transaction(date: Date(timeIntervalSince1970: 0), company: "RSPI", amount: 22950000)])
+    Saving(name: "Holiday to Ibiza", balance: 10540000),
+    Saving(name: "Healthcare", balance: 21550000)
 ]
 
 class SavingsViewController: UIViewController {
@@ -36,16 +32,22 @@ class SavingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Saving Detail" {
+            if let cell = (sender as? SavingsCell) {
+                cell.isSelected = false
+                if let savingName = cell.savingNameLabel.text, let savingDetailVC = segue.destination as? SavingDetailViewController {
+                    savingDetailVC.savingName = savingName
+                    savingDetailVC.navigationItem.title = savingName
+                }
+            }
+        }
     }
-    */
 
 }
 
@@ -87,6 +89,10 @@ extension SavingsViewController: UITableViewDataSource {
         let saving = indexPath.section == TableSection.personal.rawValue ? dummyPersonalSavings[indexPath.row] : dummyFamilySavings[indexPath.row]
         cell.savingNameLabel?.text = saving.name
         cell.savingBalanceLabel?.text = saving.balance.currencyFormat
+        
+        // Arrow
+        cell.tintColor = UIColor.white
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
