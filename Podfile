@@ -7,4 +7,5 @@ target 'Moneywell' do
 
   # Pods for Moneywell
   pod 'Pulley'
+  pod 'Charts'
 end

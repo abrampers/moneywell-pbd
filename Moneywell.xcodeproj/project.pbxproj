@@ -15,6 +15,8 @@
 		21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */; };
 		21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */; };
 		21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
+		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
+		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryContentViewController.swift; sourceTree = "<group>"; };
 		21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDrawerContentViewController.swift; sourceTree = "<group>"; };
 		21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				212739F6221A86090094933D /* AppDelegate.swift */,
 				212739FA221A86090094933D /* Main.storyboard */,
 				21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */,
+				21E3250F221D35FD00394930 /* Slide.swift */,
+				21E32511221D361D00394930 /* Slide.xib */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
@@ -165,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E32512221D361D00394930 /* Slide.xib in Resources */,
 				21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */,
 				21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */,
 				212739FE221A860A0094933D /* Assets.xcassets in Resources */,
@@ -184,12 +191,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +239,7 @@
 				21273A09221A8B770094933D /* ViewController.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
 				21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */,
+				21E32510221D35FD00394930 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
