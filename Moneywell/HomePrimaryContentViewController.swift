@@ -18,19 +18,19 @@ let dummyYourData: FamilyMember = FamilyMember(name: "Deryan", balance: 10000000
 let ChartLineWidth = CGFloat(1.8)
 let ChartCircleRadius = CGFloat(10)
 
-private class CubicLineSampleFillFormatter: IFillFormatter {
+internal class CubicLineSampleFillFormatter: IFillFormatter {
     func getFillLinePosition(dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat {
         return -10
     }
 }
 
-private class YAxisValueFormatter: IAxisValueFormatter {
+internal class YAxisValueFormatter: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         return value.kmFormatted
     }
 }
 
-private class XAxisValueFormatter: IAxisValueFormatter {
+internal class XAxisValueFormatter: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         switch value {
         case 0.0: return "Sun"
@@ -78,6 +78,13 @@ class HomePrimaryContentViewController: UIViewController, ChartViewDelegate, UIS
         balanceLabel.text = dummyYourData.balance.currencyFormat
         
         // Update deltaLabel
+        updateDeltaLabel()
+        
+        // update lineChart
+        updateChart(withData: dummyYouChartData)
+    }
+    
+    func updateDeltaLabel() {
         if dummyYourData.delta > 0 {
             deltaLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
             let deltaString = "+" + dummyYourData.delta.kmFormatted
@@ -91,9 +98,6 @@ class HomePrimaryContentViewController: UIViewController, ChartViewDelegate, UIS
             let deltaString = "-" + abs(dummyYourData.delta).kmFormatted
             deltaLabel.text = deltaString
         }
-        
-        // update lineChart
-        setupChart(withData: dummyYouChartData)
     }
     
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -122,7 +126,7 @@ class HomePrimaryContentViewController: UIViewController, ChartViewDelegate, UIS
 //        return [slide1, slide2]
 //    }
     
-    func setupChart(withData data: [(Int, Int64)]) {
+    func updateChart(withData data: [(Int, Int64)]) {
         lineChart.delegate = self
         lineChart.dragEnabled = false
         lineChart.rightAxis.enabled = false
