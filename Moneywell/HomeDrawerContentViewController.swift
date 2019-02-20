@@ -158,11 +158,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
             // Cell content
             let famMember = dummyFamilyData[indexPath.row]
             cell.nameLabel?.text = famMember.name
-            let balance = famMember.balance as NSNumber
-            let formatter = NumberFormatter()
-            formatter.locale = Locale(identifier: "id_ID")
-            formatter.numberStyle = .currency
-            cell.balanceLabel?.text = formatter.string(from: balance)
+            cell.balanceLabel?.text = famMember.balance.currencyFormat
             cell.deltaContainer?.layer.cornerRadius = DeltaContainerCornerRadius
 
             if famMember.delta > 0 {
@@ -193,11 +189,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyy"
             cell.dateLabel?.text = formatter.string(from: transaction.date)
-            let amount = transaction.amount as NSNumber
-            let numberFormatter = NumberFormatter()
-            numberFormatter.locale = Locale(identifier: "id_ID")
-            numberFormatter.numberStyle = .currency
-            cell.amountLabel?.text = numberFormatter.string(from: amount)
+            cell.amountLabel?.text = transaction.amount.currencyFormat
             
 
             return cell

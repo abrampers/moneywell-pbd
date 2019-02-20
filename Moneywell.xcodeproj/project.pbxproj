@@ -17,6 +17,7 @@
 		21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
 		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
+		21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E32513221D7BE000394930 /* SavingsViewController.swift */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		21E32513221D7BE000394930 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				212739FA221A86090094933D /* Main.storyboard */,
 				21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */,
 				21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */,
+				21E32513221D7BE000394930 /* SavingsViewController.swift */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */,
 				21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */,
 				21273A09221A8B770094933D /* ViewController.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
