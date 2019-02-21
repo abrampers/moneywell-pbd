@@ -1078,14 +1078,14 @@
     </scenes>
     <resources>
         <image name="Navbar Analytics Default" width="27" height="23"/>
-        <image name="Navbar Analytics Selected" width="45" height="41"/>
+        <image name="Navbar Analytics Selected" width="27" height="23"/>
         <image name="Navbar Dashboard Default" width="27" height="25"/>
-        <image name="Navbar Dashboard Selected" width="45" height="43"/>
+        <image name="Navbar Dashboard Selected" width="27" height="25"/>
         <image name="Navbar Family Default" width="30" height="22"/>
-        <image name="Navbar Family Selected" width="48" height="40"/>
+        <image name="Navbar Family Selected" width="30" height="22"/>
         <image name="Navbar Savings Default" width="28" height="28"/>
-        <image name="Navbar Savings Selected" width="46" height="46"/>
+        <image name="Navbar Savings Selected" width="28" height="28"/>
         <image name="Navbar Wallet Default" width="25" height="26"/>
-        <image name="Navbar Wallet Selected" width="43" height="44"/>
+        <image name="Navbar Wallet Selected" width="25" height="26"/>
     </resources>
 </document>
