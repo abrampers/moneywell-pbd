@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Analytics-->
+        <!--View Controller-->
         <scene sceneID="Weh-Bn-Oxw">
             <objects>
                 <viewController id="CfL-v9-6Iz" customClass="ViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1ED-eC-Xuo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Analytics" id="xj4-Ck-Nhe"/>
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Analytics Default" selectedImage="Navbar Analytics Selected" id="xj4-Ck-Nhe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RD-oW-4Ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="97" y="727"/>
         </scene>
-        <!--Transactions-->
+        <!--View Controller-->
         <scene sceneID="Tu0-zd-Dxu">
             <objects>
                 <viewController id="2x5-PD-Z6d" customClass="ViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,16 +36,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GYp-al-UU4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" id="0yP-Ax-czQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Wallet Default" selectedImage="Navbar Wallet Selected" id="0yP-Ax-czQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-vT-OVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="98" y="27"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Moneywell Tab Bar Controller-->
         <scene sceneID="ekK-T3-VeH">
             <objects>
-                <tabBarController id="ht4-9M-IcI" sceneMemberID="viewController">
+                <tabBarController id="ht4-9M-IcI" customClass="MoneywellTabBarController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrP-ms-w1c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="-2292" y="1159"/>
         </scene>
-        <!--Home-->
+        <!--Pulley View Controller-->
         <scene sceneID="I7H-wD-KAm">
             <objects>
                 <viewController id="paB-VJ-izL" customClass="PulleyViewController" customModule="Pulley" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Sn-pJ-zeZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Ukv-9e-nW9"/>
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Dashboard Default" selectedImage="Navbar Dashboard Selected" id="Ukv-9e-nW9"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="drawerCornerRadius">
                             <real key="value" value="30"/>
@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="-640.64039408866995"/>
         </scene>
-        <!--Account-->
+        <!--View Controller-->
         <scene sceneID="fPX-gg-cgc">
             <objects>
                 <viewController id="JMO-Ux-J2d" customClass="ViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5lp-Is-eHW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="NBO-J9-AzF"/>
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Family Default" selectedImage="Navbar Family Selected" id="NBO-J9-AzF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxZ-oy-rbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -461,11 +461,11 @@
             </objects>
             <point key="canvasLocation" x="1039.2" y="1530.2955665024631"/>
         </scene>
-        <!--Savings-->
+        <!--Navigation Controller-->
         <scene sceneID="beQ-WC-tFH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hC-1D-AsL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Savings" id="6vr-Uv-hu3"/>
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Savings Default" selectedImage="Navbar Savings Selected" id="6vr-Uv-hu3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="k4d-A9-m7I">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -982,4 +982,16 @@
             <point key="canvasLocation" x="2984.8000000000002" y="1248.768472906404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Navbar Analytics Default" width="27" height="23"/>
+        <image name="Navbar Analytics Selected" width="45" height="41"/>
+        <image name="Navbar Dashboard Default" width="27" height="25"/>
+        <image name="Navbar Dashboard Selected" width="45" height="43"/>
+        <image name="Navbar Family Default" width="30" height="22"/>
+        <image name="Navbar Family Selected" width="48" height="40"/>
+        <image name="Navbar Savings Default" width="28" height="28"/>
+        <image name="Navbar Savings Selected" width="46" height="46"/>
+        <image name="Navbar Wallet Default" width="25" height="26"/>
+        <image name="Navbar Wallet Selected" width="43" height="44"/>
+    </resources>
 </document>
