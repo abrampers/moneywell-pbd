@@ -56,7 +56,7 @@ let SectionHeaderFontSize = CGFloat(24)
 // Row constants
 let RowHeight = CGFloat(190.0)
 let CollapsedDrawerHeight = CGFloat(360.00)
-let PartialRevealDrawerDistanceToTopSafeArea = CGFloat(40)
+let PartialRevealDrawerDistanceToTopSafeArea = CGFloat(100)
 // Cell constants
 let CellCornerRadius = CGFloat(16)
 let DeltaContainerCornerRadius = CGFloat(12)
