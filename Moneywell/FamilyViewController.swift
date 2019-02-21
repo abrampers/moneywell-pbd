@@ -1,5 +1,5 @@
-	//
-//  CreateSavingViewController.swift
+//
+//  FamilyViewController.swift
 //  Moneywell
 //
 //  Created by Abram Situmorang on 21/02/19.
@@ -8,18 +8,12 @@
 
 import UIKit
 
-class CreateSavingViewController: UIViewController {
-    @IBOutlet weak var savingNameTextField: UITextField!
-    @IBOutlet weak var savingTypePicker: UIPickerView!
-    @IBOutlet weak var createSavingButton: UIButton!
-    
-    var pickerData: [String] = ["Personal", "Family"]
-    
+class FamilyViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        createSavingButton.layer.cornerRadius = ButtonCornerRadius
     }
     
 
@@ -34,41 +28,33 @@ class CreateSavingViewController: UIViewController {
     */
 
 }
-    
-    
-extension CreateSavingViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    
-}
 
-extension CreateSavingViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-}
-
-
-extension CreateSavingViewController: UITableViewDataSource {
+extension FamilyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dummyFamilyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChangeMemberCell", for: indexPath) as! ChangeMemberCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMemberCell", for: indexPath) as! FamilyMemberCell
+        
         cell.layer.cornerRadius = CellCornerRadius
+        
+        let member = dummyFamilyData[indexPath.row]
+        cell.memberImage = nil
+        cell.memberNameLabel.text = member.name
+        cell.memberAccountNumberLabel.text = member.accountNumber
+        
         return cell
     }
+    
+    
 }
 
-
-class ChangeMemberCell: UITableViewCell {
+class FamilyMemberCell: UITableViewCell {
+    @IBOutlet weak var memberImage: UIImageView!
+    @IBOutlet weak var memberNameLabel: UILabel!
+    @IBOutlet weak var memberAccountNumberLabel: UILabel!
+    
     override var frame: CGRect {
         get {
             return super.frame
@@ -83,4 +69,3 @@ class ChangeMemberCell: UITableViewCell {
         }
     }
 }
-    

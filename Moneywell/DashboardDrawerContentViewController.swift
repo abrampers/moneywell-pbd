@@ -10,6 +10,7 @@ import UIKit
 import Pulley
 
 struct FamilyMember {
+    var accountNumber: String
     var name: String
     var balance: Int64
     var delta: Int64
@@ -22,12 +23,12 @@ struct Transaction {
 }
 
 let dummyFamilyData: [FamilyMember] = [
-    FamilyMember(name: "Joanna", balance: 3472000, delta: 2400000),
-    FamilyMember(name: "Josh", balance: 1703000, delta: -830000),
-    FamilyMember(name: "Abram", balance: 160000, delta: -830000),
-    FamilyMember(name: "Faza", balance: 200000, delta: -830000),
-    FamilyMember(name: "Deryan", balance: 4000000, delta: -830000),
-    FamilyMember(name: "Nicho", balance: 30100000, delta: -830000)
+    FamilyMember(accountNumber: "3249100234", name: "Joanna", balance: 3472000, delta: 2400000),
+    FamilyMember(accountNumber: "3249100234", name: "Josh", balance: 1703000, delta: -830000),
+    FamilyMember(accountNumber: "3249100234", name: "Abram", balance: 160000, delta: -830000),
+    FamilyMember(accountNumber: "3249100234", name: "Faza", balance: 200000, delta: -830000),
+    FamilyMember(accountNumber: "3249100234", name: "Deryan", balance: 4000000, delta: -830000),
+    FamilyMember(accountNumber: "3249100234", name: "Nicho", balance: 30100000, delta: -830000)
 ]
 
 let dummyTransactionData: [Transaction] = [
@@ -66,7 +67,7 @@ let ShadowRadius = CGFloat(10)
 let ShadowOpacity = CGFloat(0.23)
 let ShadowOffset = CGSize(width: 0, height: 0)
 
-class HomeDrawerContentViewController: UIViewController {
+class DashboardDrawerContentViewController: UIViewController {
     @IBOutlet weak var gripperView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -101,7 +102,7 @@ class HomeDrawerContentViewController: UIViewController {
 
 }
 
-extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
+extension DashboardDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     func supportedDrawerPositions() -> [PulleyPosition] {
         return [PulleyPosition.collapsed, .partiallyRevealed]
     }
@@ -128,7 +129,7 @@ extension HomeDrawerContentViewController: PulleyDrawerViewControllerDelegate {
     // TODO: Upper section animation
 }
 
-extension HomeDrawerContentViewController: UITableViewDataSource {
+extension DashboardDrawerContentViewController: UITableViewDataSource {
     enum TableSection: Int, CaseIterable {
         case FamilyMember = 0, Transaction
     }
@@ -148,10 +149,10 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberCell" : "TransactionCell"
+        let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberDashboardCell" : "TransactionDashboardCell"
         
-        if prototype == "FamilyMemberCell" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberCell
+        if prototype == "FamilyMemberDashboardCell" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberDashboardCell
 
             // TODO: Shadow
             // cell.layer.masksToBounds = false
@@ -187,7 +188,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionDashboardCell
             
             // Rounded Corners
             cell.layer.cornerRadius = CellCornerRadius
@@ -205,7 +206,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
     }
 }
 
-extension HomeDrawerContentViewController: UITableViewDelegate {
+extension DashboardDrawerContentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
         let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
@@ -228,7 +229,7 @@ extension HomeDrawerContentViewController: UITableViewDelegate {
     }
 }
 
-class FamilyMemberCell: UITableViewCell {
+class FamilyMemberDashboardCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var deltaContainer: UIView!
@@ -249,7 +250,7 @@ class FamilyMemberCell: UITableViewCell {
     }
 }
 
-class TransactionCell: UITableViewCell {
+class TransactionDashboardCell: UITableViewCell {
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!

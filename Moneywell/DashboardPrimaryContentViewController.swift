@@ -12,7 +12,7 @@ import Charts
 let dummyYouChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 5000000), (6, 1200000)]
 let dummyFamilyChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2200000), (6, 1200000)]
 
-let dummyYourData: FamilyMember = FamilyMember(name: "Deryan", balance: 10000000, delta: -100000000000)
+let dummyYourData: FamilyMember = FamilyMember(accountNumber: "3249100234", name: "Deryan", balance: 10000000, delta: -100000000000)
 
 // Chart constants
 let ChartLineWidth = CGFloat(1.8)
@@ -46,7 +46,7 @@ internal class XAxisValueFormatter: IAxisValueFormatter {
     }
 }
 
-class HomePrimaryContentViewController: UIViewController, ChartViewDelegate, UIScrollViewDelegate {
+class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate, UIScrollViewDelegate {
     @IBOutlet weak var balanceTitle: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var deltaLabel: UILabel!

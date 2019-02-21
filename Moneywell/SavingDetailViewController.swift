@@ -33,8 +33,8 @@ let dummySavingDetailData: SavingDetail = SavingDetail(balance: 1000000, todayDe
 let dummySavingChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2000000), (6, 1200000)]
 
 let dummySavingMembers: [FamilyMember] = [
-    FamilyMember(name: "Abram", balance: 100000, delta: 10000),
-    FamilyMember(name: "Nicho", balance: 100000, delta: 10000)
+    FamilyMember(accountNumber: "3249100234", name: "Abram", balance: 100000, delta: 10000),
+    FamilyMember(accountNumber: "3249100234", name: "Nicho", balance: 100000, delta: 10000)
 ]
 
 let dummyRecentInOut: [RecentTransaction] = [
