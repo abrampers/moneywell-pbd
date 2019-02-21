@@ -15,6 +15,7 @@
 		21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */; };
 		21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */; };
 		21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
+		2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */; };
 		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E32513221D7BE000394930 /* SavingsViewController.swift */; };
@@ -37,6 +38,7 @@
 		21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryContentViewController.swift; sourceTree = "<group>"; };
 		21273A0E221A8C770094933D /* HomeDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDrawerContentViewController.swift; sourceTree = "<group>"; };
 		21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberViewController.swift; sourceTree = "<group>"; };
 		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		21E32513221D7BE000394930 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				21E32513221D7BE000394930 /* SavingsViewController.swift */,
 				21E3251B221DA9A300394930 /* SavingDetailViewController.swift */,
 				21FD00BD221EDE3E0009F6A9 /* CreateSavingViewController.swift */,
+				2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
@@ -251,6 +254,7 @@
 				21FD00BE221EDE3E0009F6A9 /* CreateSavingViewController.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
 				21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */,
+				2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

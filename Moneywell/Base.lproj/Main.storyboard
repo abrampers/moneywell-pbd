@@ -883,6 +883,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="Nd4-8X-0Ki" secondAttribute="bottom" constant="16" id="skn-Hz-KGV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Aa5-4H-8uW" kind="show" id="UnS-Lo-F3f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -927,7 +930,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0L-X9-m46"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New Saving" id="WLt-zg-U48"/>
+                    <navigationItem key="navigationItem" title="Create New Saving" id="WLt-zg-U48">
+                        <barButtonItem key="backBarButtonItem" title="Create New Saving" id="skl-3l-h3D"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="createSavingButton" destination="VBL-sc-o0a" id="PZT-A5-eOJ"/>
                         <outlet property="savingNameTextField" destination="y5w-AI-2Rg" id="2yX-uG-xo5"/>
@@ -937,6 +942,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPs-CI-UBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.8" y="1248.768472906404"/>
+        </scene>
+        <!--Change Members-->
+        <scene sceneID="QCn-AT-fA8">
+            <objects>
+                <viewController id="Aa5-4H-8uW" customClass="ChangeMemberViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ij5-9N-0wb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lgj-rX-qmO">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qqB-Ey-WrK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qqB-Ey-WrK" id="LlE-1I-nDG">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="64.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Lgj-rX-qmO" firstAttribute="top" secondItem="TFK-jt-EQD" secondAttribute="top" id="JKc-yH-FPp"/>
+                            <constraint firstItem="TFK-jt-EQD" firstAttribute="trailing" secondItem="Lgj-rX-qmO" secondAttribute="trailing" id="N85-zd-j8O"/>
+                            <constraint firstItem="Lgj-rX-qmO" firstAttribute="leading" secondItem="TFK-jt-EQD" secondAttribute="leading" id="ZNm-Tv-nkc"/>
+                            <constraint firstItem="TFK-jt-EQD" firstAttribute="bottom" secondItem="Lgj-rX-qmO" secondAttribute="bottom" id="fug-r8-yci"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TFK-jt-EQD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change Members" id="cwh-03-xVR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWc-T9-bBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2984.8000000000002" y="1248.768472906404"/>
         </scene>
     </scenes>
 </document>
