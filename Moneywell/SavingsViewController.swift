@@ -11,6 +11,19 @@ import UIKit
 struct Saving {
     var name: String
     var balance: Int64
+    var isFamily: Bool
+    
+    init(name: String, balance: Int64) {
+        self.name = name
+        self.balance = balance
+        self.isFamily = false
+    }
+    
+    init(name: String, balance: Int64, isFamily: Bool) {
+        self.name = name
+        self.balance = balance
+        self.isFamily = isFamily
+    }
 }
 
 // Dummy data
@@ -20,8 +33,8 @@ let dummyPersonalSavings: [Saving] = [
 ]
 
 let dummyFamilySavings: [Saving] = [
-    Saving(name: "Holiday to Ibiza", balance: 10540000),
-    Saving(name: "Healthcare", balance: 21550000)
+    Saving(name: "Holiday to Ibiza", balance: 10540000, isFamily: true),
+    Saving(name: "Healthcare", balance: 21550000, isFamily: true)
 ]
 
 class SavingsViewController: UIViewController {
@@ -44,6 +57,7 @@ class SavingsViewController: UIViewController {
                 if let savingName = cell.savingNameLabel.text, let savingDetailVC = segue.destination as? SavingDetailViewController {
                     savingDetailVC.savingName = savingName
                     savingDetailVC.navigationItem.title = savingName
+                    savingDetailVC.isFamily = (sender as? SavingsCell)?.indexPath?.section == TableSection.family.rawValue
                 }
             }
         }
@@ -72,6 +86,7 @@ extension SavingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavingsCell", for: indexPath) as! SavingsCell
+        cell.indexPath = indexPath
         
         // TODO: Shadow
         // cell.layer.masksToBounds = false
@@ -124,6 +139,7 @@ extension SavingsViewController: UITableViewDelegate {
 class SavingsCell: UITableViewCell {
     @IBOutlet weak var savingNameLabel: UILabel!
     @IBOutlet weak var savingBalanceLabel: UILabel!
+    var indexPath: IndexPath?
     
     override var frame: CGRect {
         get {

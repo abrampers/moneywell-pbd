@@ -186,9 +186,7 @@ extension HomeDrawerContentViewController: UITableViewDataSource {
             // Cell content
             let transaction = dummyTransactionData[indexPath.row]
             cell.companyLabel?.text = transaction.company
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd/MM/yyy"
-            cell.dateLabel?.text = formatter.string(from: transaction.date)
+            cell.dateLabel?.text = transaction.date.ddyymmFormat
             cell.amountLabel?.text = transaction.amount.currencyFormat
             
 
@@ -282,5 +280,13 @@ extension Int64 {
         }
         
         return String(format: "%.0f", locale: Locale.current, Double(self))
+    }
+}
+
+extension Date {
+    var ddyymmFormat: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: self)
     }
 }

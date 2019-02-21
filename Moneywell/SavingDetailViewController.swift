@@ -14,23 +14,41 @@ struct SavingDetail {
     var todayDelta: Int64
     var thisWeekDelta: Int64
     var thisMonthDelta: Int64
-    var recentTransactions: [RecentTransaction]
 }
 
 struct RecentTransaction {
+    enum TransactionType: Int {
+        case withdraw = 0, deposit
+    }
+    
+    var name: String
     var date: Date
     var amount: Int64
+    var type: TransactionType
 }
 
 let ButtonCornerRadius = CGFloat(28)
 
-let dummySavingDetailData: SavingDetail = SavingDetail(balance: 1000000, todayDelta: -500000, thisWeekDelta: 1000500, thisMonthDelta: 2560000, recentTransactions: [RecentTransaction(date: Date(timeIntervalSince1970: 0), amount: 1000000), RecentTransaction(date: Date(timeIntervalSince1970: 0), amount: 300000)])
+let dummySavingDetailData: SavingDetail = SavingDetail(balance: 1000000, todayDelta: -500000, thisWeekDelta: 1000500, thisMonthDelta: 2560000)
 let dummySavingChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2000000), (6, 1200000)]
+
+let dummySavingMembers: [FamilyMember] = [
+    FamilyMember(name: "Abram", balance: 100000, delta: 10000),
+    FamilyMember(name: "Nicho", balance: 100000, delta: 10000)
+]
+
+let dummyRecentInOut: [RecentTransaction] = [
+    RecentTransaction(name: "Bambang", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .withdraw),
+    RecentTransaction(name: "Faza", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .deposit),
+    RecentTransaction(name: "Nicho", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .deposit),
+    RecentTransaction(name: "Deryan", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .withdraw)
+]
 
 
 class SavingDetailViewController: UIViewController, ChartViewDelegate {
     
     var savingName: String?
+    lazy var isFamily: Bool = false
     @IBOutlet weak var depositButton: UIButton!
     @IBOutlet weak var withdrawButton: UIButton!
     @IBOutlet weak var balanceLabel: UILabel!
@@ -40,6 +58,14 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var todayDeltaLabel: UILabel!
     @IBOutlet weak var thisWeekDeltaLabel: UILabel!
     @IBOutlet weak var thisMonthDeltaLabel: UILabel!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    
+//    @IBAction func startTap(_ sender: UIButton) {
+//        sender.layer.backgroundColor = UIColor.lightGray.cgColor
+//    }
+//    @IBAction func finishedTap(_ sender: UIButton) {
+//        sender.layer.backgroundColor = UIColor.white.cgColor
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +79,16 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
         }
         
         updateViewFromModel()
+        
+        var frame = tableView.frame
+        frame.size.height = tableView.contentSize.height
+        tableView.frame = frame
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        super.updateViewConstraints()
+        tableViewHeight.constant = tableView.contentSize.height
     }
     
     func updateViewFromModel() {
@@ -154,4 +190,155 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
     }
     */
 
+}
+
+extension SavingDetailViewController: UITableViewDataSource {
+    enum TableSection: Int, CaseIterable {
+        case members = 0, recentInOut
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return isFamily ? 2 : 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !isFamily {
+            return dummyRecentInOut.count
+        }
+        
+        switch section {
+        case TableSection.members.rawValue:
+            return dummySavingMembers.count
+        case TableSection.recentInOut.rawValue:
+            return dummyRecentInOut.count
+        default: return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var prototype = (indexPath.section == TableSection.members.rawValue) ? "SavingMembersCell" : "RecentTransactionCell"
+        
+        if !isFamily {
+            prototype = "RecentTransactionCell"
+        }
+        
+        if prototype == "SavingMembersCell" && isFamily {
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! SavingMembersCell
+            
+            // TODO: Shadow
+            // cell.layer.masksToBounds = false
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.shadowOffset = ShadowOffset
+            // cell.layer.shadowColor = UIColor.black.cgColor
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.masksToBounds = true
+            
+            // Rounded Corners
+            cell.layer.cornerRadius = CellCornerRadius
+            cell.clipsToBounds = true
+            
+            // Cell content
+            let member = dummySavingMembers[indexPath.row]
+            cell.memberImage = nil
+            cell.memberNameLabel.text = member.name
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! RecentTransactionCell
+            
+            // TODO: Shadow
+            // cell.layer.masksToBounds = false
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.shadowOffset = ShadowOffset
+            // cell.layer.shadowColor = UIColor.black.cgColor
+            // cell.layer.shadowRadius = ShadowRadius
+            // cell.layer.masksToBounds = true
+            
+            // Rounded Corners
+            cell.layer.cornerRadius = CellCornerRadius
+            cell.clipsToBounds = true
+            
+            // Cell content
+            let transaction = dummyRecentInOut[indexPath.row]
+            cell.transactionNameLabel.text = transaction.name
+            cell.transactionDateLabel.text = transaction.date.ddyymmFormat
+            if transaction.type == .deposit {
+                cell.transactionAmountLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+                cell.transactionAmountLabel.text = "+" + transaction.amount.currencyFormat
+            } else {
+                cell.transactionAmountLabel.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
+                cell.transactionAmountLabel.text = "-" + transaction.amount.currencyFormat
+            }
+            
+            return cell
+        }
+    }
+}
+
+extension SavingDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
+        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
+        label.font = UIFont(name: "Avenir-Heavy", size: SectionHeaderFontSize)
+        label.textColor = #colorLiteral(red: 0.5450422168, green: 0.5451371074, blue: 0.5450297594, alpha: 1)
+        if let tableSection = TableSection(rawValue: section) {
+            if !isFamily {
+                label.text = "Recent In/Out"
+            } else {
+                switch tableSection {
+                case .members:
+                    label.text = "Members"
+                case .recentInOut:
+                    label.text = "Recent In/Out"
+                }
+            }
+        }
+        view.addSubview(label)
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return SectionHeaderHeight
+    }
+}
+
+class SavingMembersCell: UITableViewCell {
+    @IBOutlet weak var memberImage: UIImageView!
+    @IBOutlet weak var memberNameLabel: UILabel!
+    
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set(newFrame) {
+            var frame =  newFrame
+            frame.origin.y += RowSpacing
+            frame.size.height -= 2 * RowSpacing
+            frame.origin.x += InsetSpacing
+            frame.size.width -= 2 * InsetSpacing
+            super.frame = frame
+        }
+    }
+}
+
+class RecentTransactionCell: UITableViewCell {
+    @IBOutlet weak var transactionNameLabel: UILabel!
+    @IBOutlet weak var transactionDateLabel: UILabel!
+    @IBOutlet weak var transactionAmountLabel: UILabel!
+    
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set(newFrame) {
+            var frame =  newFrame
+            frame.origin.y += RowSpacing
+            frame.size.height -= 2 * RowSpacing
+            frame.origin.x += InsetSpacing
+            frame.size.width -= 2 * InsetSpacing
+            super.frame = frame
+        }
+    }
 }
