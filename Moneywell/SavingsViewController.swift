@@ -51,7 +51,7 @@ class SavingsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "Saving Detail" {
+        if segue.identifier == "SavingDetail" {
             if let cell = (sender as? SavingsCell) {
                 cell.isSelected = false
                 if let savingName = cell.savingNameLabel.text, let savingDetailVC = segue.destination as? SavingDetailViewController {
@@ -60,6 +60,8 @@ class SavingsViewController: UIViewController {
                     savingDetailVC.isFamily = (sender as? SavingsCell)?.indexPath?.section == TableSection.family.rawValue
                 }
             }
+        } else if segue.identifier == "CreateSaving" {
+            
         }
     }
 

@@ -19,6 +19,7 @@
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E32513221D7BE000394930 /* SavingsViewController.swift */; };
 		21E3251C221DA9A300394930 /* SavingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3251B221DA9A300394930 /* SavingDetailViewController.swift */; };
+		21FD00BE221EDE3E0009F6A9 /* CreateSavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FD00BD221EDE3E0009F6A9 /* CreateSavingViewController.swift */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		21E32513221D7BE000394930 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
 		21E3251B221DA9A300394930 /* SavingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingDetailViewController.swift; sourceTree = "<group>"; };
+		21FD00BD221EDE3E0009F6A9 /* CreateSavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSavingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				21273A0A221A8BC40094933D /* HomePrimaryContentViewController.swift */,
 				21E32513221D7BE000394930 /* SavingsViewController.swift */,
 				21E3251B221DA9A300394930 /* SavingDetailViewController.swift */,
+				21FD00BD221EDE3E0009F6A9 /* CreateSavingViewController.swift */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
@@ -245,6 +248,7 @@
 				21E3251C221DA9A300394930 /* SavingDetailViewController.swift in Sources */,
 				21273A0F221A8C770094933D /* HomeDrawerContentViewController.swift in Sources */,
 				21273A09221A8B770094933D /* ViewController.swift in Sources */,
+				21FD00BE221EDE3E0009F6A9 /* CreateSavingViewController.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
 				21273A0B221A8BC40094933D /* HomePrimaryContentViewController.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,

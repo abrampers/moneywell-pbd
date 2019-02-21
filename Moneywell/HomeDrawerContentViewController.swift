@@ -78,6 +78,16 @@ class HomeDrawerContentViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(bounceDrawer), userInfo: nil, repeats: false)
+    }
+    
+    @objc fileprivate func bounceDrawer() {
+        self.pulleyViewController?.bounceDrawer()
+    }
+    
 
     /*
     // MARK: - Navigation
