@@ -10,37 +10,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Analytics-->
         <scene sceneID="Weh-Bn-Oxw">
             <objects>
                 <viewController id="CfL-v9-6Iz" customClass="ViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jfa-5z-2mB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="1ED-eC-Xuo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Navbar Analytics Default" selectedImage="Navbar Analytics Selected" id="xj4-Ck-Nhe"/>
+                    <navigationItem key="navigationItem" title="Analytics" id="uPR-44-vHa">
+                        <barButtonItem key="backBarButtonItem" title="Analytics" id="T67-dS-jXU"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RD-oW-4Ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="616"/>
+            <point key="canvasLocation" x="1881" y="616"/>
         </scene>
-        <!--View Controller-->
+        <!--Wallet-->
         <scene sceneID="Tu0-zd-Dxu">
             <objects>
                 <viewController id="2x5-PD-Z6d" customClass="ViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XfT-ga-IFq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="GYp-al-UU4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Navbar Wallet Default" selectedImage="Navbar Wallet Selected" id="0yP-Ax-czQ"/>
+                    <navigationItem key="navigationItem" title="Wallet" id="Pd7-NB-mph">
+                        <barButtonItem key="backBarButtonItem" title="Wallet" id="Y63-qg-G6y"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-vT-OVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="-7"/>
+            <point key="canvasLocation" x="1881" y="-103"/>
         </scene>
         <!--Moneywell Tab Bar Controller-->
         <scene sceneID="ekK-T3-VeH">
@@ -53,8 +57,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="paB-VJ-izL" kind="relationship" relationship="viewControllers" id="Uga-H4-D3N"/>
-                        <segue destination="2x5-PD-Z6d" kind="relationship" relationship="viewControllers" id="EMP-8O-lyD"/>
-                        <segue destination="CfL-v9-6Iz" kind="relationship" relationship="viewControllers" id="AOB-Jh-FL8"/>
+                        <segue destination="CAh-YT-8ED" kind="relationship" relationship="viewControllers" id="EMP-8O-lyD"/>
+                        <segue destination="cvo-4t-8Kc" kind="relationship" relationship="viewControllers" id="AOB-Jh-FL8"/>
                         <segue destination="7hC-1D-AsL" kind="relationship" relationship="viewControllers" id="yC8-v8-r62"/>
                         <segue destination="4TI-04-UrH" kind="relationship" relationship="viewControllers" id="jI7-nP-bgQ"/>
                     </connections>
@@ -105,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTh-Ma-FFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.799999999999997" y="-640.64039408866995"/>
+            <point key="canvasLocation" x="276" y="-938"/>
         </scene>
         <!--Family-->
         <scene sceneID="fPX-gg-cgc">
@@ -188,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxZ-oy-rbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="2600"/>
+            <point key="canvasLocation" x="3834" y="4119"/>
         </scene>
         <!--Dashboard Primary Content View Controller-->
         <scene sceneID="r8o-yw-vFj">
@@ -280,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsC-dy-6n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-841"/>
+            <point key="canvasLocation" x="2174" y="-1158"/>
         </scene>
         <!--Dashboard Drawer Content View Controller-->
         <scene sceneID="ll3-e1-rH3">
@@ -444,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0k-qm-adU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-502"/>
+            <point key="canvasLocation" x="2173" y="-817"/>
         </scene>
         <!--Savings-->
         <scene sceneID="Kxv-Vu-jwT">
@@ -526,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCk-iQ-Mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="1241"/>
+            <point key="canvasLocation" x="4706" y="1784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="beQ-WC-tFH">
@@ -556,7 +560,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vI-HK-mCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="1249"/>
+            <point key="canvasLocation" x="3529" y="1784"/>
         </scene>
         <!--Saving Detail View Controller-->
         <scene sceneID="fmx-wN-dI9">
@@ -875,7 +879,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hse-mh-HJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="1692"/>
+            <point key="canvasLocation" x="6010" y="2404"/>
         </scene>
         <!--Create New Saving-->
         <scene sceneID="1kP-l8-aTx">
@@ -1008,7 +1012,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPs-CI-UBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="959"/>
+            <point key="canvasLocation" x="6012" y="1465"/>
         </scene>
         <!--Change Members-->
         <scene sceneID="QCn-AT-fA8">
@@ -1046,7 +1050,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWc-T9-bBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3052" y="959"/>
+            <point key="canvasLocation" x="7004" y="1465"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eUb-Ar-zqs">
@@ -1073,7 +1077,59 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3S-ja-mJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="2599"/>
+            <point key="canvasLocation" x="2894" y="4119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hko-Wp-7kU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAh-YT-8ED" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Wallet Default" selectedImage="Navbar Wallet Selected" id="0yP-Ax-czQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="l6C-Bx-FUo">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2x5-PD-Z6d" kind="relationship" relationship="rootViewController" id="bmF-Xz-GM7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioc-ZM-Qet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="-103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kpf-zE-7WW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cvo-4t-8Kc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Navbar Analytics Default" selectedImage="Navbar Analytics Selected" id="xj4-Ck-Nhe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Vgm-Ht-Ccs">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CfL-v9-6Iz" kind="relationship" relationship="rootViewController" id="LzC-S9-4WY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7e-2h-mG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="616"/>
         </scene>
     </scenes>
     <resources>
