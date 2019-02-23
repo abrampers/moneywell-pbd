@@ -35,7 +35,28 @@
                     <view key="view" contentMode="scaleToFill" id="XfT-ga-IFq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P24-l6-7NM">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="403" placeholderIntrinsicHeight="751" image="Wallet" translatesAutoresizingMaskIntoConstraints="NO" id="DHr-j3-Act">
+                                        <rect key="frame" x="-14" y="0.0" width="403" height="751"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DHr-j3-Act" firstAttribute="top" secondItem="P24-l6-7NM" secondAttribute="top" id="CoB-Xu-e46"/>
+                                    <constraint firstAttribute="bottom" secondItem="DHr-j3-Act" secondAttribute="bottom" id="Ytf-0x-4RF"/>
+                                    <constraint firstItem="DHr-j3-Act" firstAttribute="centerX" secondItem="P24-l6-7NM" secondAttribute="centerX" id="jrv-FZ-RfS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="P24-l6-7NM" firstAttribute="top" secondItem="GYp-al-UU4" secondAttribute="top" id="9nu-tO-Zja"/>
+                            <constraint firstAttribute="trailing" secondItem="P24-l6-7NM" secondAttribute="trailing" id="9vl-x9-Wer"/>
+                            <constraint firstItem="GYp-al-UU4" firstAttribute="bottom" secondItem="P24-l6-7NM" secondAttribute="bottom" id="WVL-rP-noa"/>
+                            <constraint firstItem="P24-l6-7NM" firstAttribute="leading" secondItem="GYp-al-UU4" secondAttribute="leading" id="sPi-6n-2SI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GYp-al-UU4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wallet" id="Pd7-NB-mph">
@@ -44,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-vT-OVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="-103"/>
+            <point key="canvasLocation" x="1880.8" y="-103.44827586206897"/>
         </scene>
         <!--Moneywell Tab Bar Controller-->
         <scene sceneID="ekK-T3-VeH">
@@ -1509,6 +1530,7 @@
         <image name="Navbar Savings Selected" width="28" height="28"/>
         <image name="Navbar Wallet Default" width="25" height="26"/>
         <image name="Navbar Wallet Selected" width="25" height="26"/>
+        <image name="Wallet" width="403" height="751"/>
         <image name="moneywell" width="228" height="57"/>
     </resources>
 </document>
