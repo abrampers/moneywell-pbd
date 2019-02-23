@@ -11,7 +11,7 @@ import Foundation
 class HTTPRequest {
     let task: URLSessionDataTask
     
-    init(url: String, completionHandler: @escaping (_ result: Dictionary<String, Any>) -> Void) {
+    init(url: String, completionHandler: @escaping (_ result: [String: Any]) -> Void) {
         let urlSession = URLSession.shared
         let getRequest = URLRequest(url: URL(string: url)!)
         self.task = urlSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) in
@@ -25,6 +25,8 @@ class HTTPRequest {
                     // parse JSON result into a dictionary of type [String: Any]
                     if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
                         completionHandler(json)
+                    } else {
+                        print("JSON parsing failed.")
                     }
                 } catch let error {
                     print(error.localizedDescription)
