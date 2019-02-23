@@ -50,7 +50,7 @@ class DashboardPrimary {
             weekGraphData: graphData
         )
         
-        self.isYourAccountInitialized = false
+        self.isYourAccountInitialized = true
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardPrimaryYourAccountUpdated"), object: self)
     }
 }
