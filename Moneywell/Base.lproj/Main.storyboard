@@ -17,7 +17,32 @@
                     <view key="view" contentMode="scaleToFill" id="jfa-5z-2mB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKS-aq-TmH">
+                                <rect key="frame" x="16" y="153" width="397" height="272"/>
+                                <state key="normal" title="Button" image="Analytics You"/>
+                                <connections>
+                                    <segue destination="dte-Co-QQA" kind="show" id="4KY-yz-5eK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-oW-yLz">
+                                <rect key="frame" x="16" y="442" width="397" height="272"/>
+                                <state key="normal" title="Button" image="Analytics Your Family"/>
+                                <connections>
+                                    <segue destination="b8T-C1-x2c" kind="show" id="n2x-fh-ra6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lbr-oW-yLz" firstAttribute="top" secondItem="yKS-aq-TmH" secondAttribute="bottom" constant="17" id="4Ab-MH-aoY"/>
+                            <constraint firstItem="lbr-oW-yLz" firstAttribute="leading" secondItem="1ED-eC-Xuo" secondAttribute="leading" constant="16" id="6lM-k8-vTw"/>
+                            <constraint firstItem="yKS-aq-TmH" firstAttribute="leading" secondItem="1ED-eC-Xuo" secondAttribute="leading" constant="16" id="9aA-dt-gIC"/>
+                            <constraint firstItem="yKS-aq-TmH" firstAttribute="top" secondItem="1ED-eC-Xuo" secondAttribute="top" constant="13" id="LEP-Fk-eyB"/>
+                            <constraint firstItem="1ED-eC-Xuo" firstAttribute="bottom" secondItem="lbr-oW-yLz" secondAttribute="bottom" constant="15" id="U6P-iA-ais"/>
+                            <constraint firstAttribute="trailing" secondItem="lbr-oW-yLz" secondAttribute="trailing" constant="-38" id="bIv-Lh-3ew"/>
+                            <constraint firstAttribute="trailing" secondItem="yKS-aq-TmH" secondAttribute="trailing" constant="-38" id="rhr-6z-k33"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1ED-eC-Xuo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Analytics" id="uPR-44-vHa">
@@ -26,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RD-oW-4Ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="616"/>
+            <point key="canvasLocation" x="1880.8" y="615.51724137931035"/>
         </scene>
         <!--Wallet-->
         <scene sceneID="Tu0-zd-Dxu">
@@ -1204,6 +1229,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Vgm-Ht-Ccs">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
@@ -1518,8 +1544,86 @@
             </objects>
             <point key="canvasLocation" x="4836" y="4118.7192118226603"/>
         </scene>
+        <!--You-->
+        <scene sceneID="c6M-1o-0ve">
+            <objects>
+                <viewController id="dte-Co-QQA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SnV-EK-Gb9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SF2-UU-9bT">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="You" translatesAutoresizingMaskIntoConstraints="NO" id="siW-NM-KpA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="795"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="siW-NM-KpA" firstAttribute="leading" secondItem="SF2-UU-9bT" secondAttribute="leading" id="UX6-Nw-Eqb"/>
+                                    <constraint firstAttribute="trailing" secondItem="siW-NM-KpA" secondAttribute="trailing" id="WsH-pG-lOg"/>
+                                    <constraint firstItem="siW-NM-KpA" firstAttribute="top" secondItem="SF2-UU-9bT" secondAttribute="top" id="ZPc-1p-W27"/>
+                                    <constraint firstAttribute="bottom" secondItem="siW-NM-KpA" secondAttribute="bottom" id="hAX-7W-Div"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SF2-UU-9bT" firstAttribute="top" secondItem="MaU-Yp-P7f" secondAttribute="top" id="IGv-EW-wxy"/>
+                            <constraint firstItem="MaU-Yp-P7f" firstAttribute="bottom" secondItem="SF2-UU-9bT" secondAttribute="bottom" id="b9J-gL-S1O"/>
+                            <constraint firstItem="MaU-Yp-P7f" firstAttribute="trailing" secondItem="SF2-UU-9bT" secondAttribute="trailing" id="fRf-GP-EH3"/>
+                            <constraint firstItem="SF2-UU-9bT" firstAttribute="leading" secondItem="MaU-Yp-P7f" secondAttribute="leading" id="nzU-Yo-lum"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MaU-Yp-P7f"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="You" id="XFC-jd-7Uy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBF-fT-5df" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="263"/>
+        </scene>
+        <!--Your Family-->
+        <scene sceneID="dwo-fl-xwB">
+            <objects>
+                <viewController id="b8T-C1-x2c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xJN-DL-KsV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2d-su-z6u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Your Family" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-RU-xrM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1008"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2dO-RU-xrM" secondAttribute="bottom" id="0YF-Y0-pFS"/>
+                                    <constraint firstItem="2dO-RU-xrM" firstAttribute="leading" secondItem="B2d-su-z6u" secondAttribute="leading" id="EKw-6C-icL"/>
+                                    <constraint firstItem="2dO-RU-xrM" firstAttribute="top" secondItem="B2d-su-z6u" secondAttribute="top" id="e1L-TT-R5J"/>
+                                    <constraint firstAttribute="trailing" secondItem="2dO-RU-xrM" secondAttribute="trailing" id="vTn-y5-pva"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Org-U3-3Wd" firstAttribute="trailing" secondItem="B2d-su-z6u" secondAttribute="trailing" id="CN5-uE-5a5"/>
+                            <constraint firstItem="B2d-su-z6u" firstAttribute="top" secondItem="xJN-DL-KsV" secondAttribute="top" id="Crg-Es-tnc"/>
+                            <constraint firstItem="B2d-su-z6u" firstAttribute="leading" secondItem="Org-U3-3Wd" secondAttribute="leading" id="kJp-BF-8Ny"/>
+                            <constraint firstItem="Org-U3-3Wd" firstAttribute="bottom" secondItem="B2d-su-z6u" secondAttribute="bottom" id="sWP-56-Vxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Org-U3-3Wd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Family" id="9Yb-E9-flS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98C-IC-aj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3235" y="950"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Analytics You" width="343" height="272"/>
+        <image name="Analytics Your Family" width="343" height="272"/>
         <image name="Jenius Icon Default" width="36.666667938232422" height="36.666667938232422"/>
         <image name="Jenius Icon Selected" width="36" height="27"/>
         <image name="Navbar Dashboard Default" width="27" height="25"/>
@@ -1531,6 +1635,8 @@
         <image name="Navbar Wallet Default" width="25" height="26"/>
         <image name="Navbar Wallet Selected" width="25" height="26"/>
         <image name="Wallet" width="403" height="751"/>
+        <image name="You" width="375" height="795"/>
+        <image name="Your Family" width="375" height="1008"/>
         <image name="moneywell" width="228" height="57"/>
     </resources>
 </document>
