@@ -23,6 +23,14 @@ let dummyFamilyAccounts = [
         totalBalance: 838383,
         weekDelta: -2828
     ),
+    Account(
+        number: "3243330234",
+        name: "Nicholas Rianto PUtra",
+        activeBalance: 838383,
+        totalBalance: 838383,
+        weekDelta: -2828,
+        isChild: true
+    ),
 ]
 
 class FamilyViewController: UIViewController {
@@ -52,6 +60,19 @@ class FamilyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "FamilyMemberDetail" {
+            if let cell = (sender as? FamilyMemberCell) {
+                cell.isSelected = false
+                if let memberName = cell.memberNameLabel.text, let familyMemberDetailVC = segue.destination as? FamilyDetailViewController {
+                    familyMemberDetailVC.navigationItem.title = memberName
+                }
+            }
+        }
+    }
 }
 
 extension FamilyViewController: UIActionSheetDelegate {
@@ -67,11 +88,16 @@ extension FamilyViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMemberCell", for: indexPath) as! FamilyMemberCell
         
         cell.layer.cornerRadius = CellCornerRadius
+        cell.childLabelContainer.layer.cornerRadius = DeltaContainerCornerRadius
         
         let member = dummyFamilyAccounts[indexPath.row]
         cell.memberImage = nil
         cell.memberNameLabel.text = member.name
         cell.memberAccountNumberLabel.text = member.number
+        
+        if !member.isChild {
+            cell.childLabelContainer.isHidden = true
+        }
         
         return cell
     }
@@ -83,6 +109,7 @@ class FamilyMemberCell: UITableViewCell {
     @IBOutlet weak var memberImage: UIImageView!
     @IBOutlet weak var memberNameLabel: UILabel!
     @IBOutlet weak var memberAccountNumberLabel: UILabel!
+    @IBOutlet weak var childLabelContainer: UIView!
     
     override var frame: CGRect {
         get {
