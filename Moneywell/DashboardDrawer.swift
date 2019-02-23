@@ -43,13 +43,13 @@ class DashboardDrawer {
     
     func updateData() {
         let updateFamilyAccountsRequest = HTTPRequest(
-            url: "https://moneywell-backend.herokuapp.com/api/families?accountNumber=\(2558408)",
+            url: "\(Constants.url)/families?accountNumber=\(2558408)",
             completionHandler: updateFamilyAccounts
         )
         updateFamilyAccountsRequest.resume()
         
         let updateRecentFamilyTransactionsRequest = HTTPRequest(
-            url: "https://moneywell-backend.herokuapp.com/api/allTransactions?accountNumber=\(2558408)",
+            url: "\(Constants.url)/allTransactions?accountNumber=\(2558408)",
             completionHandler: updateRecentFamilyTransactions
         )
         updateRecentFamilyTransactionsRequest.resume()

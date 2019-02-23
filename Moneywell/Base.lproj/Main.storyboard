@@ -187,7 +187,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Family" id="NgV-QE-8Ip">
                         <barButtonItem key="backBarButtonItem" title="Family" id="kra-OJ-6SA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QJp-Zt-5Zw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QJp-Zt-5Zw">
+                            <connections>
+                                <action selector="createAccountTapped:" destination="JMO-Ux-J2d" id="Af7-FP-Fct"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxZ-oy-rbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,31 +264,28 @@
                                     <constraint firstAttribute="width" constant="274" id="LnG-2d-bd4"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-aQ-c7S">
-                                <rect key="frame" x="180" y="100.66666666666667" width="20" height="20"/>
-                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </activityIndicatorView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6GA-It-tmf">
-                                <rect key="frame" x="172" y="226" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-TO-imp">
+                                <rect key="frame" x="171" y="176" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="WRn-Mp-T4C">
-                                <rect key="frame" x="218.66666666666666" y="148.66666666666666" width="20" height="20"/>
-                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneywell" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiS-Gh-YBh">
+                                <rect key="frame" x="125" y="320.33333333333331" width="130" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="HIq-oF-Fit"/>
+                                    <constraint firstAttribute="width" constant="130" id="KvL-6J-wI8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ZYa-aQ-c7S" firstAttribute="centerY" secondItem="zoh-FT-S1B" secondAttribute="centerY" id="1L0-l3-m61"/>
                             <constraint firstItem="31J-bj-bFG" firstAttribute="top" secondItem="zoh-FT-S1B" secondAttribute="bottom" constant="11" id="Azb-ac-vIf"/>
                             <constraint firstItem="zoh-FT-S1B" firstAttribute="centerX" secondItem="meS-ej-oKB" secondAttribute="centerX" id="BaR-BV-4RS"/>
                             <constraint firstItem="I1Z-42-hlL" firstAttribute="top" secondItem="31J-bj-bFG" secondAttribute="bottom" constant="14" id="K41-o8-Iyn"/>
+                            <constraint firstItem="BiS-Gh-YBh" firstAttribute="top" secondItem="I1Z-42-hlL" secondAttribute="bottom" constant="16" id="OIg-Aw-ZQm"/>
                             <constraint firstItem="OM9-jz-qkj" firstAttribute="top" secondItem="UBO-t0-ZEx" secondAttribute="top" constant="-8" id="VWo-Vs-Mzo"/>
-                            <constraint firstItem="ZYa-aQ-c7S" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="W9n-Bq-8Hv"/>
-                            <constraint firstItem="WRn-Mp-T4C" firstAttribute="centerX" secondItem="XoN-f6-hAp" secondAttribute="centerX" id="X5h-cT-eUg"/>
+                            <constraint firstItem="BiS-Gh-YBh" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="ZxJ-2M-7zt"/>
                             <constraint firstItem="zoh-FT-S1B" firstAttribute="top" secondItem="UBO-t0-ZEx" secondAttribute="bottom" constant="8" id="iwF-e7-OYb"/>
-                            <constraint firstItem="WRn-Mp-T4C" firstAttribute="centerY" secondItem="XoN-f6-hAp" secondAttribute="centerY" id="oZi-fl-B14"/>
                             <constraint firstItem="UBO-t0-ZEx" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="vAR-YT-8CS"/>
                             <constraint firstItem="I1Z-42-hlL" firstAttribute="centerX" secondItem="meS-ej-oKB" secondAttribute="centerX" id="whT-Hv-XMH"/>
                             <constraint firstItem="31J-bj-bFG" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="xD6-wi-KPN"/>
@@ -297,9 +298,8 @@
                         <outlet property="deltaContainer" destination="XoN-f6-hAp" id="yjI-Oy-H4t"/>
                         <outlet property="deltaLabel" destination="RRG-pj-NFd" id="QQP-3t-fdA"/>
                         <outlet property="lineChart" destination="I1Z-42-hlL" id="3gP-U4-MaF"/>
-                        <outletCollection property="spinners" destination="ZYa-aQ-c7S" collectionClass="NSMutableArray" id="3Xg-xz-OIt"/>
-                        <outletCollection property="spinners" destination="6GA-It-tmf" collectionClass="NSMutableArray" id="TUg-Lk-KiM"/>
-                        <outletCollection property="spinners" destination="WRn-Mp-T4C" collectionClass="NSMutableArray" id="aIC-MC-C1c"/>
+                        <outlet property="spinner" destination="AW3-TO-imp" id="W1n-27-0nd"/>
+                        <outlet property="thisWeekLabel" destination="HaR-5Z-VUr" id="y4L-O7-7ti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsC-dy-6n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,8 +322,8 @@
                                     <constraint firstAttribute="height" constant="5" id="mLz-bu-mBV"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-tZ-PMN">
-                                <rect key="frame" x="0.0" y="31" width="380" height="295"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-tZ-PMN">
+                                <rect key="frame" x="0.0" y="31" width="380" height="206"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FamilyMemberDashboardCell" rowHeight="90" id="W4n-an-Yqj" customClass="FamilyMemberDashboardCell" customModule="Moneywell" customModuleProvider="target">
@@ -403,7 +403,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98c-l9-aTG">
-                                                    <rect key="frame" x="16" y="9" width="79.666666666666671" height="24"/>
+                                                    <rect key="frame" x="16" y="9" width="80" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="Zmp-bQ-P14"/>
                                                     </constraints>
@@ -412,13 +412,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-Bp-iUJ">
-                                                    <rect key="frame" x="289" y="43.666666666666657" width="75" height="24"/>
+                                                    <rect key="frame" x="289" y="44" width="75" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
-                                                    <rect key="frame" x="16" y="35.999999999999993" width="38" height="12"/>
+                                                    <rect key="frame" x="16" y="36.000000000000007" width="38" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="uOr-UY-Kxp"/>
                                                     </constraints>
@@ -428,13 +428,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dZR-Bp-iUJ" firstAttribute="centerY" secondItem="e5W-29-sTR" secondAttribute="centerY" id="BTi-Y8-qlB"/>
                                                 <constraint firstItem="98c-l9-aTG" firstAttribute="top" secondItem="e5W-29-sTR" secondAttribute="top" constant="9" id="Ba7-mB-pJR"/>
                                                 <constraint firstItem="jzv-XS-5gS" firstAttribute="top" secondItem="98c-l9-aTG" secondAttribute="bottom" constant="3" id="Dgg-l9-ASl"/>
                                                 <constraint firstItem="98c-l9-aTG" firstAttribute="leading" secondItem="e5W-29-sTR" secondAttribute="leading" constant="16" id="Kuk-Gf-C06"/>
                                                 <constraint firstItem="jzv-XS-5gS" firstAttribute="leading" secondItem="e5W-29-sTR" secondAttribute="leading" constant="16" id="L3i-am-c2d"/>
                                                 <constraint firstItem="dZR-Bp-iUJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="98c-l9-aTG" secondAttribute="trailing" constant="16" id="Psu-LG-UwY"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jzv-XS-5gS" secondAttribute="trailing" constant="20" symbolic="YES" id="Uv8-Tk-cy8"/>
+                                                <constraint firstItem="dZR-Bp-iUJ" firstAttribute="centerY" secondItem="e5W-29-sTR" secondAttribute="centerY" id="mPk-Hf-pMs"/>
                                                 <constraint firstAttribute="bottom" secondItem="jzv-XS-5gS" secondAttribute="bottom" constant="10" id="pSY-CZ-NFg"/>
                                                 <constraint firstAttribute="trailing" secondItem="dZR-Bp-iUJ" secondAttribute="trailing" constant="16" id="szy-yl-kyk"/>
                                             </constraints>
@@ -447,10 +447,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="spinnerCell" rowHeight="72.999999999999972" id="kqE-EO-BAs" customClass="TransactionDashboardCell" customModule="Moneywell" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="218.33333333333334" width="380" height="73.000000000000028"/>
+                                        <rect key="frame" x="0.0" y="218.33333333333334" width="380" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kqE-EO-BAs" id="CEk-LQ-GF1">
-                                            <rect key="frame" x="0.0" y="0.0" width="380" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="72.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u2j-NL-OIJ">
@@ -1154,7 +1154,7 @@
         <scene sceneID="Kpf-zE-7WW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cvo-4t-8Kc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Navbar Analytics Default" selectedImage="Navbar Analytics Selected" id="xj4-Ck-Nhe"/>
+                    <tabBarItem key="tabBarItem" title="" image="Jenius Icon Default" selectedImage="Jenius Icon Selected" id="xj4-Ck-Nhe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Vgm-Ht-Ccs">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -1178,8 +1178,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Navbar Analytics Default" width="27" height="23"/>
-        <image name="Navbar Analytics Selected" width="27" height="23"/>
+        <image name="Jenius Icon Default" width="36.666667938232422" height="36.666667938232422"/>
+        <image name="Jenius Icon Selected" width="36" height="27"/>
         <image name="Navbar Dashboard Default" width="27" height="25"/>
         <image name="Navbar Dashboard Selected" width="27" height="25"/>
         <image name="Navbar Family Default" width="30" height="22"/>
@@ -1188,5 +1188,6 @@
         <image name="Navbar Savings Selected" width="28" height="28"/>
         <image name="Navbar Wallet Default" width="25" height="26"/>
         <image name="Navbar Wallet Selected" width="25" height="26"/>
+        <image name="moneywell" width="228" height="57"/>
     </resources>
 </document>

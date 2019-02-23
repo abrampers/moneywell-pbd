@@ -28,7 +28,7 @@ class DashboardPrimary {
     
     func updateData() {
         let updateYourAccountRequest = HTTPRequest(
-            url: "https://moneywell-backend.herokuapp.com/api/userDetail?accountNumber=\(2558408)",
+            url: "\(Constants.url)/userDetail?accountNumber=\(2558408)",
             completionHandler: updateYourAccount
         )
         updateYourAccountRequest.resume()

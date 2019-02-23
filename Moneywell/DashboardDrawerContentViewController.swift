@@ -63,18 +63,14 @@ class DashboardDrawerContentViewController: UIViewController {
     
     @objc func familyAccountsDidUpdated() {
         DispatchQueue.main.async {
-            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.FamilyMember.rawValue), with: UITableView.RowAnimation.right)
+            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.FamilyMember.rawValue), with: UITableView.RowAnimation.automatic)
         }
-        print(self.dashboardDrawer.familyAccounts)
-        print("kon")
     }
     
     @objc func recentFamilyTransactionsDidUpdated() {
         DispatchQueue.main.async {
-            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.Transaction.rawValue), with: UITableView.RowAnimation.right)
+            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.Transaction.rawValue), with: UITableView.RowAnimation.automatic)
         }
-        print(self.dashboardDrawer.recentFamilyTransactions)
-        print("tol")
     }
 }
 
@@ -115,6 +111,10 @@ extension DashboardDrawerContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (!dashboardDrawer.isFamilyAccountsInitialized && section == TableSection.FamilyMember.rawValue) ||
+            (!dashboardDrawer.isRecentFamilyTransactionsInitialized && section == TableSection.Transaction.rawValue) {
+            return 1
+        }
         switch section {
         case TableSection.FamilyMember.rawValue:
             return self.dashboardDrawer.familyAccounts.count
@@ -125,12 +125,9 @@ extension DashboardDrawerContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if !dashboardDrawer.isFamilyAccountsInitialized && indexPath.section == TableSection.FamilyMember.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
-            return cell
-        }
-        
-        if !dashboardDrawer.isRecentFamilyTransactionsInitialized && indexPath.section == TableSection.Transaction.rawValue {
+        if (!dashboardDrawer.isFamilyAccountsInitialized && indexPath.section == TableSection.FamilyMember.rawValue) ||
+            (!dashboardDrawer.isRecentFamilyTransactionsInitialized && indexPath.section == TableSection.Transaction.rawValue) ||
+            ((!dashboardDrawer.isFamilyAccountsInitialized || !dashboardDrawer.isRecentFamilyTransactionsInitialized) && tableView.numberOfRows(inSection: indexPath.section) == 1) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
             return cell
         }

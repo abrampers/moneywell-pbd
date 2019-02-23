@@ -50,7 +50,8 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     @IBOutlet weak var deltaLabel: UILabel!
     @IBOutlet weak var deltaContainer: UIView!
     @IBOutlet weak var lineChart: LineChartView!
-    @IBOutlet var spinners: [UIActivityIndicatorView]!
+    @IBOutlet weak var thisWeekLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
     lazy var dashboardPrimary = DashboardPrimary(accountNumber: "84848448")
@@ -70,9 +71,7 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
         deltaContainer.layer.cornerRadius = DeltaContainerCornerRadius
         
         // TODO: ScrollView pagination
-        for spinner in spinners {
-            spinner.hidesWhenStopped = true
-        }
+        spinner.hidesWhenStopped = true
         
         // Initialize chart
 //        updateViewFromModel()
@@ -86,24 +85,24 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
         self.dashboardPrimary.updateData()
         
         if !dashboardPrimary.isYourAccountInitialized {
+            self.balanceTitle.isHidden = true
+            self.thisWeekLabel.isHidden = true
+            self.deltaContainer.isHidden = true
             self.balanceLabel.isHidden = true
             self.deltaLabel.isHidden = true
             self.lineChart.isHidden = true
             
-            for spinner in spinners {
-                spinner.startAnimating()
-            }
+            self.spinner.startAnimating()
         }
     }
 
     func updateViewFromModel() {
         DispatchQueue.main.async {
-            // Stop spinner
-            for spinner in self.spinners {
-                spinner.stopAnimating()
-            }
-            
             // Update balanceLabel
+            self.balanceTitle.isHidden = false
+            self.balanceLabel.isHidden = false
+            self.deltaContainer.isHidden = false
+            self.thisWeekLabel.isHidden = false
             self.balanceLabel.isHidden = false
             self.deltaLabel.isHidden = false
             self.lineChart.isHidden = false
@@ -111,6 +110,9 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
             
             // Update deltaLabel
             self.updateDeltaLabel()
+            
+            // Stop spinner
+            self.spinner.stopAnimating()
             
             // update lineChart
             self.updateChart(withData: dummyYouChartData)

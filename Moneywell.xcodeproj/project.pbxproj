@@ -18,6 +18,7 @@
 		2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */; };
 		2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */; };
 		2140AC3D221F0D0900897CD6 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC3C221F0D0900897CD6 /* FamilyViewController.swift */; };
+		21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0D82221A0B4002F2FB9 /* Constants.swift */; };
 		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E32513221D7BE000394930 /* SavingsViewController.swift */; };
@@ -52,6 +53,7 @@
 		2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberViewController.swift; sourceTree = "<group>"; };
 		2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneywellTabBarController.swift; sourceTree = "<group>"; };
 		2140AC3C221F0D0900897CD6 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		21DCB0D82221A0B4002F2FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		21E32513221D7BE000394930 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				C31C9DD5222129E2006D7CC6 /* Mutation.swift */,
 				C31C9DC1222115D2006D7CC6 /* Account.swift */,
 				C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */,
+				21DCB0D82221A0B4002F2FB9 /* Constants.swift */,
 			);
 			path = Moneywell;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */,
 				2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */,
 				2140AC3D221F0D0900897CD6 /* FamilyViewController.swift in Sources */,
+				21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */,
 				C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,
 				C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */,

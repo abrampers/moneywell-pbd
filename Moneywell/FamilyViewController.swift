@@ -26,10 +26,36 @@ let dummyFamilyAccounts = [
 ]
 
 class FamilyViewController: UIViewController {
-
+    
+    @IBAction func createAccountTapped(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "What type of account would you like to add?", message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Invite Existing Account", style: .default , handler:{ (UIAlertAction)in
+            print("User click Approve button")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Create New Child Account", style: .default , handler:{ (UIAlertAction)in
+            print("User click Edit button")
+        }))
+        
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+            print("User click Dismiss button")
+        }))
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
+
+extension FamilyViewController: UIActionSheetDelegate {
+    
 }
 
 extension FamilyViewController: UITableViewDataSource {
