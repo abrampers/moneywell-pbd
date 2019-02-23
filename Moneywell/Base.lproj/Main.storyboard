@@ -260,14 +260,31 @@
                                     <constraint firstAttribute="width" constant="274" id="LnG-2d-bd4"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-aQ-c7S">
+                                <rect key="frame" x="180" y="100.66666666666667" width="20" height="20"/>
+                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6GA-It-tmf">
+                                <rect key="frame" x="172" y="226" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="WRn-Mp-T4C">
+                                <rect key="frame" x="218.66666666666666" y="148.66666666666666" width="20" height="20"/>
+                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="ZYa-aQ-c7S" firstAttribute="centerY" secondItem="zoh-FT-S1B" secondAttribute="centerY" id="1L0-l3-m61"/>
                             <constraint firstItem="31J-bj-bFG" firstAttribute="top" secondItem="zoh-FT-S1B" secondAttribute="bottom" constant="11" id="Azb-ac-vIf"/>
                             <constraint firstItem="zoh-FT-S1B" firstAttribute="centerX" secondItem="meS-ej-oKB" secondAttribute="centerX" id="BaR-BV-4RS"/>
                             <constraint firstItem="I1Z-42-hlL" firstAttribute="top" secondItem="31J-bj-bFG" secondAttribute="bottom" constant="14" id="K41-o8-Iyn"/>
                             <constraint firstItem="OM9-jz-qkj" firstAttribute="top" secondItem="UBO-t0-ZEx" secondAttribute="top" constant="-8" id="VWo-Vs-Mzo"/>
+                            <constraint firstItem="ZYa-aQ-c7S" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="W9n-Bq-8Hv"/>
+                            <constraint firstItem="WRn-Mp-T4C" firstAttribute="centerX" secondItem="XoN-f6-hAp" secondAttribute="centerX" id="X5h-cT-eUg"/>
                             <constraint firstItem="zoh-FT-S1B" firstAttribute="top" secondItem="UBO-t0-ZEx" secondAttribute="bottom" constant="8" id="iwF-e7-OYb"/>
+                            <constraint firstItem="WRn-Mp-T4C" firstAttribute="centerY" secondItem="XoN-f6-hAp" secondAttribute="centerY" id="oZi-fl-B14"/>
                             <constraint firstItem="UBO-t0-ZEx" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="vAR-YT-8CS"/>
                             <constraint firstItem="I1Z-42-hlL" firstAttribute="centerX" secondItem="meS-ej-oKB" secondAttribute="centerX" id="whT-Hv-XMH"/>
                             <constraint firstItem="31J-bj-bFG" firstAttribute="centerX" secondItem="OM9-jz-qkj" secondAttribute="centerX" id="xD6-wi-KPN"/>
@@ -280,6 +297,9 @@
                         <outlet property="deltaContainer" destination="XoN-f6-hAp" id="yjI-Oy-H4t"/>
                         <outlet property="deltaLabel" destination="RRG-pj-NFd" id="QQP-3t-fdA"/>
                         <outlet property="lineChart" destination="I1Z-42-hlL" id="3gP-U4-MaF"/>
+                        <outletCollection property="spinners" destination="ZYa-aQ-c7S" collectionClass="NSMutableArray" id="3Xg-xz-OIt"/>
+                        <outletCollection property="spinners" destination="6GA-It-tmf" collectionClass="NSMutableArray" id="TUg-Lk-KiM"/>
+                        <outletCollection property="spinners" destination="WRn-Mp-T4C" collectionClass="NSMutableArray" id="aIC-MC-C1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsC-dy-6n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,7 +418,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
-                                                    <rect key="frame" x="16" y="36.000000000000007" width="38" height="12"/>
+                                                    <rect key="frame" x="16" y="35.999999999999993" width="38" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="uOr-UY-Kxp"/>
                                                     </constraints>
@@ -433,12 +453,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="u2j-NL-OIJ">
-                                                    <rect key="frame" x="180" y="26.666666666666671" width="20" height="20"/>
+                                                <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u2j-NL-OIJ">
+                                                    <rect key="frame" x="171.66666666666666" y="10.999999999999996" width="37" height="50.666666666666657"/>
+                                                    <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </activityIndicatorView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="u2j-NL-OIJ" firstAttribute="centerX" secondItem="CEk-LQ-GF1" secondAttribute="centerX" id="9f1-Oi-fmA"/>
+                                                <constraint firstAttribute="bottom" secondItem="u2j-NL-OIJ" secondAttribute="bottom" constant="11" id="FTE-sb-7YS"/>
+                                                <constraint firstItem="u2j-NL-OIJ" firstAttribute="top" secondItem="CEk-LQ-GF1" secondAttribute="top" constant="11" id="GHt-O1-fS4"/>
                                                 <constraint firstItem="u2j-NL-OIJ" firstAttribute="centerY" secondItem="CEk-LQ-GF1" secondAttribute="centerY" id="xDZ-4N-et5"/>
                                             </constraints>
                                         </tableViewCellContentView>

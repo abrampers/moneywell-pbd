@@ -50,6 +50,8 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     @IBOutlet weak var deltaLabel: UILabel!
     @IBOutlet weak var deltaContainer: UIView!
     @IBOutlet weak var lineChart: LineChartView!
+    @IBOutlet var spinners: [UIActivityIndicatorView]!
+    
     
     lazy var dashboardPrimary = DashboardPrimary(accountNumber: "84848448")
     
@@ -68,28 +70,51 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
         deltaContainer.layer.cornerRadius = DeltaContainerCornerRadius
         
         // TODO: ScrollView pagination
+        for spinner in spinners {
+            spinner.hidesWhenStopped = true
+        }
         
         // Initialize chart
-        updateViewFromModel()
+//        updateViewFromModel()
         
         NotificationCenter.default.addObserver(self, selector: #selector(yourAccountDidUpdated), name: Notification.Name(rawValue: "DashboardPrimaryYourAccountUpdated"), object: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.dashboardPrimary.updateData()
+        
+        if !dashboardPrimary.isYourAccountInitialized {
+            self.balanceLabel.isHidden = true
+            self.deltaLabel.isHidden = true
+            self.lineChart.isHidden = true
+            
+            for spinner in spinners {
+                spinner.startAnimating()
+            }
+        }
     }
-    
+
     func updateViewFromModel() {
-        // Update balanceLabel
-        balanceLabel.text = dashboardPrimary.yourAccount.totalBalance.currencyFormat
-        
-        // Update deltaLabel
-        updateDeltaLabel()
-        
-        // update lineChart
-        updateChart(withData: dummyYouChartData)
+        DispatchQueue.main.async {
+            // Stop spinner
+            for spinner in self.spinners {
+                spinner.stopAnimating()
+            }
+            
+            // Update balanceLabel
+            self.balanceLabel.isHidden = false
+            self.deltaLabel.isHidden = false
+            self.lineChart.isHidden = false
+            self.balanceLabel.text = self.dashboardPrimary.yourAccount.totalBalance.currencyFormat
+            
+            // Update deltaLabel
+            self.updateDeltaLabel()
+            
+            // update lineChart
+            self.updateChart(withData: dummyYouChartData)
+        }
     }
     
     func updateDeltaLabel() {
@@ -198,6 +223,8 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     @objc func yourAccountDidUpdated() {
         print(self.dashboardPrimary.yourAccount)
         print("konci")
+        
+        updateViewFromModel()
     }
 }
 

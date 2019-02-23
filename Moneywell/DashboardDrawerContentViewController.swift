@@ -46,12 +46,15 @@ class DashboardDrawerContentViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(recentFamilyTransactionsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.dashboardDrawer.updateData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(bounceDrawer), userInfo: nil, repeats: false)
-        
-        self.dashboardDrawer.updateData()
     }
     
     @objc fileprivate func bounceDrawer() {
@@ -122,12 +125,12 @@ extension DashboardDrawerContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if !DashboardDrawer.isFamilyAccountInitialized && indexPath.section == TableSection.FamilyMember {
+        if !dashboardDrawer.isFamilyAccountsInitialized && indexPath.section == TableSection.FamilyMember.rawValue {
             let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
             return cell
         }
         
-        if !DashboardDrawer.isRecentFamilyTransactionInitialized && indexPath.section == TableSection.Transaction {
+        if !dashboardDrawer.isRecentFamilyTransactionsInitialized && indexPath.section == TableSection.Transaction.rawValue {
             let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
             return cell
         }
@@ -181,7 +184,22 @@ extension DashboardDrawerContentViewController: UITableViewDataSource {
             let transaction = self.dashboardDrawer.recentFamilyTransactions[indexPath.row]
             cell.companyLabel?.text = transaction.title
             cell.detailsLabel?.text = transaction.date.ddyymmFormat + " - " + transaction.category
-            cell.amountLabel?.text = transaction.amount.currencyFormat
+            
+            if transaction.amount > 0 {
+                cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+                let amountString = transaction.amount.currencyFormat
+                cell.amountLabel?.text = amountString
+            } else if transaction.amount == 0 {
+                cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+                let amountString = String(transaction.amount)
+                cell.amountLabel?.text = amountString
+            } else {
+                cell.amountLabel?.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
+                let amountString = abs(transaction.amount).currencyFormat
+                cell.amountLabel?.text = amountString
+            }
+            
+//            cell.amountLabel?.text = transaction.amount.currencyFormat
             
             return cell
         }
