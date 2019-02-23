@@ -31,6 +31,7 @@ let ShadowOpacity = CGFloat(0.23)
 let ShadowOffset = CGSize(width: 0, height: 0)
 
 class DashboardDrawerContentViewController: UIViewController {
+    var spinner: UIActivityIndicatorView!
     @IBOutlet weak var gripperView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -58,11 +59,17 @@ class DashboardDrawerContentViewController: UIViewController {
     }
     
     @objc func familyAccountsDidUpdated() {
+        DispatchQueue.main.async {
+            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.FamilyMember.rawValue), with: UITableView.RowAnimation.right)
+        }
         print(self.dashboardDrawer.familyAccounts)
         print("kon")
     }
     
     @objc func recentFamilyTransactionsDidUpdated() {
+        DispatchQueue.main.async {
+            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.Transaction.rawValue), with: UITableView.RowAnimation.right)
+        }
         print(self.dashboardDrawer.recentFamilyTransactions)
         print("tol")
     }
@@ -115,6 +122,16 @@ extension DashboardDrawerContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if !DashboardDrawer.isFamilyAccountInitialized && indexPath.section == TableSection.FamilyMember {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
+            return cell
+        }
+        
+        if !DashboardDrawer.isRecentFamilyTransactionInitialized && indexPath.section == TableSection.Transaction {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
+            return cell
+        }
+        
         let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberDashboardCell" : "TransactionDashboardCell"
         
         if prototype == "FamilyMemberDashboardCell" {
