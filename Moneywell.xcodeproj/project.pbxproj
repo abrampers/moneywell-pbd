@@ -27,11 +27,11 @@
 		C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DBD22211392006D7CC6 /* Transaction.swift */; };
 		C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC1222115D2006D7CC6 /* Account.swift */; };
 		C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */; };
-		C31C9DC822212258006D7CC6 /* SavingsMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC722212258006D7CC6 /* SavingsMain.swift */; };
 		C31C9DCA222122C5006D7CC6 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC9222122C5006D7CC6 /* Saving.swift */; };
 		C31C9DCC22212321006D7CC6 /* FamilySaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DCB22212321006D7CC6 /* FamilySaving.swift */; };
 		C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD5222129E2006D7CC6 /* Mutation.swift */; };
 		C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */; };
+		C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD922217E43006D7CC6 /* SavingsPage.swift */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +61,11 @@
 		C31C9DBD22211392006D7CC6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C31C9DC1222115D2006D7CC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPrimary.swift; sourceTree = "<group>"; };
-		C31C9DC722212258006D7CC6 /* SavingsMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsMain.swift; sourceTree = "<group>"; };
 		C31C9DC9222122C5006D7CC6 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		C31C9DCB22212321006D7CC6 /* FamilySaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySaving.swift; sourceTree = "<group>"; };
 		C31C9DD5222129E2006D7CC6 /* Mutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutation.swift; sourceTree = "<group>"; };
 		C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		C31C9DD922217E43006D7CC6 /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 				21273A24221AC44C0094933D /* Fonts */,
 				C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */,
 				C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */,
-				C31C9DC722212258006D7CC6 /* SavingsMain.swift */,
+				C31C9DD922217E43006D7CC6 /* SavingsPage.swift */,
 				C31C9DC9222122C5006D7CC6 /* Saving.swift */,
 				C31C9DCB22212321006D7CC6 /* FamilySaving.swift */,
 				C31C9DBD22211392006D7CC6 /* Transaction.swift */,
@@ -291,11 +291,11 @@
 				C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */,
 				21273A09221A8B770094933D /* ViewController.swift in Sources */,
 				21FD00BE221EDE3E0009F6A9 /* CreateSavingViewController.swift in Sources */,
+				C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */,
 				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
 				21273A0B221A8BC40094933D /* DashboardPrimaryContentViewController.swift in Sources */,
 				C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */,
 				2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */,
-				C31C9DC822212258006D7CC6 /* SavingsMain.swift in Sources */,
 				2140AC3D221F0D0900897CD6 /* FamilyViewController.swift in Sources */,
 				C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,

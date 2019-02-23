@@ -35,13 +35,19 @@ class DashboardPrimary {
     }
     
     func updateYourAccount(response: [String: Any]) {
+        var graphData: [(Int, Int64)] = []
+        let datas = response["graph"] as! [[Any]]
+        for data in datas {
+            graphData.append((data[0] as! Int, data[1] as! Int64))
+        }
+        
         self.yourAccount = Account(
             number: response["accountNumber"] as! String,
             name: response["name"] as! String,
             activeBalance: response["activeBalance"] as! Int64,
             totalBalance: response["totalBalance"] as! Int64,
             weekDelta: response["weekDelta"] as! Int64,
-            weekGraphData: response["graph"] as! [(Int, Int64)]
+            weekGraphData: graphData
         )
         
         self.isYourAccountInitialized = false

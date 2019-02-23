@@ -1,5 +1,5 @@
 //
-//  SavingsMain.swift
+//  SavingsPage.swift
 //  Moneywell
 //
 //  Created by Faza Fahleraz on 23/02/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SavingsMain {
+class SavingsPage {
     let accountNumber: String
     var personalSavings: [Saving]
     var familySavings: [FamilySaving]
