@@ -202,8 +202,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="380" height="389"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBO-t0-ZEx">
-                                <rect key="frame" x="134" y="52" width="112" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Active Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBO-t0-ZEx">
+                                <rect key="frame" x="106.66666666666669" y="52" width="167" height="25"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -218,7 +218,7 @@
                                 <rect key="frame" x="123.66666666666669" y="147" width="133" height="23.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaR-5Z-VUr">
-                                        <rect key="frame" x="0.0" y="1.6666666666666572" width="68" height="20"/>
+                                        <rect key="frame" x="5.6843418860808015e-14" y="2.6666666666667425" width="68" height="20"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -244,7 +244,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="HaR-5Z-VUr" firstAttribute="centerY" secondItem="XoN-f6-hAp" secondAttribute="centerY" id="Jkm-gA-CqX"/>
+                                    <constraint firstItem="HaR-5Z-VUr" firstAttribute="centerY" secondItem="XoN-f6-hAp" secondAttribute="centerY" constant="2.0000000000000764" id="Jkm-gA-CqX"/>
                                     <constraint firstItem="XoN-f6-hAp" firstAttribute="height" secondItem="31J-bj-bFG" secondAttribute="height" id="L25-dl-IHV"/>
                                     <constraint firstItem="XoN-f6-hAp" firstAttribute="top" secondItem="31J-bj-bFG" secondAttribute="top" id="RHk-el-O3k"/>
                                     <constraint firstAttribute="trailing" secondItem="XoN-f6-hAp" secondAttribute="trailing" id="RPo-wg-DU2"/>
@@ -392,13 +392,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-Bp-iUJ">
-                                                    <rect key="frame" x="289" y="25.333333333333329" width="75" height="24"/>
+                                                    <rect key="frame" x="289" y="25.666666666666671" width="75" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
-                                                    <rect key="frame" x="16" y="33" width="25.666666666666671" height="31.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
+                                                    <rect key="frame" x="16" y="33" width="38" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -420,7 +420,7 @@
                                         <connections>
                                             <outlet property="amountLabel" destination="dZR-Bp-iUJ" id="aCq-xs-Gvk"/>
                                             <outlet property="companyLabel" destination="98c-l9-aTG" id="BUe-cz-sW0"/>
-                                            <outlet property="dateLabel" destination="jzv-XS-5gS" id="aoF-9S-N2E"/>
+                                            <outlet property="detailsLabel" destination="jzv-XS-5gS" id="E0C-jx-rlI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

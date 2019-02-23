@@ -12,8 +12,6 @@ import Charts
 let dummyYouChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 5000000), (6, 1200000)]
 let dummyFamilyChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2200000), (6, 1200000)]
 
-let dummyYourData: FamilyMember = FamilyMember(accountNumber: "3249100234", name: "Deryan", balance: 10000000, delta: -100000000000)
-
 // Chart constants
 let ChartLineWidth = CGFloat(1.8)
 let ChartCircleRadius = CGFloat(10)
@@ -53,6 +51,8 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     @IBOutlet weak var deltaContainer: UIView!
     @IBOutlet weak var lineChart: LineChartView!
     
+    lazy var dashboardPrimary = DashboardPrimary(accountNumber: "84848448")
+    
     var slides: [Slide] = []
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -75,7 +75,7 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     
     func updateViewFromModel() {
         // Update balanceLabel
-        balanceLabel.text = dummyYourData.balance.currencyFormat
+        balanceLabel.text = dashboardPrimary.yourAccount.totalBalance.currencyFormat
         
         // Update deltaLabel
         updateDeltaLabel()
@@ -85,17 +85,18 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
     }
     
     func updateDeltaLabel() {
-        if dummyYourData.delta > 0 {
+        let weekDelta = dashboardPrimary.yourAccount.weekDelta
+        if weekDelta > 0 {
             deltaLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-            let deltaString = "+" + dummyYourData.delta.kmFormatted
+            let deltaString = "+" + weekDelta.kmFormatted
             deltaLabel.text = deltaString
-        } else if dummyYourData.delta == 0 {
+        } else if weekDelta == 0 {
             deltaLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-            let deltaString = String(dummyYourData.delta)
+            let deltaString = String(weekDelta.kmFormatted)
             deltaLabel.text = deltaString
         } else {
             deltaLabel.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
-            let deltaString = "-" + abs(dummyYourData.delta).kmFormatted
+            let deltaString = "-" + abs(weekDelta).kmFormatted
             deltaLabel.text = deltaString
         }
     }

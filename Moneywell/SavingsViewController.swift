@@ -8,46 +8,12 @@
 
 import UIKit
 
-struct Saving {
-    var name: String
-    var balance: Int64
-    var isFamily: Bool
-    
-    init(name: String, balance: Int64) {
-        self.name = name
-        self.balance = balance
-        self.isFamily = false
-    }
-    
-    init(name: String, balance: Int64, isFamily: Bool) {
-        self.name = name
-        self.balance = balance
-        self.isFamily = isFamily
-    }
-}
-
-// Dummy data
-let dummyPersonalSavings: [Saving] = [
-    Saving(name: "Food", balance: 539000),
-    Saving(name: "Movie", balance: 92000)
-]
-
-let dummyFamilySavings: [Saving] = [
-    Saving(name: "Holiday to Ibiza", balance: 10540000, isFamily: true),
-    Saving(name: "Healthcare", balance: 21550000, isFamily: true)
-]
-
 class SavingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -64,7 +30,6 @@ class SavingsViewController: UIViewController {
             
         }
     }
-
 }
 
 extension SavingsViewController: UITableViewDataSource {
