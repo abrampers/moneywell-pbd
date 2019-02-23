@@ -65,7 +65,8 @@ class DashboardDrawer {
                 number: account["accountNumber"] as! String,
                 name: account["name"] as! String,
                 activeBalance: account["activeBalance"] as! Int64,
-                totalBalance: account["totalBalance"] as! Int64
+                totalBalance: account["totalBalance"] as! Int64,
+                weekDelta: account["weekDelta"] as! Int64
             ))
         }
 
@@ -75,6 +76,7 @@ class DashboardDrawer {
                 name: account["name"] as! String,
                 activeBalance: account["activeBalance"] as! Int64,
                 totalBalance: account["totalBalance"] as! Int64,
+                weekDelta: account["weekDelta"] as! Int64,
                 isChild: true
             ))
         }

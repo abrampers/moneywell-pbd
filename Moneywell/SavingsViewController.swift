@@ -10,7 +10,7 @@ import UIKit
 
 class SavingsViewController: UIViewController {
     
-    lazy var savingsMain = SavingsMain(accountNumber: "84848484")
+    lazy var savingsPage = SavingsPage(accountNumber: "84848484")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +46,9 @@ extension SavingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case TableSection.personal.rawValue:
-            return self.savingsMain.personalSavings.count
+            return self.savingsPage.personalSavings.count
         case TableSection.family.rawValue:
-            return self.savingsMain.familySavings.count
+            return self.savingsPage.familySavings.count
         default: return 0
         }
     }
@@ -71,11 +71,11 @@ extension SavingsViewController: UITableViewDataSource {
         
         // Cell content
         if indexPath.section == TableSection.personal.rawValue {
-            let saving = self.savingsMain.personalSavings[indexPath.row]
+            let saving = self.savingsPage.personalSavings[indexPath.row]
             cell.savingNameLabel?.text = saving.name
             cell.savingBalanceLabel?.text = saving.balance.currencyFormat
         } else {
-            let saving = self.savingsMain.familySavings[indexPath.row]
+            let saving = self.savingsPage.familySavings[indexPath.row]
             cell.savingNameLabel?.text = saving.name
             cell.savingBalanceLabel?.text = saving.balance.currencyFormat
         }

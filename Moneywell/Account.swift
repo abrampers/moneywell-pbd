@@ -16,9 +16,10 @@ struct Account {
     var dayDelta: Int64
     var weekDelta: Int64
     var monthDelta: Int64
+    var weekGraphData: [(Int, Int64)]
     var isChild: Bool
     
-    init(number: String, name: String, activeBalance: Int64, totalBalance: Int64, dayDelta: Int64 = 0, weekDelta: Int64 = 0, monthDelta: Int64 = 0, isChild: Bool = false) {
+    init(number: String, name: String, activeBalance: Int64, totalBalance: Int64, dayDelta: Int64 = 0, weekDelta: Int64 = 0, monthDelta: Int64 = 0, weekGraphData: [(Int, Int64)] = [], isChild: Bool = false) {
         self.number = number
         self.name = name
         self.activeBalance = activeBalance
@@ -26,6 +27,7 @@ struct Account {
         self.dayDelta = dayDelta
         self.weekDelta = weekDelta
         self.monthDelta = monthDelta
+        self.weekGraphData = weekGraphData
         self.isChild = isChild
     }
 }
