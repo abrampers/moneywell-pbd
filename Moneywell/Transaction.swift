@@ -15,3 +15,11 @@ struct Transaction {
     var amount: Int64
     var category: String
 }
+
+extension Date {
+    var ddyymmFormat: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: self)
+    }
+}

@@ -32,9 +32,21 @@ let ButtonCornerRadius = CGFloat(28)
 let dummySavingDetailData: SavingDetail = SavingDetail(balance: 1000000, todayDelta: -500000, thisWeekDelta: 1000500, thisMonthDelta: 2560000)
 let dummySavingChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2000000), (6, 1200000)]
 
-let dummySavingMembers: [FamilyMember] = [
-    FamilyMember(accountNumber: "3249100234", name: "Abram", balance: 100000, delta: 10000),
-    FamilyMember(accountNumber: "3249100234", name: "Nicho", balance: 100000, delta: 10000)
+let dummySavingMembers: [Account] = [
+    Account(
+        number: "3249100234",
+        name: "Faza Fahleraz",
+        activeBalance: 160000,
+        totalBalance: -830000,
+        weekDelta: 2828
+    ),
+    Account(
+        number: "3243330234",
+        name: "Abram Perdanaputra",
+        activeBalance: 838383,
+        totalBalance: 838383,
+        weekDelta: -2828
+    ),
 ]
 
 let dummyRecentInOut: [RecentTransaction] = [
@@ -105,11 +117,11 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
     }
     
     func updateDeltaLabel(label deltaLabel: UILabel, withDelta delta: Int64) {
-        if dummyYourData.delta > 0 {
+        if delta > 0 {
             deltaLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
             let deltaString = "+" + delta.kmFormatted
             deltaLabel.text = deltaString
-        } else if dummyYourData.delta == 0 {
+        } else if delta == 0 {
             deltaLabel.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
             let deltaString = String(delta)
             deltaLabel.text = deltaString
@@ -179,17 +191,6 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
         
         return data
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension SavingDetailViewController: UITableViewDataSource {

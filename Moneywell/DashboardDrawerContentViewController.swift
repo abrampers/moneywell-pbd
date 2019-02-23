@@ -40,7 +40,6 @@ class DashboardDrawerContentViewController: UIViewController {
         super.viewDidLoad()
 
         gripperView.layer.cornerRadius = 2.5
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

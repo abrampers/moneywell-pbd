@@ -21,7 +21,7 @@ class DashboardDrawer {
                 number: "3249100234",
                 name: "Faza Fahleraz",
                 activeBalance: 160000,
-                totalBalance: -830000,
+                totalBalance: 830000,
                 weekDelta: 2828
             ),
             Account(
@@ -49,37 +49,30 @@ class DashboardDrawer {
                 category: "Faza Fahleraz"
             )
         ]
+        
+        let updateFamilyAccountsRequest = HTTPRequest(
+            url: "https://moneywell-backend.herokuapp.com/api/families?accountNumber=\(2558408)",
+            completionHandler: updateFamilyAccounts
+        )
+        updateFamilyAccountsRequest.resume()
+        
+        let updateRecentFamilyTransactionsRequest = HTTPRequest(
+            url: "https://moneywell-backend.herokuapp.com/api/families?accountNumber=\(2558408)",
+            completionHandler: updateRecentFamilyTransactions
+        )
+        updateRecentFamilyTransactionsRequest.resume()
     }
-}
-
-extension Int64 {
-    var kmFormatted: String {
-        let locale = Locale(identifier: "id_ID")
+    
+    func updateFamilyAccounts(response: Dictionary<String, Any>) {
+        let childs = response["childs"] as! Array<Any>
+        let adults = response["adults"] as! Array<Any>
         
-        if self >= 10000 && self <= 999999 {
-            return String(format: "%.1fK", locale: locale, Double(self)/1000).replacingOccurrences(of: ",0", with: "")
+        for case let account as Account in adults {
+            print(account.number)
         }
-        
-        if self > 999999 && self <= 999999999 {
-            return String(format: "%.1fM", locale: locale, Double(self)/1000000).replacingOccurrences(of: ",0", with: "")
-        }
-        
-        if self > 999999999 && self <= 999999999999 {
-            return String(format: "%.1fB", locale: locale, Double(self)/1000000000).replacingOccurrences(of: ",0", with: "")
-        }
-        
-        if self > 999999999999 {
-            return String(format: "%.1fT", locale: locale, Double(self)/1000000000000).replacingOccurrences(of: ",0", with: "")
-        }
-        
-        return String(format: "%.0f", locale: Locale.current, Double(self))
     }
-}
-
-extension Date {
-    var ddyymmFormat: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        return formatter.string(from: self)
+    
+    func updateRecentFamilyTransactions(response: Dictionary<String, Any>) {
+        
     }
 }

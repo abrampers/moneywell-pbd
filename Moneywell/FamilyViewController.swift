@@ -8,30 +8,33 @@
 
 import UIKit
 
+let dummyFamilyAccounts = [
+    Account(
+        number: "3249100234",
+        name: "Faza Fahleraz",
+        activeBalance: 160000,
+        totalBalance: -830000,
+        weekDelta: 2828
+    ),
+    Account(
+        number: "3243330234",
+        name: "Abram Perdanaputra",
+        activeBalance: 838383,
+        totalBalance: 838383,
+        weekDelta: -2828
+    ),
+]
+
 class FamilyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension FamilyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyFamilyData.count
+        return dummyFamilyAccounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,10 +42,10 @@ extension FamilyViewController: UITableViewDataSource {
         
         cell.layer.cornerRadius = CellCornerRadius
         
-        let member = dummyFamilyData[indexPath.row]
+        let member = dummyFamilyAccounts[indexPath.row]
         cell.memberImage = nil
         cell.memberNameLabel.text = member.name
-        cell.memberAccountNumberLabel.text = member.accountNumber
+        cell.memberAccountNumberLabel.text = member.number
         
         return cell
     }

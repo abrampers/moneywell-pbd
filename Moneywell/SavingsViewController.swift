@@ -9,6 +9,8 @@
 import UIKit
 
 class SavingsViewController: UIViewController {
+    
+    lazy var savingsMain = SavingsMain(accountNumber: "84848484")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +46,9 @@ extension SavingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case TableSection.personal.rawValue:
-            return dummyPersonalSavings.count
+            return self.savingsMain.personalSavings.count
         case TableSection.family.rawValue:
-            return dummyFamilySavings.count
+            return self.savingsMain.familySavings.count
         default: return 0
         }
     }
@@ -68,9 +70,15 @@ extension SavingsViewController: UITableViewDataSource {
         cell.clipsToBounds = true
         
         // Cell content
-        let saving = indexPath.section == TableSection.personal.rawValue ? dummyPersonalSavings[indexPath.row] : dummyFamilySavings[indexPath.row]
-        cell.savingNameLabel?.text = saving.name
-        cell.savingBalanceLabel?.text = saving.balance.currencyFormat
+        if indexPath.section == TableSection.personal.rawValue {
+            let saving = self.savingsMain.personalSavings[indexPath.row]
+            cell.savingNameLabel?.text = saving.name
+            cell.savingBalanceLabel?.text = saving.balance.currencyFormat
+        } else {
+            let saving = self.savingsMain.familySavings[indexPath.row]
+            cell.savingNameLabel?.text = saving.name
+            cell.savingBalanceLabel?.text = saving.balance.currencyFormat
+        }
         
         // Arrow
         cell.tintColor = UIColor.white
