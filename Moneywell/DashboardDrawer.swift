@@ -18,35 +18,21 @@ class DashboardDrawer {
         
         familyAccounts = [
             Account(
-                number: "3249100234",
-                name: "Faza Fahleraz",
-                activeBalance: 160000,
-                totalBalance: 830000,
-                weekDelta: 2828
-            ),
-            Account(
-                number: "3243330234",
-                name: "Abram Perdanaputra",
-                activeBalance: 838383,
-                totalBalance: 838383,
-                weekDelta: -2828
-            ),
+                number: "--",
+                name: "--",
+                activeBalance: 0,
+                totalBalance: 0,
+                weekDelta: 0
+            )
         ]
         
         recentFamilyTransactions = [
             Transaction(
                 date: Date(timeIntervalSince1970: 0),
-                title: "Allbirds, Inc.",
-                accountName: "Faza Fahleraz",
-                amount: 1403000,
-                category: "Clothing"
-            ),
-            Transaction(
-                date: Date(timeIntervalSince1970: 0),
-                title: "Apple, Inc.",
-                accountName: "Faza",
-                amount: 1403000,
-                category: "Faza Fahleraz"
+                title: "--",
+                accountName: "--",
+                amount: 0,
+                category: "--"
             )
         ]
         

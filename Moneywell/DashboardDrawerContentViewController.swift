@@ -41,8 +41,8 @@ class DashboardDrawerContentViewController: UIViewController {
 
         gripperView.layer.cornerRadius = 2.5
         
-        NotificationCenter.default.addObserver(self, selector: #selector(didFamilyAccountsUpdated), name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didRecentFamilyTransactionsUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(familyAccountsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(recentFamilyTransactionsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,12 +55,12 @@ class DashboardDrawerContentViewController: UIViewController {
         self.pulleyViewController?.bounceDrawer()
     }
     
-    @objc func didFamilyAccountsUpdated() {
+    @objc func familyAccountsDidUpdated() {
         print(self.dashboardDrawer.familyAccounts)
         print("kon")
     }
     
-    @objc func didRecentFamilyTransactionsUpdated() {
+    @objc func recentFamilyTransactionsDidUpdated() {
         print(self.dashboardDrawer.recentFamilyTransactions)
         print("tol")
     }

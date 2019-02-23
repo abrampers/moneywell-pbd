@@ -15,12 +15,31 @@ class DashboardPrimary {
     init(accountNumber: String) {
         self.accountNumber = accountNumber
         
-        yourAccount = Account(
-            number: "3249100234",
-            name: "Faza Fahleraz",
-            activeBalance: 160000,
-            totalBalance: -830000,
-            weekDelta: 2828
+        self.yourAccount = Account(
+            number: "--",
+            name: "--",
+            activeBalance: 0,
+            totalBalance: 0,
+            weekDelta: 0
         )
+        
+        let updateYourAccountRequest = HTTPRequest(
+            url: "https://moneywell-backend.herokuapp.com/api/families?accountNumber=\(2558408)",
+            completionHandler: updateYourAccount
+        )
+        updateYourAccountRequest.resume()
+    }
+    
+    func updateYourAccount(response: [String: Any]) {
+        let user = response["user"] as! Dictionary<String, Any>
+        
+        self.yourAccount = Account(
+            number: user["accountNumber"] as! String,
+            name: user["name"] as! String,
+            activeBalance: user["activeBalance"] as! Int64,
+            totalBalance: user["totalBalance"] as! Int64
+        )
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardPrimaryYourAccountUpdated"), object: self)
     }
 }
