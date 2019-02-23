@@ -11,9 +11,11 @@ import Foundation
 class DashboardPrimary {
     let accountNumber: String
     var yourAccount: Account
+    var isYourAccountInitialized: Bool
     
     init(accountNumber: String) {
         self.accountNumber = accountNumber
+        self.isYourAccountInitialized = false
         
         self.yourAccount = Account(
             number: "--",
@@ -42,6 +44,7 @@ class DashboardPrimary {
             totalBalance: user["totalBalance"] as! Int64
         )
         
+        self.isYourAccountInitialized = false
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardPrimaryYourAccountUpdated"), object: self)
     }
 }
