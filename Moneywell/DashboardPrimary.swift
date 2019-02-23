@@ -22,7 +22,9 @@ class DashboardPrimary {
             totalBalance: 0,
             weekDelta: 0
         )
-        
+    }
+    
+    func updateData() {
         let updateYourAccountRequest = HTTPRequest(
             url: "https://moneywell-backend.herokuapp.com/api/families?accountNumber=\(2558408)",
             completionHandler: updateYourAccount

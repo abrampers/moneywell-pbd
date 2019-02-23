@@ -49,6 +49,8 @@ class DashboardDrawerContentViewController: UIViewController {
         super.viewDidAppear(animated)
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(bounceDrawer), userInfo: nil, repeats: false)
+        
+        self.dashboardDrawer.updateData()
     }
     
     @objc fileprivate func bounceDrawer() {

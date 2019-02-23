@@ -75,6 +75,12 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
         NotificationCenter.default.addObserver(self, selector: #selector(yourAccountDidUpdated), name: Notification.Name(rawValue: "DashboardPrimaryYourAccountUpdated"), object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.dashboardPrimary.updateData()
+    }
+    
     func updateViewFromModel() {
         // Update balanceLabel
         balanceLabel.text = dashboardPrimary.yourAccount.totalBalance.currencyFormat
