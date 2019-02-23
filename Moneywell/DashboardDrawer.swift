@@ -12,9 +12,13 @@ class DashboardDrawer {
     let accountNumber: String
     var familyAccounts: [Account]
     var recentFamilyTransactions: [Transaction]
+    var isFamilyAccountsInitialized: Bool
+    var isRecentFamilyTransactionsInitialized: Bool
     
     init(accountNumber: String) {
         self.accountNumber = accountNumber
+        self.isFamilyAccountsInitialized = false
+        self.isRecentFamilyTransactionsInitialized = false
         
         familyAccounts = [
             Account(
@@ -75,6 +79,8 @@ class DashboardDrawer {
             ))
         }
         
+        self.isFamilyAccountsInitialized = true
+        
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: self)
     }
     
@@ -91,6 +97,7 @@ class DashboardDrawer {
                 category: transaction["category"] as! String
             ))
         }
+        self.isRecentFamilyTransactionsInitialized = true
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: self)
     }
