@@ -53,13 +53,14 @@ class FamilyDetailViewController: UIViewController, ChartViewDelegate {
         frame.size.height = tableView.contentSize.height
         tableView.frame = frame
         
-        print("FamilyDetail: ", tableView.frame.size)
+        print("FamilyDetail: ", tableViewHeight.constant)
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         super.updateViewConstraints()
         tableViewHeight.constant = tableView.contentSize.height
+        scrollView.sizeToFit()
     }
     
     func updateViewFromModel() {

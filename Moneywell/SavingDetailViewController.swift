@@ -96,7 +96,7 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
         frame.size.height = tableView.contentSize.height
         tableView.frame = frame
         
-        print("SavingDetail: ", tableView.frame.size)
+        print("SavingDetail: ", tableViewHeight.constant)
     }
     
     override func viewWillLayoutSubviews() {
