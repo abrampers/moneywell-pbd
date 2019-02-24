@@ -18,24 +18,19 @@ class SavingsPage {
         
         personalSavings = [
             Saving(
-                name: "Food",
+                name: "PS4",
                 balance: 539000
             ),
             Saving(
-                name: "Movie",
+                name: "Hanamasa",
                 balance: 92000
             )
         ]
         
         familySavings = [
             FamilySaving(
-                name: "Holiday to Ibiza",
+                name: "Honeymoon to Maldives",
                 balance: 10540000,
-                members: []
-            ),
-            FamilySaving(
-                name: "Healthcare",
-                balance: 21550000,
                 members: []
             )
         ]

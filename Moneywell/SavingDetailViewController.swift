@@ -29,31 +29,31 @@ struct RecentTransaction {
 
 let ButtonCornerRadius = CGFloat(28)
 
-let dummySavingDetailData: SavingDetail = SavingDetail(balance: 1000000, todayDelta: -500000, thisWeekDelta: 1000500, thisMonthDelta: 2560000)
+let dummySavingDetailData: SavingDetail = SavingDetail(balance: 10540000, todayDelta: -500000, thisWeekDelta: 1000500, thisMonthDelta: 2560000)
 let dummySavingChartData: [(Int, Int64)] = [(0, 1000000), (1, 2000000), (2, 1500000), (3, 1700000), (4, 1000000), (5, 2000000), (6, 1200000)]
 
 let dummySavingMembers: [Account] = [
     Account(
         number: "3249100234",
-        name: "Faza Fahleraz",
+        name: "Nicholas Rianto Putra",
         activeBalance: 160000,
         totalBalance: -830000,
         weekDelta: 2828
     ),
     Account(
-        number: "3243330234",
-        name: "Abram Perdanaputra",
-        activeBalance: 838383,
-        totalBalance: 838383,
-        weekDelta: -2828
-    ),
+        number: "3249100234",
+        name: "Jennie Kim",
+        activeBalance: 160000,
+        totalBalance: -830000,
+        weekDelta: 2828
+    )
 ]
 
 let dummyRecentInOut: [RecentTransaction] = [
-    RecentTransaction(name: "Bambang", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .withdraw),
-    RecentTransaction(name: "Faza", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .deposit),
-    RecentTransaction(name: "Nicho", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .deposit),
-    RecentTransaction(name: "Deryan", date: Date(timeIntervalSince1970: 0), amount: 100000, type: .withdraw)
+    RecentTransaction(name: "Jennie Kim", date: Date(timeIntervalSince1970: 1550958944), amount: 100000, type: .withdraw),
+    RecentTransaction(name: "Nicholas Rianto Putra", date: Date(timeIntervalSince1970: 1550948844), amount: 100000, type: .deposit),
+    RecentTransaction(name: "Nicholas Rianto Putra", date: Date(timeIntervalSince1970: 1550938744), amount: 100000, type: .deposit),
+    RecentTransaction(name: "Jennie Kim", date: Date(timeIntervalSince1970: 1550928644), amount: 100000, type: .withdraw)
 ]
 
 
@@ -95,6 +95,8 @@ class SavingDetailViewController: UIViewController, ChartViewDelegate {
         var frame = tableView.frame
         frame.size.height = tableView.contentSize.height
         tableView.frame = frame
+        
+        print("SavingDetail: ", tableView.frame.size)
     }
     
     override func viewWillLayoutSubviews() {

@@ -16,10 +16,13 @@ let dummySavings = [
 
 let dummyAccount = Account(
     number: "3249100234",
-    name: "Faza Fahleraz",
+    name: "Ella Gross",
     activeBalance: 160000,
     totalBalance: -830000,
-    weekDelta: 2828
+    dayDelta: 152,
+    weekDelta: 2828,
+    monthDelta: 8045,
+    isChild: true
 )
 
 class FamilyDetailViewController: UIViewController, ChartViewDelegate {
@@ -49,6 +52,8 @@ class FamilyDetailViewController: UIViewController, ChartViewDelegate {
         var frame = tableView.frame
         frame.size.height = tableView.contentSize.height
         tableView.frame = frame
+        
+        print("FamilyDetail: ", tableView.frame.size)
     }
     
     override func viewWillLayoutSubviews() {
@@ -62,8 +67,8 @@ class FamilyDetailViewController: UIViewController, ChartViewDelegate {
         memberAccountNumberLabel.text = dummyAccount.number
         memberBalanceLabel.text = dummyAccount.activeBalance.currencyFormat
         updateDeltaLabel(label: todayDeltaLabel, withDelta: dummyAccount.dayDelta)
-        updateDeltaLabel(label: todayDeltaLabel, withDelta: dummyAccount.weekDelta)
-        updateDeltaLabel(label: todayDeltaLabel, withDelta: dummyAccount.monthDelta)
+        updateDeltaLabel(label: thisWeekDeltaLabel, withDelta: dummyAccount.weekDelta)
+        updateDeltaLabel(label: thisMonthDeltaLabel, withDelta: dummyAccount.monthDelta)
         
         updateChart(withData: dummySavingChartData)
     }
@@ -168,9 +173,13 @@ extension FamilyDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyDetailSavingCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyDetailSavingCell", for: indexPath) as! FamilyDetailSavingCell
             
             cell.layer.cornerRadius = CellCornerRadius
+            
+            let saving = dummySavings[indexPath.row]
+            cell.savingNameLabel.text = saving.name
+            cell.savingBalanceLabel.text = saving.balance.currencyFormat
             
             return cell
         } else {

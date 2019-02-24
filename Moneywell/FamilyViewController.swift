@@ -10,22 +10,22 @@ import UIKit
 
 let dummyFamilyAccounts = [
     Account(
-        number: "3249100234",
-        name: "Faza Fahleraz",
+        number: "2558408",
+        name: "Nicholas Rianto Putra",
         activeBalance: 160000,
         totalBalance: -830000,
         weekDelta: 2828
     ),
     Account(
-        number: "3243330234",
-        name: "Abram Perdanaputra",
+        number: "3875229",
+        name: "Jennie Kim",
         activeBalance: 838383,
         totalBalance: 838383,
         weekDelta: -2828
     ),
     Account(
-        number: "3243330234",
-        name: "Nicholas Rianto PUtra",
+        number: "5554042",
+        name: "Ella Gross",
         activeBalance: 838383,
         totalBalance: 838383,
         weekDelta: -2828,
@@ -34,6 +34,9 @@ let dummyFamilyAccounts = [
 ]
 
 class FamilyViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    lazy var familyView = FamilyView(accountNumber: "84848484")
     
     @IBAction func createAccountTapped(_ sender: UIBarButtonItem) {
         
@@ -59,6 +62,14 @@ class FamilyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(familyAccountsDidUpdated), name: Notification.Name(rawValue: "FamilyViewFamilyAccountsUpdated"), object: nil)
+    }
+    
+    @objc func familyAccountsDidUpdated() {
+        DispatchQueue.main.async {
+            self.tableView.reloadSections(IndexSet(arrayLiteral: 0), with: UITableView.RowAnimation.automatic)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
