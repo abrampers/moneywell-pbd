@@ -331,7 +331,6 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-TO-imp">
                                 <rect key="frame" x="171" y="176" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneywell" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiS-Gh-YBh">
                                 <rect key="frame" x="125" y="320.33333333333331" width="130" height="27"/>
@@ -977,7 +976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hse-mh-HJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6012" y="4119"/>
+            <point key="canvasLocation" x="6012" y="2201"/>
         </scene>
         <!--Create New Saving-->
         <scene sceneID="1kP-l8-aTx">
@@ -1238,7 +1237,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-jz-ccm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-jz-ccm">
                                 <rect key="frame" x="0.0" y="140" width="375" height="589"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHw-Yn-C7M">
@@ -1455,6 +1454,9 @@
                                                         <constraint firstAttribute="bottom" secondItem="IlV-Ry-hQH" secondAttribute="bottom" constant="11" id="x0Z-tc-L2L"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <segue destination="CpZ-Ie-kGu" kind="show" id="1iD-cd-nib"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -1592,6 +1594,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98C-IC-aj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3235" y="950"/>
+        </scene>
+        <!--Access Control-->
+        <scene sceneID="186-Zq-iMf">
+            <objects>
+                <viewController id="CpZ-Ie-kGu" customClass="AccessControlViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbY-oC-pTB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-Fw-gXj">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccessControlCell" rowHeight="85" id="X2u-1v-Bs0" customClass="AccessControlCell" customModule="Moneywell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X2u-1v-Bs0" id="JCP-EX-3Yx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtT-Gw-TVF">
+                                                    <rect key="frame" x="31.000000000000007" y="22" width="66.666666666666686" height="41"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                                    <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FtT-Gw-TVF" secondAttribute="bottom" constant="11" id="DWf-K4-HIX"/>
+                                                <constraint firstItem="FtT-Gw-TVF" firstAttribute="leading" secondItem="JCP-EX-3Yx" secondAttribute="leadingMargin" constant="16" id="F9b-9H-U4v"/>
+                                                <constraint firstItem="FtT-Gw-TVF" firstAttribute="top" secondItem="JCP-EX-3Yx" secondAttribute="topMargin" constant="11" id="bhs-wB-dD0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="FtT-Gw-TVF" id="2JL-z9-STj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CpZ-Ie-kGu" id="jOX-KF-4Ng"/>
+                                    <outlet property="delegate" destination="CpZ-Ie-kGu" id="C2w-Ex-3tB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94902592900000005" green="0.94900828599999998" blue="0.94902032609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dNU-Fw-gXj" firstAttribute="top" secondItem="JWU-w5-WwY" secondAttribute="top" id="1hH-vZ-IA9"/>
+                            <constraint firstItem="JWU-w5-WwY" firstAttribute="bottom" secondItem="dNU-Fw-gXj" secondAttribute="bottom" id="dia-XG-g62"/>
+                            <constraint firstItem="dNU-Fw-gXj" firstAttribute="leading" secondItem="JWU-w5-WwY" secondAttribute="leading" id="jhI-ML-BbG"/>
+                            <constraint firstItem="JWU-w5-WwY" firstAttribute="trailing" secondItem="dNU-Fw-gXj" secondAttribute="trailing" id="n1r-kB-7T7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JWU-w5-WwY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Access Control" id="Idl-Zp-OH8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUC-xr-B5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6088.8000000000002" y="4118.7192118226603"/>
         </scene>
     </scenes>
     <resources>

@@ -21,6 +21,7 @@
 		21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0D82221A0B4002F2FB9 /* Constants.swift */; };
 		21DCB0E32221D37C002F2FB9 /* FamilyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0E22221D37C002F2FB9 /* FamilyDetailViewController.swift */; };
 		21DCB0E722221F9F002F2FB9 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0E622221F9F002F2FB9 /* FamilyView.swift */; };
+		21DCB0E922222EDD002F2FB9 /* AccessControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0E822222EDD002F2FB9 /* AccessControlViewController.swift */; };
 		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		21E32514221D7BE000394930 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E32513221D7BE000394930 /* SavingsViewController.swift */; };
@@ -58,6 +59,7 @@
 		21DCB0D82221A0B4002F2FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21DCB0E22221D37C002F2FB9 /* FamilyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDetailViewController.swift; sourceTree = "<group>"; };
 		21DCB0E622221F9F002F2FB9 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
+		21DCB0E822222EDD002F2FB9 /* AccessControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlViewController.swift; sourceTree = "<group>"; };
 		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		21E32513221D7BE000394930 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				2140AC36221EEB4C00897CD6 /* ChangeMemberViewController.swift */,
 				2140AC3C221F0D0900897CD6 /* FamilyViewController.swift */,
 				21DCB0E22221D37C002F2FB9 /* FamilyDetailViewController.swift */,
+				21DCB0E822222EDD002F2FB9 /* AccessControlViewController.swift */,
 				212739FD221A860A0094933D /* Assets.xcassets */,
 				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
 				21273A02221A860A0094933D /* Info.plist */,
@@ -307,6 +310,7 @@
 				C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */,
 				2140AC37221EEB4C00897CD6 /* ChangeMemberViewController.swift in Sources */,
 				2140AC3D221F0D0900897CD6 /* FamilyViewController.swift in Sources */,
+				21DCB0E922222EDD002F2FB9 /* AccessControlViewController.swift in Sources */,
 				21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */,
 				C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,
