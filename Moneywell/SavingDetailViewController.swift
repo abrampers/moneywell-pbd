@@ -38,7 +38,7 @@ let dummySavingMembers: [Account] = [
         name: "Nicholas Rianto Putra",
         activeBalance: 160000,
         totalBalance: -830000,
-        weekDelta: 2828
+        weekDelta: 2827
     ),
     Account(
         number: "3249100234",
