@@ -481,7 +481,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-XS-5gS">
-                                                    <rect key="frame" x="16" y="36.000000000000007" width="38" height="12"/>
+                                                    <rect key="frame" x="16" y="35.999999999999993" width="38" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="uOr-UY-Kxp"/>
                                                     </constraints>
@@ -1005,7 +1005,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMF-wz-eME">
                                 <rect key="frame" x="27.666666666666657" y="304" width="320" height="75"/>
@@ -1229,7 +1229,7 @@
             </objects>
             <point key="canvasLocation" x="276" y="616"/>
         </scene>
-        <!--Family Detail View Controller-->
+        <!--Family Member Detail-->
         <scene sceneID="1cN-ZH-OYb">
             <objects>
                 <viewController id="Kr3-Ck-yQJ" customClass="FamilyDetailViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
@@ -1455,7 +1455,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <segue destination="CpZ-Ie-kGu" kind="show" id="1iD-cd-nib"/>
+                                                    <segue destination="CpZ-Ie-kGu" kind="show" identifier="AccessControl" id="1iD-cd-nib"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -1499,6 +1499,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DcL-rN-QcD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Family Member Detail" id="7PI-0K-rra">
+                        <barButtonItem key="backBarButtonItem" title="Family Member Detail" id="gMZ-3E-veM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lineChart" destination="erg-2Z-hYv" id="715-Na-wfx"/>
                         <outlet property="memberAccountNumberLabel" destination="vwc-wA-W2j" id="7v3-gT-QIw"/>
@@ -1517,7 +1520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gm4-8e-bMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="4118.7192118226603"/>
+            <point key="canvasLocation" x="5222" y="4586"/>
         </scene>
         <!--You-->
         <scene sceneID="c6M-1o-0ve">
@@ -1651,7 +1654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUC-xr-B5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6088.8000000000002" y="4118.7192118226603"/>
+            <point key="canvasLocation" x="6474" y="4586"/>
         </scene>
     </scenes>
     <resources>

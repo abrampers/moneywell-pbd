@@ -26,6 +26,8 @@ let dummyAccount = Account(
 )
 
 class FamilyDetailViewController: UIViewController, ChartViewDelegate {
+    var account: Account?
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var memberImage: UIImageView!
     @IBOutlet weak var memberFullNameLabel: UILabel!
@@ -64,12 +66,12 @@ class FamilyDetailViewController: UIViewController, ChartViewDelegate {
     }
     
     func updateViewFromModel() {
-        memberFullNameLabel.text = dummyAccount.name
-        memberAccountNumberLabel.text = dummyAccount.number
-        memberBalanceLabel.text = dummyAccount.activeBalance.currencyFormat
-        updateDeltaLabel(label: todayDeltaLabel, withDelta: dummyAccount.dayDelta)
-        updateDeltaLabel(label: thisWeekDeltaLabel, withDelta: dummyAccount.weekDelta)
-        updateDeltaLabel(label: thisMonthDeltaLabel, withDelta: dummyAccount.monthDelta)
+        memberFullNameLabel.text = account!.name
+        memberAccountNumberLabel.text = account!.number
+        memberBalanceLabel.text = account!.activeBalance.currencyFormat
+        updateDeltaLabel(label: todayDeltaLabel, withDelta: account!.dayDelta)
+        updateDeltaLabel(label: thisWeekDeltaLabel, withDelta: account!.weekDelta)
+        updateDeltaLabel(label: thisMonthDeltaLabel, withDelta: account!.monthDelta)
         
         updateChart(withData: dummySavingChartData)
     }
@@ -151,15 +153,18 @@ class FamilyDetailViewController: UIViewController, ChartViewDelegate {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "AccessControl" {
+            if let cell = (sender as? ChangeAccessCell) {
+                cell.isSelected = false
+            }
+        }
     }
-    */
 
 }
 

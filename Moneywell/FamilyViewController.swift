@@ -12,23 +12,29 @@ let dummyFamilyAccounts = [
     Account(
         number: "2558408",
         name: "Nicholas Rianto Putra",
-        activeBalance: 160000,
-        totalBalance: -830000,
-        weekDelta: 2828
+        activeBalance: 160000000,
+        totalBalance: 1200000000,
+        dayDelta: 2903000,
+        weekDelta: 12985000,
+        monthDelta: 128957000
     ),
     Account(
         number: "3875229",
         name: "Jennie Kim",
-        activeBalance: 838383,
-        totalBalance: 838383,
-        weekDelta: -2828
+        activeBalance: 4508000,
+        totalBalance: 500000000,
+        dayDelta: 20000,
+        weekDelta: 2095800,
+        monthDelta: -1058900
     ),
     Account(
         number: "5554042",
         name: "Ella Gross",
-        activeBalance: 838383,
-        totalBalance: 838383,
-        weekDelta: -2828,
+        activeBalance: 300500,
+        totalBalance: 60000000,
+        dayDelta: 152,
+        weekDelta: 2828,
+        monthDelta: 8045,
         isChild: true
     ),
 ]
@@ -39,7 +45,6 @@ class FamilyViewController: UIViewController {
     lazy var familyView = FamilyView(accountNumber: "84848484")
     
     @IBAction func createAccountTapped(_ sender: UIBarButtonItem) {
-        
         let alert = UIAlertController(title: "What type of account would you like to add?", message: nil, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Invite Existing Account", style: .default , handler:{ (UIAlertAction)in
@@ -79,7 +84,7 @@ class FamilyViewController: UIViewController {
             if let cell = (sender as? FamilyMemberCell) {
                 cell.isSelected = false
                 if let memberName = cell.memberNameLabel.text, let familyMemberDetailVC = segue.destination as? FamilyDetailViewController {
-                    familyMemberDetailVC.navigationItem.title = memberName
+                    familyMemberDetailVC.account = cell.account
                 }
             }
         }
@@ -102,6 +107,7 @@ extension FamilyViewController: UITableViewDataSource {
         cell.childLabelContainer.layer.cornerRadius = DeltaContainerCornerRadius
         
         let member = dummyFamilyAccounts[indexPath.row]
+        cell.account = member
         cell.memberImage = nil
         cell.memberNameLabel.text = member.name
         cell.memberAccountNumberLabel.text = member.number
@@ -117,6 +123,7 @@ extension FamilyViewController: UITableViewDataSource {
 }
 
 class FamilyMemberCell: UITableViewCell {
+    var account: Account?
     @IBOutlet weak var memberImage: UIImageView!
     @IBOutlet weak var memberNameLabel: UILabel!
     @IBOutlet weak var memberAccountNumberLabel: UILabel!
