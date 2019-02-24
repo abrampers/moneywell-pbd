@@ -92,7 +92,7 @@ class DashboardDrawer {
         self.recentFamilyTransactions = []
         for case let transaction as Dictionary<String, Any> in transactions {
             self.recentFamilyTransactions.append(Transaction(
-                date: Date(timeIntervalSince1970: transaction["timestamp"] as! TimeInterval),
+                date: Date(timeIntervalSince1970: (transaction["timestamp"] as! Double) / 1000),
                 title: transaction["title"] as! String,
                 accountName: transaction["accountName"] as! String,
                 amount: transaction["amount"] as! Int64,
