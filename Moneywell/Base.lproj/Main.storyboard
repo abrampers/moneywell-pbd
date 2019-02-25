@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UuK-vc-Wr8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ht4-9M-IcI">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,14 +21,55 @@
                     </tabBar>
                     <connections>
                         <segue destination="paB-VJ-izL" kind="relationship" relationship="viewControllers" id="Uga-H4-D3N"/>
-                        <segue destination="7hC-1D-AsL" kind="relationship" relationship="viewControllers" id="yC8-v8-r62"/>
-                        <segue destination="vrd-YE-NwU" kind="relationship" relationship="viewControllers" id="nOb-hD-EiM"/>
+                        <segue destination="xWP-gu-Ntp" kind="relationship" relationship="viewControllers" id="mn5-XN-ojh"/>
+                        <segue destination="5go-J9-fWY" kind="relationship" relationship="viewControllers" id="jkC-oT-8GH"/>
                         <segue destination="msj-Vh-gKr" kind="relationship" relationship="viewControllers" id="wRe-Sc-gsj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgW-Kf-q7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1249" y="616"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="IBx-I6-jI4">
+            <objects>
+                <viewController id="xWP-gu-Ntp" customClass="PayViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mzh-zq-Usf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G6a-Up-rE6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="S3h-ty-o6a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vav-4y-ObG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="616"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="l2x-uq-OwW">
+            <objects>
+                <viewController id="5go-J9-fWY" customClass="CompassViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xDJ-8j-yk9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-5T-Pkz">
+                                <rect key="frame" x="22" y="298" width="331" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.395475834608078" green="0.8534589409828186" blue="0.69410049915313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="cxf-Fu-Sjj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MOt-Wx-p7u"/>
+                    <connections>
+                        <outlet property="compassImage" destination="8jO-5T-Pkz" id="URF-AT-Gsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw5-l5-20h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="1366.9950738916257"/>
         </scene>
         <!--Pulley View Controller-->
         <scene sceneID="I7H-wD-KAm">
@@ -370,114 +411,6 @@
             </objects>
             <point key="canvasLocation" x="1706" y="-8"/>
         </scene>
-        <!--Savings-->
-        <scene sceneID="Kxv-Vu-jwT">
-            <objects>
-                <viewController id="l8p-yN-pd8" customClass="SavingsViewController" customModule="Moneywell" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TP6-qj-ByA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-Dv-rjT">
-                                <rect key="frame" x="0.0" y="142" width="375" height="587"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SavingsCell" editingAccessoryType="disclosureIndicator" rowHeight="101" id="HsH-dl-39X" customClass="SavingsCell" customModule="Moneywell" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="101"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HsH-dl-39X" id="MXU-If-jHr">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="101"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Saving Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pb-PJ-SQq">
-                                                    <rect key="frame" x="16.000000000000007" y="19" width="123.66666666666669" height="31"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmV-YT-loH">
-                                                    <rect key="frame" x="16" y="55" width="167" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                    <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="dmV-YT-loH" firstAttribute="top" secondItem="3Pb-PJ-SQq" secondAttribute="bottom" constant="5" id="8LJ-Wb-Ltl"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Pb-PJ-SQq" secondAttribute="trailing" constant="20" symbolic="YES" id="9nR-Hm-919"/>
-                                                <constraint firstItem="3Pb-PJ-SQq" firstAttribute="leading" secondItem="MXU-If-jHr" secondAttribute="leading" constant="16" id="Fg7-as-2tp"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dmV-YT-loH" secondAttribute="trailing" constant="20" symbolic="YES" id="GXC-fq-daR"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dmV-YT-loH" secondAttribute="bottom" constant="6" id="YMd-uz-CcF"/>
-                                                <constraint firstItem="dmV-YT-loH" firstAttribute="leading" secondItem="MXU-If-jHr" secondAttribute="leading" constant="16" id="gp9-zu-tUM"/>
-                                                <constraint firstItem="3Pb-PJ-SQq" firstAttribute="top" secondItem="MXU-If-jHr" secondAttribute="topMargin" constant="8" id="xvq-uZ-iap"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                        <connections>
-                                            <outlet property="savingBalanceLabel" destination="dmV-YT-loH" id="pNG-Za-wGL"/>
-                                            <outlet property="savingNameLabel" destination="3Pb-PJ-SQq" id="mfj-oH-d9C"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="l8p-yN-pd8" id="bkx-I2-R9t"/>
-                                    <outlet property="delegate" destination="l8p-yN-pd8" id="McI-gI-Krg"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="3EH-Dv-rjT" firstAttribute="top" secondItem="lg4-8c-A3M" secondAttribute="top" constant="2" id="7iI-qQ-Kap"/>
-                            <constraint firstItem="3EH-Dv-rjT" firstAttribute="bottom" secondItem="lg4-8c-A3M" secondAttribute="bottom" id="ZAA-OB-t56"/>
-                            <constraint firstItem="3EH-Dv-rjT" firstAttribute="trailing" secondItem="lg4-8c-A3M" secondAttribute="trailing" id="gA1-9s-RDr"/>
-                            <constraint firstItem="3EH-Dv-rjT" firstAttribute="leading" secondItem="lg4-8c-A3M" secondAttribute="leading" id="tUJ-JZ-y7Z"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lg4-8c-A3M"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Savings" id="S1f-wm-Jc9">
-                        <barButtonItem key="backBarButtonItem" title="Savings" id="sDf-TF-SZX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nbS-H7-gT9">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xCk-iQ-Mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1708" y="616"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="beQ-WC-tFH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hC-1D-AsL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Navbar Savings Default" selectedImage="Navbar Savings Selected" id="6vr-Uv-hu3"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="k4d-A9-m7I">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iFV-wt-pi5">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="l8p-yN-pd8" kind="relationship" relationship="rootViewController" id="zOg-Wi-9ny"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2vI-HK-mCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="276" y="616"/>
-        </scene>
         <!--Account-->
         <scene sceneID="1cN-ZH-OYb">
             <objects>
@@ -528,42 +461,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gm4-8e-bMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1218.4000000000001" y="2300.9852216748768"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="RmU-8j-CIy">
-            <objects>
-                <viewController id="3t3-tz-7VT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dmu-d8-PkR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="cX4-Zo-5Ke"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sTA-bl-4Fl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xmf-8b-bNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1218.4000000000001" y="1438.6699507389162"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="cDw-SR-wtB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vrd-YE-NwU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0wT-PM-WOA"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="ymX-ag-uhu">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3t3-tz-7VT" kind="relationship" relationship="rootViewController" id="ukq-xA-fI0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D5R-fA-C8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="276" y="1438.6699507389162"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="b9f-Sa-1Kg">
@@ -632,8 +529,7 @@
         <image name="Navbar Dashboard Selected" width="27" height="25"/>
         <image name="Navbar Family Default" width="30" height="22"/>
         <image name="Navbar Family Selected" width="30" height="22"/>
-        <image name="Navbar Savings Default" width="28" height="28"/>
-        <image name="Navbar Savings Selected" width="28" height="28"/>
+        <image name="compass" width="294" height="204"/>
         <image name="logo" width="228" height="57"/>
         <image name="moneywell" width="228" height="57"/>
     </resources>
