@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Continuous location update is required to provide appropriate prayer times.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location is required to find the heading from you to Mecca.</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -18,7 +18,6 @@ class CompassViewController: UIViewController {
     
     let locationDelegate = LocationDelegate()
     var currentLocation: CLLocation? = nil
-    var currentLocationIsSet: Bool = false
     var targetLocationBearing: CGFloat { return currentLocation?.bearingToLocationRadian(self.targetLocation) ?? 0 }
     var targetLocation: CLLocation = CLLocation(latitude: 21.422684, longitude: 39.826192)
     
@@ -27,6 +26,7 @@ class CompassViewController: UIViewController {
         $0.desiredAccuracy = kCLLocationAccuracyBest
         $0.startUpdatingLocation()
         $0.startUpdatingHeading()
+        $0.startMonitoringSignificantLocationChanges()
         return $0
     }(CLLocationManager())
     
@@ -56,11 +56,7 @@ class CompassViewController: UIViewController {
         
         locationDelegate.locationCallback = { location in
             self.currentLocation = location
-            
-            if (self.currentLocation != nil) && (!self.currentLocationIsSet) {
-                self.requestCurrentLocationAddress()
-                self.currentLocationIsSet = true
-            }
+            self.requestCurrentLocationAddress()
         }
         
         locationDelegate.headingCallback = { newHeading in
@@ -100,6 +96,12 @@ class CompassViewController: UIViewController {
             }
             
             self.updateLocationLabel(withPlacemark: placemark)
+            
+            let timeZone = placemark.timeZone?.abbreviation()!
+//            let email = UserDefaults
+            let locationUpdateRequestURL = "http://3.1.35.180/api/timeSetting?lat=\(self.currentLocation!.coordinate.latitude)&lng=\(self.currentLocation!.coordinate.longitude)&timezone=\(timeZone ?? "GMT+7")&email="
+            let locationUpdateRequest = HTTPRequest(url: locationUpdateRequestURL, completionHandler: {(_: [String: Any]) -> Void in })
+            locationUpdateRequest.resume()
         }
     }
     
