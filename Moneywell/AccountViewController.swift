@@ -63,7 +63,17 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func questionsButtonTapped(_ sender: UIButton) {
-        
+        print("tapped")
+        let email = "abram.perdanaputra@gmail.com"
+        let subject = "Here's%20my%20question%20about%20Moneywell"
+        if let url = URL(string: "mailto:\(email)?subject=\(subject)") {
+            print("masuk")
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     /*
