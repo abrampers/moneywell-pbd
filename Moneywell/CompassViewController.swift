@@ -98,10 +98,12 @@ class CompassViewController: UIViewController {
             self.updateLocationLabel(withPlacemark: placemark)
             
             let timeZone = placemark.timeZone?.abbreviation()!
-//            let email = UserDefaults
-            let locationUpdateRequestURL = "http://3.1.35.180/api/timeSetting?lat=\(self.currentLocation!.coordinate.latitude)&lng=\(self.currentLocation!.coordinate.longitude)&timezone=\(timeZone ?? "GMT+7")&email="
+            let email = UserDefaults.user?.email
+            let locationUpdateRequestURL = "http://3.1.35.180/api/timeSetting?lat=\(self.currentLocation!.coordinate.latitude)&lng=\(self.currentLocation!.coordinate.longitude)&timezone=\(timeZone ?? "GMT+7")&email=\(email ?? "")"
             let locationUpdateRequest = HTTPRequest(url: locationUpdateRequestURL, completionHandler: {(_: [String: Any]) -> Void in })
             locationUpdateRequest.resume()
+            
+            print(email)
         }
     }
     
