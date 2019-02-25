@@ -28,7 +28,6 @@
 		2133546D2223C7AE00582588 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133546C2223C7AE00582588 /* AccountViewController.swift */; };
 		2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */; };
 		21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0D82221A0B4002F2FB9 /* Constants.swift */; };
-		21DCB0E722221F9F002F2FB9 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0E622221F9F002F2FB9 /* FamilyView.swift */; };
 		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
 		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
 		C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */; };
@@ -40,12 +39,8 @@
 		C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD5222129E2006D7CC6 /* Mutation.swift */; };
 		C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */; };
 		C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD922217E43006D7CC6 /* SavingsPage.swift */; };
-		C389A4B72223D9CA0094867E /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4B62223D9CA0094867E /* CompassViewController.swift */; };
 		C389A4B92223DB1E0094867E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4B82223DB1E0094867E /* PayViewController.swift */; };
-		C389A4BD2223E2D70094867E /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BC2223E2D70094867E /* LocationDelegate.swift */; };
 		C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BE2223E3080094867E /* CLLocationExtension.swift */; };
-		C389A4C12223E35A0094867E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */; };
-		C389A4C5222430A90094867E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4C4222430920094867E /* User.swift */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +71,6 @@
 		2133546C2223C7AE00582588 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneywellTabBarController.swift; sourceTree = "<group>"; };
 		21DCB0D82221A0B4002F2FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		21DCB0E622221F9F002F2FB9 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDrawer.swift; sourceTree = "<group>"; };
@@ -156,7 +150,6 @@
 				212CFFDB2223EAE500862826 /* User.swift */,
 				212CFFD32223E85400862826 /* UserDefaultsExtension.swift */,
 				C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */,
-				21DCB0E622221F9F002F2FB9 /* FamilyView.swift */,
 				C31C9DD922217E43006D7CC6 /* SavingsPage.swift */,
 				C31C9DC9222122C5006D7CC6 /* Saving.swift */,
 				C31C9DCB22212321006D7CC6 /* FamilySaving.swift */,
@@ -383,7 +376,6 @@
 				212CFFD52223E85400862826 /* CLLocationExtension.swift in Sources */,
 				C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
 				21E32510221D35FD00394930 /* Slide.swift in Sources */,
-				21DCB0E722221F9F002F2FB9 /* FamilyView.swift in Sources */,
 				C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

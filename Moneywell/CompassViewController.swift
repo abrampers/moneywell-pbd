@@ -25,6 +25,11 @@ class CompassViewController: UIViewController {
         return .lightContent
     }
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        view.setNeedsLayout()
+    }
+    
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
         $0.desiredAccuracy = kCLLocationAccuracyBest
@@ -101,13 +106,15 @@ class CompassViewController: UIViewController {
             
             self.updateLocationLabel(withPlacemark: placemark)
             
+            let latitude = Int(Double((self.currentLocation?.coordinate.latitude)!))
+            let longitude = Int(Double((self.currentLocation?.coordinate.longitude)!))
             let timeZone = placemark.timeZone?.abbreviation()!
             let email = UserDefaults.user?.email
-            let locationUpdateRequestURL = "http://3.1.35.180/api/timeSetting?lat=\(self.currentLocation!.coordinate.latitude)&lng=\(self.currentLocation!.coordinate.longitude)&timezone=\(timeZone ?? "GMT+7")&email=\(email ?? "")"
+            let locationUpdateRequestURL = "http://3.1.35.180/api/timeSetting?lat=\(latitude)&lng=\(longitude)&timezone=\(timeZone ?? "GMT+7")&email=\(email ?? "")"
             let locationUpdateRequest = HTTPRequest(url: locationUpdateRequestURL, completionHandler: {(_: [String: Any]) -> Void in })
             locationUpdateRequest.resume()
             
-            print(email)
+            print(locationUpdateRequestURL)
         }
     }
     
