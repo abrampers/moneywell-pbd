@@ -19,15 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        if GIDSignIn.sharedInstance()?.currentUser != nil {
-            let pulleyVC = PulleyViewController.init(contentViewController: DashboardPrimaryContentViewController(), drawerViewController: DashboardDrawerContentViewController())
-            self.window?.rootViewController = pulleyVC
-        } else {
-            let loginVC = LoginViewController()
-            self.window?.rootViewController = loginVC
-        }
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        if GIDSignIn.sharedInstance()?.currentUser != nil {
+//            let pulleyVC = PulleyViewController.init(contentViewController: DashboardPrimaryContentViewController(), drawerViewController: DashboardDrawerContentViewController())
+//            self.window?.rootViewController = pulleyVC
+//        } else {
+//            let loginVC = LoginViewController()
+//            self.window?.rootViewController = loginVC
+//        }
         
         return true
     }
