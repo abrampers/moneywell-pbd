@@ -75,12 +75,22 @@ extension DashboardDrawerContentViewController: PulleyDrawerViewControllerDelega
     
     func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
         let window = UIApplication.shared.windows[0]
-        return window.safeAreaLayoutGuide.layoutFrame.size.height - PartialRevealDrawerDistanceToTopSafeArea
+        
+        let height = window.safeAreaLayoutGuide.layoutFrame.size.height - PartialRevealDrawerDistanceToTopSafeArea
+        if UIDevice.current.orientation == .portrait {
+            return height
+        } else {
+            return height + CGFloat(20)
+        }
     }
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
-        return CollapsedDrawerHeight + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            return CGFloat(100)
+        } else {
+            return CollapsedDrawerHeight + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
+        }
     }
     
     func drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat) {

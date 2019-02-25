@@ -18,16 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash screen" translatesAutoresizingMaskIntoConstraints="NO" id="VMB-zS-K3f">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moneywell." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7a-Br-KLb">
+                                <rect key="frame" x="80.666666666666686" y="383.66666666666669" width="214" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="9FI-m5-ssP"/>
+                                    <constraint firstAttribute="width" constant="214" id="l7B-8d-oYX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VMB-zS-K3f" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="OgY-oM-iy5"/>
-                            <constraint firstItem="VMB-zS-K3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cWH-6x-fPz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VMB-zS-K3f" secondAttribute="trailing" id="cnA-MJ-xFE"/>
-                            <constraint firstAttribute="bottom" secondItem="VMB-zS-K3f" secondAttribute="bottom" id="zov-Kd-zre"/>
+                            <constraint firstItem="U7a-Br-KLb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jrW-Zz-Kkl"/>
+                            <constraint firstItem="U7a-Br-KLb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q6C-l6-ftj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,7 +42,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="splash screen" width="375" height="812"/>
-    </resources>
 </document>
