@@ -22,7 +22,9 @@ class AccountViewController: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
-        UIApplication.shared.keyWindow?.rootViewController = initial
+//        UIApplication.shared.keyWindow?.rootViewController = initial
+        UIApplication.setRootView(initial!, options: UIApplication.logoutAnimation)
+        UserDefaults.isLoggedIn = false
     }
     
     /*

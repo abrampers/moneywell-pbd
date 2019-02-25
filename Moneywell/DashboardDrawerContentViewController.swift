@@ -44,6 +44,8 @@ class DashboardDrawerContentViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(familyAccountsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(recentFamilyTransactionsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: nil)
+        
+        print(UserDefaults.user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
