@@ -54,17 +54,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-5T-Pkz">
-                                <rect key="frame" x="22" y="298" width="331" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding your location..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tW-vb-B8R">
+                                <rect key="frame" x="98.666666666666686" y="605.33333333333337" width="178" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.93233134389528771" green="0.93233134389528771" blue="0.93233134389528771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S61-y8-2R8">
+                                <rect key="frame" x="32" y="645.33333333333337" width="311" height="27.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="qKN-hG-sk2">
+                                <rect key="frame" x="177.66666666666666" y="649.33333333333337" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-5T-Pkz">
+                                <rect key="frame" x="40.666666666666657" y="284.66666666666669" width="294" height="204"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.395475834608078" green="0.8534589409828186" blue="0.69410049915313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cxf-Fu-Sjj" firstAttribute="bottom" secondItem="S61-y8-2R8" secondAttribute="bottom" constant="56" id="1mx-wb-jSG"/>
+                            <constraint firstItem="8jO-5T-Pkz" firstAttribute="centerY" secondItem="cxf-Fu-Sjj" secondAttribute="centerY" id="2Sf-Vc-OdT"/>
+                            <constraint firstItem="S61-y8-2R8" firstAttribute="centerX" secondItem="cxf-Fu-Sjj" secondAttribute="centerX" id="7kX-zI-iqc"/>
+                            <constraint firstItem="8jO-5T-Pkz" firstAttribute="centerX" secondItem="cxf-Fu-Sjj" secondAttribute="centerX" id="EQi-r1-XFt"/>
+                            <constraint firstItem="cxf-Fu-Sjj" firstAttribute="trailing" secondItem="S61-y8-2R8" secondAttribute="trailing" constant="32" id="bZh-R0-Qf3"/>
+                            <constraint firstItem="S61-y8-2R8" firstAttribute="leading" secondItem="cxf-Fu-Sjj" secondAttribute="leading" constant="32" id="hFh-fn-exj"/>
+                            <constraint firstItem="S61-y8-2R8" firstAttribute="top" secondItem="9tW-vb-B8R" secondAttribute="bottom" constant="20" id="j26-EP-MqI"/>
+                            <constraint firstItem="9tW-vb-B8R" firstAttribute="centerX" secondItem="cxf-Fu-Sjj" secondAttribute="centerX" id="mld-U9-D7o"/>
+                            <constraint firstItem="qKN-hG-sk2" firstAttribute="centerY" secondItem="S61-y8-2R8" secondAttribute="centerY" id="yve-zz-FZ8"/>
+                            <constraint firstItem="qKN-hG-sk2" firstAttribute="centerX" secondItem="cxf-Fu-Sjj" secondAttribute="centerX" id="zfH-Uh-BkL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cxf-Fu-Sjj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="MOt-Wx-p7u"/>
                     <connections>
                         <outlet property="compassImage" destination="8jO-5T-Pkz" id="URF-AT-Gsf"/>
+                        <outlet property="locationLabel" destination="S61-y8-2R8" id="sq9-ah-lmj"/>
+                        <outlet property="locationLabelSpinner" destination="qKN-hG-sk2" id="Iho-Dt-k2N"/>
+                        <outlet property="locationStatusLabel" destination="9tW-vb-B8R" id="3iJ-c9-KWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw5-l5-20h" userLabel="First Responder" sceneMemberID="firstResponder"/>

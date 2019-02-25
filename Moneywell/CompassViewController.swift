@@ -12,14 +12,15 @@ import CoreLocation
 class CompassViewController: UIViewController {
 
     @IBOutlet weak var compassImage: UIImageView!
+    @IBOutlet weak var locationStatusLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationLabelSpinner: UIActivityIndicatorView!
     
     let locationDelegate = LocationDelegate()
-    var latestLocation: CLLocation? = CLLocation(latitude: 21.422684, longitude: 39.826192)
-    var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.yourLocation) ?? 0 }
-    var yourLocation: CLLocation {
-        get { return UserDefaults.standard.currentLocation }
-        set { UserDefaults.standard.currentLocation = newValue }
-    }
+    var currentLocation: CLLocation? = nil
+    var currentLocationIsSet: Bool = false
+    var targetLocationBearing: CGFloat { return currentLocation?.bearingToLocationRadian(self.targetLocation) ?? 0 }
+    var targetLocation: CLLocation = CLLocation(latitude: 21.422684, longitude: 39.826192)
     
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
@@ -50,16 +51,22 @@ class CompassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationManager.delegate = locationDelegate
+        
         locationDelegate.locationCallback = { location in
-            self.latestLocation = location
+            self.currentLocation = location
+            
+            if (self.currentLocation != nil) && (!self.currentLocationIsSet) {
+                self.requestCurrentLocationAddress()
+                self.currentLocationIsSet = true
+            }
         }
         
         locationDelegate.headingCallback = { newHeading in
             func computeNewAngle(with newAngle: CGFloat) -> CGFloat {
                 let heading: CGFloat = {
-                    let originalHeading = self.yourLocationBearing - newAngle.degreesToRadians
+                    let originalHeading = self.targetLocationBearing - newAngle.degreesToRadians
                     switch UIDevice.current.orientation {
                     case .faceDown: return -originalHeading
                     default: return originalHeading
@@ -70,8 +77,46 @@ class CompassViewController: UIViewController {
             
             UIView.animate(withDuration: 0.5) {
                 let angle = computeNewAngle(with: CGFloat(newHeading))
-                self.compassImage.transform = CGAffineTransform(rotationAngle: angle - .pi / 2.0)
+                self.compassImage.transform = CGAffineTransform(rotationAngle: angle)
             }
         }
+        
+        self.locationLabel.isHidden = true
+        self.locationLabelSpinner.startAnimating()
+    }
+    
+    func requestCurrentLocationAddress() {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(self.currentLocation!) { placemarks, error in
+            
+            guard error == nil else {
+                print("⚠️ Error in \(#function): \(error!.localizedDescription)")
+                return
+            }
+            
+            guard let placemark = placemarks?[0] else {
+                print("⚠️ Error in \(#function): placemark is nil")
+                return
+            }
+            
+            self.updateLocationLabel(withPlacemark: placemark)
+        }
+    }
+    
+    func updateLocationLabel(withPlacemark placemark: CLPlacemark) {
+        var output = ""
+        if let town = placemark.locality {
+            output = output + "\(town), "
+        }
+        if let state = placemark.administrativeArea {
+            output = output + "\(state), "
+        }
+        if let country = placemark.country {
+            output = output + "\(country)"
+        }
+        self.locationLabelSpinner.stopAnimating()
+        self.locationLabel.text = output
+        self.locationLabel.isHidden = false
+        self.locationStatusLabel.text = "Heading to Mecca from"
     }
 }
