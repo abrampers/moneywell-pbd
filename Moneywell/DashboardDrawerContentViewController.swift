@@ -42,10 +42,8 @@ class DashboardDrawerContentViewController: UIViewController {
 
         gripperView.layer.cornerRadius = 2.5
         
-        NotificationCenter.default.addObserver(self, selector: #selector(familyAccountsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(recentFamilyTransactionsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(recentTransactionsDidUpdated), name: Notification.Name(rawValue: "DashboardDrawerRecentTransactionsUpdated"), object: nil)
         
-        print(UserDefaults.user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,15 +61,9 @@ class DashboardDrawerContentViewController: UIViewController {
         self.pulleyViewController?.bounceDrawer()
     }
     
-    @objc func familyAccountsDidUpdated() {
+    @objc func recentTransactionsDidUpdated() {
         DispatchQueue.main.async {
-            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.FamilyMember.rawValue), with: UITableView.RowAnimation.automatic)
-        }
-    }
-    
-    @objc func recentFamilyTransactionsDidUpdated() {
-        DispatchQueue.main.async {
-            self.tableView.reloadSections(IndexSet(arrayLiteral: TableSection.Transaction.rawValue), with: UITableView.RowAnimation.automatic)
+            self.tableView.reloadSections(IndexSet(arrayLiteral: 0), with: UITableView.RowAnimation.automatic)
         }
     }
 }
@@ -104,104 +96,44 @@ extension DashboardDrawerContentViewController: PulleyDrawerViewControllerDelega
 }
 
 extension DashboardDrawerContentViewController: UITableViewDataSource {
-    enum TableSection: Int, CaseIterable {
-        case FamilyMember = 0, Transaction
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return TableSection.allCases.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (!dashboardDrawer.isFamilyAccountsInitialized && section == TableSection.FamilyMember.rawValue) ||
-            (!dashboardDrawer.isRecentFamilyTransactionsInitialized && section == TableSection.Transaction.rawValue) {
-            return 1
-        }
-        switch section {
-        case TableSection.FamilyMember.rawValue:
-            return self.dashboardDrawer.familyAccounts.count
-        case TableSection.Transaction.rawValue:
-            return self.dashboardDrawer.recentFamilyTransactions.count
-        default: return 0
-        }
+        return self.dashboardDrawer.recentFamilyTransactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (!dashboardDrawer.isFamilyAccountsInitialized && indexPath.section == TableSection.FamilyMember.rawValue) ||
-            (!dashboardDrawer.isRecentFamilyTransactionsInitialized && indexPath.section == TableSection.Transaction.rawValue) ||
-            ((!dashboardDrawer.isFamilyAccountsInitialized || !dashboardDrawer.isRecentFamilyTransactionsInitialized) && tableView.numberOfRows(inSection: indexPath.section) == 1) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "spinnerCell", for: indexPath)
-            return cell
-        }
+        let prototype = "TransactionDashboardCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionDashboardCell
         
-        let prototype = (indexPath.section == TableSection.FamilyMember.rawValue) ? "FamilyMemberDashboardCell" : "TransactionDashboardCell"
+        // Rounded Corners
+        cell.layer.cornerRadius = CellCornerRadius
+        cell.clipsToBounds = true
         
-        if prototype == "FamilyMemberDashboardCell" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! FamilyMemberDashboardCell
-
-            // TODO: Shadow
-            // cell.layer.masksToBounds = false
-            // cell.layer.shadowRadius = ShadowRadius
-            // cell.layer.shadowOffset = ShadowOffset
-            // cell.layer.shadowColor = UIColor.black.cgColor
-            // cell.layer.shadowRadius = ShadowRadius
-            // cell.layer.masksToBounds = true
-
-            // Rounded Corners
-            cell.layer.cornerRadius = CellCornerRadius
-            cell.clipsToBounds = true
-
-            // Cell content
-            let account = self.dashboardDrawer.familyAccounts[indexPath.row]
-            cell.nameLabel?.text = account.name
-            cell.balanceLabel?.text = account.totalBalance.currencyFormat
-            cell.deltaContainer?.layer.cornerRadius = DeltaContainerCornerRadius
-
-            if account.weekDelta > 0 {
-                cell.deltaLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-                let deltaString = "+" + account.weekDelta.kmFormatted
-                cell.deltaLabel?.text = deltaString
-            } else if account.weekDelta == 0 {
-                cell.deltaLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-                let deltaString = String(account.weekDelta)
-                cell.deltaLabel?.text = deltaString
-            } else {
-                cell.deltaLabel?.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
-                let deltaString = "-" + abs(account.weekDelta).kmFormatted
-                cell.deltaLabel?.text = deltaString
-            }
-
-            return cell
+        // Cell content
+        let transaction = self.dashboardDrawer.recentFamilyTransactions[indexPath.row]
+        cell.companyLabel?.text = transaction.title
+        cell.detailsLabel?.text = transaction.date.ddyymmFormat + " - " + transaction.category
+        
+        if transaction.amount > 0 {
+            cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+            let amountString = transaction.amount.currencyFormat
+            cell.amountLabel?.text = amountString
+        } else if transaction.amount == 0 {
+            cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
+            let amountString = String(transaction.amount)
+            cell.amountLabel?.text = amountString
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: prototype, for: indexPath) as! TransactionDashboardCell
-            
-            // Rounded Corners
-            cell.layer.cornerRadius = CellCornerRadius
-            cell.clipsToBounds = true
-            
-            // Cell content
-            let transaction = self.dashboardDrawer.recentFamilyTransactions[indexPath.row]
-            cell.companyLabel?.text = transaction.title
-            cell.detailsLabel?.text = transaction.date.ddyymmFormat + " - " + transaction.category
-            
-            if transaction.amount > 0 {
-                cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-                let amountString = transaction.amount.currencyFormat
-                cell.amountLabel?.text = amountString
-            } else if transaction.amount == 0 {
-                cell.amountLabel?.textColor = #colorLiteral(red: 0, green: 0.8156862745, blue: 0.5647058824, alpha: 1)
-                let amountString = String(transaction.amount)
-                cell.amountLabel?.text = amountString
-            } else {
-                cell.amountLabel?.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
-                let amountString = abs(transaction.amount).currencyFormat
-                cell.amountLabel?.text = amountString
-            }
-            
-//            cell.amountLabel?.text = transaction.amount.currencyFormat
-            
-            return cell
+            cell.amountLabel?.textColor = #colorLiteral(red: 0.8901960784, green: 0, blue: 0, alpha: 1)
+            let amountString = abs(transaction.amount).currencyFormat
+            cell.amountLabel?.text = amountString
         }
+        
+        //            cell.amountLabel?.text = transaction.amount.currencyFormat
+        
+        return cell
     }
 }
 
@@ -211,14 +143,7 @@ extension DashboardDrawerContentViewController: UITableViewDelegate {
         let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
         label.font = UIFont(name: "Avenir-Heavy", size: SectionHeaderFontSize)
         label.textColor = UIColor.black
-        if let tableSection = TableSection(rawValue: section) {
-            switch tableSection {
-            case .FamilyMember:
-                label.text = "Your Family"
-            case .Transaction:
-                label.text = "Recent Transactions"
-            }
-        }
+        label.text = "Recent Transactions"
         view.addSubview(label)
         return view
     }

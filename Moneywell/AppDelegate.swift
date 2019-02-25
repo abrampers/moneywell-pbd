@@ -12,14 +12,13 @@ import UIKit
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance().clientID = "698565599604-9srgmpemo5or6n8bd0g9vfks9a2bvjvm.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
         
         return true
     }
@@ -50,24 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return GIDSignIn.sharedInstance().handle(url as URL?,
                                                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            // Perform any operations on signed in user here.
-            let userObject: User = User(userId: user.userID, email: user.profile.email, name: user.profile.name, givenName: user.profile.givenName, familyName: user.profile.familyName, hasImage: user.profile.hasImage, imageURL: user.profile.imageURL(withDimension: 100))
-            UserDefaults.idToken = user.authentication.idToken // Safe to send to the server
-            UserDefaults.user = userObject
-            UserDefaults.isLoggedIn = true
-            
-            // ...
-        }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        //
     }
 }
 

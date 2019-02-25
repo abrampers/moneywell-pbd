@@ -18,17 +18,14 @@ class DashboardPrimary {
         self.isYourAccountInitialized = false
         
         self.yourAccount = Account(
-            number: "--",
-            name: "--",
-            activeBalance: 0,
-            totalBalance: 0,
+            balance: 0,
             weekDelta: 0
         )
     }
     
     func updateData() {
         let updateYourAccountRequest = HTTPRequest(
-            url: "\(Constants.url)/userDetail?accountNumber=\(2558408)",
+            url: "\(Constants.url)/user?email=\(UserDefaults.user!.email)",
             completionHandler: updateYourAccount
         )
         updateYourAccountRequest.resume()
@@ -42,11 +39,10 @@ class DashboardPrimary {
         }
         
         self.yourAccount = Account(
-            number: response["accountNumber"] as! String,
-            name: response["name"] as! String,
-            activeBalance: response["activeBalance"] as! Int64,
-            totalBalance: response["totalBalance"] as! Int64,
+            balance: response["balance"] as! Int64,
+            dayDelta: response["dayDelta"] as! Int64,
             weekDelta: response["weekDelta"] as! Int64,
+            monthDelta: response["monthDelta"] as! Int64,
             weekGraphData: graphData
         )
         

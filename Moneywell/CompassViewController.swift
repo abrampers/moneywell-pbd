@@ -21,6 +21,10 @@ class CompassViewController: UIViewController {
     var targetLocationBearing: CGFloat { return currentLocation?.bearingToLocationRadian(self.targetLocation) ?? 0 }
     var targetLocation: CLLocation = CLLocation(latitude: 21.422684, longitude: 39.826192)
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
         $0.desiredAccuracy = kCLLocationAccuracyBest
