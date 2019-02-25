@@ -32,6 +32,7 @@ class CompassViewController: UIViewController {
     
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
+        $0.requestAlwaysAuthorization()
         $0.desiredAccuracy = kCLLocationAccuracyBest
         $0.startUpdatingLocation()
         $0.startUpdatingHeading()
