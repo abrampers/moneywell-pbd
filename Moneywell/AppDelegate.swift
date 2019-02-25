@@ -10,24 +10,16 @@
 
 import UIKit
 import GoogleSignIn
-import Pulley
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        
-//        if GIDSignIn.sharedInstance()?.currentUser != nil {
-//            let pulleyVC = PulleyViewController.init(contentViewController: DashboardPrimaryContentViewController(), drawerViewController: DashboardDrawerContentViewController())
-//            self.window?.rootViewController = pulleyVC
-//        } else {
-//            let loginVC = LoginViewController()
-//            self.window?.rootViewController = loginVC
-//        }
+        GIDSignIn.sharedInstance().clientID = "698565599604-9srgmpemo5or6n8bd0g9vfks9a2bvjvm.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
         
         return true
     }
@@ -58,5 +50,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return GIDSignIn.sharedInstance().handle(url as URL?,
                                                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+            let userObject: User = User(userId: user.userID, email: user.profile.email, name: user.profile.name, givenName: user.profile.givenName, familyName: user.profile.familyName, hasImage: user.profile.hasImage, imageURL: user.profile.imageURL(withDimension: 100))
+            UserDefaults.idToken = user.authentication.idToken // Safe to send to the server
+            UserDefaults.user = userObject
+            UserDefaults.isLoggedIn = true
+            
+            // ...
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        //
+    }
+}
+
+extension UIApplication {
+    
+    static var loginAnimation: UIView.AnimationOptions = .transitionFlipFromRight
+    static var logoutAnimation: UIView.AnimationOptions = .transitionCrossDissolve
+    
+    public static func setRootView(_ viewController: UIViewController,
+                                   options: UIView.AnimationOptions = .transitionFlipFromRight,
+                                   animated: Bool = true,
+                                   duration: TimeInterval = 0.5,
+                                   completion: (() -> Void)? = nil) {
+        guard animated else {
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            return
+        }
+        
+        UIView.transition(with: UIApplication.shared.keyWindow!, duration: duration, options: options, animations: {
+            let oldState = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            UIView.setAnimationsEnabled(oldState)
+        }) { _ in
+            completion?()
+        }
     }
 }
