@@ -1,580 +1,571 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 50;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        212739F7221A86090094933D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212739F6221A86090094933D /* AppDelegate.swift */; };
-        212739FC221A86090094933D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FA221A86090094933D /* Main.storyboard */; };
-        212739FE221A860A0094933D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212739FD221A860A0094933D /* Assets.xcassets */; };
-        21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FF221A860A0094933D /* LaunchScreen.storyboard */; };
-        21273A09221A8B770094933D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A08221A8B770094933D /* ViewController.swift */; };
-        21273A0B221A8BC40094933D /* DashboardPrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */; };
-        21273A0F221A8C770094933D /* DashboardDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */; };
-        21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
-        212CFFD42223E85400862826 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFCF2223E85400862826 /* LocationDelegate.swift */; };
-        212CFFD52223E85400862826 /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD02223E85400862826 /* CLLocationExtension.swift */; };
-        212CFFD62223E85400862826 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD12223E85400862826 /* CompassViewController.swift */; };
-        212CFFD72223E85400862826 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD22223E85400862826 /* PayViewController.swift */; };
-        212CFFD82223E85400862826 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD32223E85400862826 /* UserDefaultsExtension.swift */; };
-        212CFFDC2223EAE500862826 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFDB2223EAE500862826 /* User.swift */; };
-        213354672223B9AE00582588 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213354662223B9AE00582588 /* LoginViewController.swift */; };
-        213354692223BB8900582588 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213354682223BB8900582588 /* GoogleToolboxForMac.framework */; };
-        2133546B2223BB8900582588 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2133546A2223BB8900582588 /* GTMSessionFetcher.framework */; };
-        2133546D2223C7AE00582588 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133546C2223C7AE00582588 /* AccountViewController.swift */; };
-        2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */; };
-        21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0D82221A0B4002F2FB9 /* Constants.swift */; };
-        21DCB0E722221F9F002F2FB9 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0E622221F9F002F2FB9 /* FamilyView.swift */; };
-        21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
-        21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
-        C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */; };
-        C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DBD22211392006D7CC6 /* Transaction.swift */; };
-        C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC1222115D2006D7CC6 /* Account.swift */; };
-        C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */; };
-        C31C9DCA222122C5006D7CC6 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC9222122C5006D7CC6 /* Saving.swift */; };
-        C31C9DCC22212321006D7CC6 /* FamilySaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DCB22212321006D7CC6 /* FamilySaving.swift */; };
-        C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD5222129E2006D7CC6 /* Mutation.swift */; };
-        C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */; };
-        C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD922217E43006D7CC6 /* SavingsPage.swift */; };
-        C389A4B72223D9CA0094867E /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4B62223D9CA0094867E /* CompassViewController.swift */; };
-        C389A4B92223DB1E0094867E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4B82223DB1E0094867E /* PayViewController.swift */; };
-        C389A4BD2223E2D70094867E /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BC2223E2D70094867E /* LocationDelegate.swift */; };
-        C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BE2223E3080094867E /* CLLocationExtension.swift */; };
-        C389A4C12223E35A0094867E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */; };
-        D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
+		212739F7221A86090094933D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212739F6221A86090094933D /* AppDelegate.swift */; };
+		212739FC221A86090094933D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FA221A86090094933D /* Main.storyboard */; };
+		212739FE221A860A0094933D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212739FD221A860A0094933D /* Assets.xcassets */; };
+		21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212739FF221A860A0094933D /* LaunchScreen.storyboard */; };
+		21273A09221A8B770094933D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A08221A8B770094933D /* ViewController.swift */; };
+		21273A0B221A8BC40094933D /* DashboardPrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */; };
+		21273A0F221A8C770094933D /* DashboardDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */; };
+		21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21273A19221AC4400094933D /* Avenir-Heavy.ttf */; };
+		212CFFD42223E85400862826 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFCF2223E85400862826 /* LocationDelegate.swift */; };
+		212CFFD52223E85400862826 /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD02223E85400862826 /* CLLocationExtension.swift */; };
+		212CFFD62223E85400862826 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD12223E85400862826 /* CompassViewController.swift */; };
+		212CFFD82223E85400862826 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFD32223E85400862826 /* UserDefaultsExtension.swift */; };
+		212CFFDC2223EAE500862826 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFDB2223EAE500862826 /* User.swift */; };
+		212CFFDE2223FDD200862826 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFDD2223FDD200862826 /* ShakeViewController.swift */; };
+		212CFFE02223FE2E00862826 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CFFDF2223FE2E00862826 /* PayViewController.swift */; };
+		213354672223B9AE00582588 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213354662223B9AE00582588 /* LoginViewController.swift */; };
+		213354692223BB8900582588 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213354682223BB8900582588 /* GoogleToolboxForMac.framework */; };
+		2133546B2223BB8900582588 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2133546A2223BB8900582588 /* GTMSessionFetcher.framework */; };
+		2133546D2223C7AE00582588 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133546C2223C7AE00582588 /* AccountViewController.swift */; };
+		2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */; };
+		21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCB0D82221A0B4002F2FB9 /* Constants.swift */; };
+		21E32510221D35FD00394930 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3250F221D35FD00394930 /* Slide.swift */; };
+		21E32512221D361D00394930 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32511221D361D00394930 /* Slide.xib */; };
+		C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */; };
+		C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DBD22211392006D7CC6 /* Transaction.swift */; };
+		C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC1222115D2006D7CC6 /* Account.swift */; };
+		C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */; };
+		C31C9DCA222122C5006D7CC6 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DC9222122C5006D7CC6 /* Saving.swift */; };
+		C31C9DCC22212321006D7CC6 /* FamilySaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DCB22212321006D7CC6 /* FamilySaving.swift */; };
+		C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD5222129E2006D7CC6 /* Mutation.swift */; };
+		C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */; };
+		C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD922217E43006D7CC6 /* SavingsPage.swift */; };
+		C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BE2223E3080094867E /* CLLocationExtension.swift */; };
+		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-        02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.release.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
-        1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.debug.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
-        115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneywell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        212739F3221A86090094933D /* Moneywell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneywell.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        212739F6221A86090094933D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        212739FB221A86090094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        212739FD221A860A0094933D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        21273A00221A860A0094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        21273A02221A860A0094933D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        21273A08221A8B770094933D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-        21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPrimaryContentViewController.swift; sourceTree = "<group>"; };
-        21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDrawerContentViewController.swift; sourceTree = "<group>"; };
-        21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
-        212CFFCF2223E85400862826 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
-        212CFFD02223E85400862826 /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
-        212CFFD12223E85400862826 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
-        212CFFD22223E85400862826 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
-        212CFFD32223E85400862826 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
-        212CFFDB2223EAE500862826 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-        213354662223B9AE00582588 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-        213354682223BB8900582588 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        2133546A2223BB8900582588 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        2133546C2223C7AE00582588 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-        2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneywellTabBarController.swift; sourceTree = "<group>"; };
-        21DCB0D82221A0B4002F2FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-        21DCB0E622221F9F002F2FB9 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
-        21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-        21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
-        C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDrawer.swift; sourceTree = "<group>"; };
-        C31C9DBD22211392006D7CC6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-        C31C9DC1222115D2006D7CC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-        C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPrimary.swift; sourceTree = "<group>"; };
-        C31C9DC9222122C5006D7CC6 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
-        C31C9DCB22212321006D7CC6 /* FamilySaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySaving.swift; sourceTree = "<group>"; };
-        C31C9DD5222129E2006D7CC6 /* Mutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutation.swift; sourceTree = "<group>"; };
-        C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-        C31C9DD922217E43006D7CC6 /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
-        C389A4B62223D9CA0094867E /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
-        C389A4B82223DB1E0094867E /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
-        C389A4BC2223E2D70094867E /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
-        C389A4BE2223E3080094867E /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
-        C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.release.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
+		1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.debug.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
+		115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneywell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		212739F3221A86090094933D /* Moneywell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneywell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		212739F6221A86090094933D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		212739FB221A86090094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		212739FD221A860A0094933D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21273A00221A860A0094933D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21273A02221A860A0094933D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21273A08221A8B770094933D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPrimaryContentViewController.swift; sourceTree = "<group>"; };
+		21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDrawerContentViewController.swift; sourceTree = "<group>"; };
+		21273A19221AC4400094933D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		212CFFCF2223E85400862826 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		212CFFD02223E85400862826 /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		212CFFD12223E85400862826 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		212CFFD32223E85400862826 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		212CFFDB2223EAE500862826 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		212CFFDD2223FDD200862826 /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		212CFFDF2223FE2E00862826 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		213354662223B9AE00582588 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		213354682223BB8900582588 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2133546A2223BB8900582588 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2133546C2223C7AE00582588 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneywellTabBarController.swift; sourceTree = "<group>"; };
+		21DCB0D82221A0B4002F2FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21E3250F221D35FD00394930 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		21E32511221D361D00394930 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDrawer.swift; sourceTree = "<group>"; };
+		C31C9DBD22211392006D7CC6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		C31C9DC1222115D2006D7CC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPrimary.swift; sourceTree = "<group>"; };
+		C31C9DC9222122C5006D7CC6 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
+		C31C9DCB22212321006D7CC6 /* FamilySaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySaving.swift; sourceTree = "<group>"; };
+		C31C9DD5222129E2006D7CC6 /* Mutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutation.swift; sourceTree = "<group>"; };
+		C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		C31C9DD922217E43006D7CC6 /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
+		C389A4B62223D9CA0094867E /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		C389A4BC2223E2D70094867E /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		C389A4BE2223E3080094867E /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        212739F0221A86090094933D /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                213354692223BB8900582588 /* GoogleToolboxForMac.framework in Frameworks */,
-                2133546B2223BB8900582588 /* GTMSessionFetcher.framework in Frameworks */,
-                D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		212739F0221A86090094933D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213354692223BB8900582588 /* GoogleToolboxForMac.framework in Frameworks */,
+				2133546B2223BB8900582588 /* GTMSessionFetcher.framework in Frameworks */,
+				D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        212739EA221A86090094933D = {
-            isa = PBXGroup;
-            children = (
-                212739F5221A86090094933D /* Moneywell */,
-                212739F4221A86090094933D /* Products */,
-                DDA87BCC5B0CBEE5D45161B0 /* Pods */,
-                4DB16132AED6F7896C516BFF /* Frameworks */,
-            );
-            sourceTree = "<group>";
-        };
-        212739F4221A86090094933D /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                212739F3221A86090094933D /* Moneywell.app */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        212739F5221A86090094933D /* Moneywell */ = {
-            isa = PBXGroup;
-            children = (
-                2133546C2223C7AE00582588 /* AccountViewController.swift */,
-                212CFFD02223E85400862826 /* CLLocationExtension.swift */,
-                212CFFD12223E85400862826 /* CompassViewController.swift */,
-                212CFFCF2223E85400862826 /* LocationDelegate.swift */,
-                212CFFD22223E85400862826 /* PayViewController.swift */,
-                212739F6221A86090094933D /* AppDelegate.swift */,
-                2133546C2223C7AE00582588 /* AccountViewController.swift */,
-                C389A4B62223D9CA0094867E /* CompassViewController.swift */,
-                213354662223B9AE00582588 /* LoginViewController.swift */,
-                C389A4B82223DB1E0094867E /* PayViewController.swift */,
-                2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */,
-                21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */,
-                21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */,
-                212739FA221A86090094933D /* Main.storyboard */,
-                212739FD221A860A0094933D /* Assets.xcassets */,
-                212739FF221A860A0094933D /* LaunchScreen.storyboard */,
-                21273A02221A860A0094933D /* Info.plist */,
-                21273A08221A8B770094933D /* ViewController.swift */,
-                21E3250F221D35FD00394930 /* Slide.swift */,
-                21E32511221D361D00394930 /* Slide.xib */,
-                21273A24221AC44C0094933D /* Fonts */,
-                C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */,
-                212CFFDB2223EAE500862826 /* User.swift */,
-                212CFFD32223E85400862826 /* UserDefaultsExtension.swift */,
-                21DCB0E622221F9F002F2FB9 /* FamilyView.swift */,
-                C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */,
-                21DCB0E622221F9F002F2FB9 /* FamilyView.swift */,
-                C31C9DD922217E43006D7CC6 /* SavingsPage.swift */,
-                C31C9DC9222122C5006D7CC6 /* Saving.swift */,
-                C31C9DCB22212321006D7CC6 /* FamilySaving.swift */,
-                C31C9DBD22211392006D7CC6 /* Transaction.swift */,
-                C31C9DD5222129E2006D7CC6 /* Mutation.swift */,
-                C31C9DC1222115D2006D7CC6 /* Account.swift */,
-                C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */,
-                21DCB0D82221A0B4002F2FB9 /* Constants.swift */,
-                C389A4BC2223E2D70094867E /* LocationDelegate.swift */,
-                C389A4BE2223E3080094867E /* CLLocationExtension.swift */,
-                C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */,
-            );
-            path = Moneywell;
-            sourceTree = "<group>";
-        };
-        21273A24221AC44C0094933D /* Fonts */ = {
-            isa = PBXGroup;
-            children = (
-                21273A19221AC4400094933D /* Avenir-Heavy.ttf */,
-            );
-            path = Fonts;
-            sourceTree = "<group>";
-        };
-        4DB16132AED6F7896C516BFF /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                213354682223BB8900582588 /* GoogleToolboxForMac.framework */,
-                2133546A2223BB8900582588 /* GTMSessionFetcher.framework */,
-                115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
-        DDA87BCC5B0CBEE5D45161B0 /* Pods */ = {
-            isa = PBXGroup;
-            children = (
-                1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */,
-                02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */,
-            );
-            path = Pods;
-            sourceTree = "<group>";
-        };
+		212739EA221A86090094933D = {
+			isa = PBXGroup;
+			children = (
+				212739F5221A86090094933D /* Moneywell */,
+				212739F4221A86090094933D /* Products */,
+				DDA87BCC5B0CBEE5D45161B0 /* Pods */,
+				4DB16132AED6F7896C516BFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		212739F4221A86090094933D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				212739F3221A86090094933D /* Moneywell.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		212739F5221A86090094933D /* Moneywell */ = {
+			isa = PBXGroup;
+			children = (
+				212CFFDD2223FDD200862826 /* ShakeViewController.swift */,
+				212CFFD02223E85400862826 /* CLLocationExtension.swift */,
+				212CFFD12223E85400862826 /* CompassViewController.swift */,
+				212CFFCF2223E85400862826 /* LocationDelegate.swift */,
+				212739F6221A86090094933D /* AppDelegate.swift */,
+				2133546C2223C7AE00582588 /* AccountViewController.swift */,
+				C389A4B62223D9CA0094867E /* CompassViewController.swift */,
+				213354662223B9AE00582588 /* LoginViewController.swift */,
+				2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */,
+				21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */,
+				21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */,
+				212739FA221A86090094933D /* Main.storyboard */,
+				212CFFDF2223FE2E00862826 /* PayViewController.swift */,
+				212739FD221A860A0094933D /* Assets.xcassets */,
+				212739FF221A860A0094933D /* LaunchScreen.storyboard */,
+				21273A02221A860A0094933D /* Info.plist */,
+				21273A08221A8B770094933D /* ViewController.swift */,
+				21E3250F221D35FD00394930 /* Slide.swift */,
+				21E32511221D361D00394930 /* Slide.xib */,
+				21273A24221AC44C0094933D /* Fonts */,
+				C31C9DB922210813006D7CC6 /* DashboardDrawer.swift */,
+				212CFFDB2223EAE500862826 /* User.swift */,
+				212CFFD32223E85400862826 /* UserDefaultsExtension.swift */,
+				C31C9DC322211D9E006D7CC6 /* DashboardPrimary.swift */,
+				C31C9DD922217E43006D7CC6 /* SavingsPage.swift */,
+				C31C9DC9222122C5006D7CC6 /* Saving.swift */,
+				C31C9DCB22212321006D7CC6 /* FamilySaving.swift */,
+				C31C9DBD22211392006D7CC6 /* Transaction.swift */,
+				C31C9DD5222129E2006D7CC6 /* Mutation.swift */,
+				C31C9DC1222115D2006D7CC6 /* Account.swift */,
+				C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */,
+				21DCB0D82221A0B4002F2FB9 /* Constants.swift */,
+				C389A4BC2223E2D70094867E /* LocationDelegate.swift */,
+				C389A4BE2223E3080094867E /* CLLocationExtension.swift */,
+				C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */,
+			);
+			path = Moneywell;
+			sourceTree = "<group>";
+		};
+		21273A24221AC44C0094933D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				21273A19221AC4400094933D /* Avenir-Heavy.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4DB16132AED6F7896C516BFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				213354682223BB8900582588 /* GoogleToolboxForMac.framework */,
+				2133546A2223BB8900582588 /* GTMSessionFetcher.framework */,
+				115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDA87BCC5B0CBEE5D45161B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */,
+				02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        212739F2221A86090094933D /* Moneywell */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 21273A05221A860A0094933D /* Build configuration list for PBXNativeTarget "Moneywell" */;
-            buildPhases = (
-                CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */,
-                212739EF221A86090094933D /* Sources */,
-                212739F0221A86090094933D /* Frameworks */,
-                212739F1221A86090094933D /* Resources */,
-                B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */,
-                2157D4FCF041E180B186C392 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Moneywell;
-            productName = Moneywell;
-            productReference = 212739F3221A86090094933D /* Moneywell.app */;
-            productType = "com.apple.product-type.application";
-        };
+		212739F2221A86090094933D /* Moneywell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21273A05221A860A0094933D /* Build configuration list for PBXNativeTarget "Moneywell" */;
+			buildPhases = (
+				CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */,
+				212739EF221A86090094933D /* Sources */,
+				212739F0221A86090094933D /* Frameworks */,
+				212739F1221A86090094933D /* Resources */,
+				B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */,
+				2157D4FCF041E180B186C392 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moneywell;
+			productName = Moneywell;
+			productReference = 212739F3221A86090094933D /* Moneywell.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        212739EB221A86090094933D /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 1010;
-                LastUpgradeCheck = 1010;
-                ORGANIZATIONNAME = "Abram Situmorang";
-                TargetAttributes = {
-                    212739F2221A86090094933D = {
-                        CreatedOnToolsVersion = 10.1;
-                    };
-                };
-            };
-            buildConfigurationList = 212739EE221A86090094933D /* Build configuration list for PBXProject "Moneywell" */;
-            compatibilityVersion = "Xcode 9.3";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 212739EA221A86090094933D;
-            productRefGroup = 212739F4221A86090094933D /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                212739F2221A86090094933D /* Moneywell */,
-            );
-        };
+		212739EB221A86090094933D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Abram Situmorang";
+				TargetAttributes = {
+					212739F2221A86090094933D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 212739EE221A86090094933D /* Build configuration list for PBXProject "Moneywell" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 212739EA221A86090094933D;
+			productRefGroup = 212739F4221A86090094933D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				212739F2221A86090094933D /* Moneywell */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        212739F1221A86090094933D /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                21E32512221D361D00394930 /* Slide.xib in Resources */,
-                21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */,
-                21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */,
-                212739FE221A860A0094933D /* Assets.xcassets in Resources */,
-                212739FC221A86090094933D /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		212739F1221A86090094933D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E32512221D361D00394930 /* Slide.xib in Resources */,
+				21273A23221AC4400094933D /* Avenir-Heavy.ttf in Resources */,
+				21273A01221A860A0094933D /* LaunchScreen.storyboard in Resources */,
+				212739FE221A860A0094933D /* Assets.xcassets in Resources */,
+				212739FC221A86090094933D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        2157D4FCF041E180B186C392 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-resources.sh",
-                "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-            );
-            name = "[CP] Copy Pods Resources";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-                "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-                "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-                "${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Moneywell-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
+		2157D4FCF041E180B186C392 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51D7090DD2F76217A19B623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneywell/Pods-Moneywell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA52B44B72E5C7334690C709 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moneywell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        212739EF221A86090094933D /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                212CFFD72223E85400862826 /* PayViewController.swift in Sources */,
-                C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */,
-                C389A4B92223DB1E0094867E /* PayViewController.swift in Sources */,
-                2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */,
-                212CFFDC2223EAE500862826 /* User.swift in Sources */,
-                C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */,
-                212CFFD62223E85400862826 /* CompassViewController.swift in Sources */,
-                C31C9DCC22212321006D7CC6 /* FamilySaving.swift in Sources */,
-                C31C9DCA222122C5006D7CC6 /* Saving.swift in Sources */,
-                21273A0F221A8C770094933D /* DashboardDrawerContentViewController.swift in Sources */,
-                C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */,
-                21273A09221A8B770094933D /* ViewController.swift in Sources */,
+		212739EF221A86090094933D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */,
+				2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */,
+				212CFFDC2223EAE500862826 /* User.swift in Sources */,
+				C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */,
+				212CFFE02223FE2E00862826 /* PayViewController.swift in Sources */,
+				212CFFD62223E85400862826 /* CompassViewController.swift in Sources */,
+				C31C9DCC22212321006D7CC6 /* FamilySaving.swift in Sources */,
+				C31C9DCA222122C5006D7CC6 /* Saving.swift in Sources */,
+				212CFFDE2223FDD200862826 /* ShakeViewController.swift in Sources */,
+				21273A0F221A8C770094933D /* DashboardDrawerContentViewController.swift in Sources */,
+				C31C9DBE22211392006D7CC6 /* Transaction.swift in Sources */,
+				21273A09221A8B770094933D /* ViewController.swift in Sources */,
 				212CFFD82223E85400862826 /* UserDefaultsExtension.swift in Sources */,
-                C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */,
-                212CFFD42223E85400862826 /* LocationDelegate.swift in Sources */,
-                213354672223B9AE00582588 /* LoginViewController.swift in Sources */,
-                212739F7221A86090094933D /* AppDelegate.swift in Sources */,
-                C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */,
-                21273A0B221A8BC40094933D /* DashboardPrimaryContentViewController.swift in Sources */,
-                2133546D2223C7AE00582588 /* AccountViewController.swift in Sources */,
-                C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */,
-                21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */,
+				C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */,
+				212CFFD42223E85400862826 /* LocationDelegate.swift in Sources */,
+				213354672223B9AE00582588 /* LoginViewController.swift in Sources */,
+				212739F7221A86090094933D /* AppDelegate.swift in Sources */,
+				C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */,
+				21273A0B221A8BC40094933D /* DashboardPrimaryContentViewController.swift in Sources */,
+				2133546D2223C7AE00582588 /* AccountViewController.swift in Sources */,
+				C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */,
+				21DCB0D92221A0B4002F2FB9 /* Constants.swift in Sources */,
 				212CFFD52223E85400862826 /* CLLocationExtension.swift in Sources */,
-                C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
-                21E32510221D35FD00394930 /* Slide.swift in Sources */,
-                21DCB0E722221F9F002F2FB9 /* FamilyView.swift in Sources */,
-                C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+				C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */,
+				21E32510221D35FD00394930 /* Slide.swift in Sources */,
+				C31C9DC2222115D2006D7CC6 /* Account.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-        212739FA221A86090094933D /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                212739FB221A86090094933D /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        212739FF221A860A0094933D /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                21273A00221A860A0094933D /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		212739FA221A86090094933D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				212739FB221A86090094933D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		212739FF221A860A0094933D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21273A00221A860A0094933D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        21273A03221A860A0094933D /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        21273A04221A860A0094933D /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        21273A06221A860A0094933D /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = HX9DU84ERF;
-                INFOPLIST_FILE = Moneywell/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = com.ffahleraz.Moneywell;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        21273A07221A860A0094933D /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = HX9DU84ERF;
-                INFOPLIST_FILE = Moneywell/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = com.ffahleraz.Moneywell;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
+		21273A03221A860A0094933D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21273A04221A860A0094933D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21273A06221A860A0094933D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1067F022E62D9926F438E3DF /* Pods-Moneywell.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				INFOPLIST_FILE = Moneywell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21273A07221A860A0094933D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B64CD5E47D6C6B3712E96B /* Pods-Moneywell.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				INFOPLIST_FILE = Moneywell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        212739EE221A86090094933D /* Build configuration list for PBXProject "Moneywell" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                21273A03221A860A0094933D /* Debug */,
-                21273A04221A860A0094933D /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        21273A05221A860A0094933D /* Build configuration list for PBXNativeTarget "Moneywell" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                21273A06221A860A0094933D /* Debug */,
-                21273A07221A860A0094933D /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		212739EE221A86090094933D /* Build configuration list for PBXProject "Moneywell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21273A03221A860A0094933D /* Debug */,
+				21273A04221A860A0094933D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21273A05221A860A0094933D /* Build configuration list for PBXNativeTarget "Moneywell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21273A06221A860A0094933D /* Debug */,
+				21273A07221A860A0094933D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 212739EB221A86090094933D /* Project object */;
+	};
+	rootObject = 212739EB221A86090094933D /* Project object */;
 }

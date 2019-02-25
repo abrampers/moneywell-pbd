@@ -30,16 +30,85 @@ internal class YAxisValueFormatter: IAxisValueFormatter {
 
 internal class XAxisValueFormatter: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        switch value {
-        case 0.0: return "Sun"
-        case 1.0: return "Mon"
-        case 2.0: return "Tue"
-        case 3.0: return "Wed"
-        case 4.0: return "Thu"
-        case 5.0: return "Fri"
-        case 6.0: return "Sat"
-        default:
-            return ""
+        switch Date().dayNumberOfWeek() {
+        case 0:
+            switch value {
+            case 0.0: return "Sun"
+            case 1.0: return "Mon"
+            case 2.0: return "Tue"
+            case 3.0: return "Wed"
+            case 4.0: return "Thu"
+            case 5.0: return "Fri"
+            case 6.0: return "Sat"
+            default: return ""
+            }
+        case 1:
+            switch value {
+            case 0.0: return "Mon"
+            case 1.0: return "Tue"
+            case 2.0: return "Wed"
+            case 3.0: return "Thu"
+            case 4.0: return "Fri"
+            case 5.0: return "Sat"
+            case 6.0: return "Sun"
+            default: return ""
+            }
+        case 2:
+            switch value {
+            case 0.0: return "Tue"
+            case 1.0: return "Wed"
+            case 2.0: return "Thu"
+            case 3.0: return "Fri"
+            case 4.0: return "Sat"
+            case 5.0: return "Sun"
+            case 6.0: return "Mon"
+            default: return ""
+            }
+        case 3:
+            switch value {
+            case 0.0: return "Wed"
+            case 1.0: return "Thu"
+            case 2.0: return "Fri"
+            case 3.0: return "Sat"
+            case 4.0: return "Sun"
+            case 5.0: return "Mon"
+            case 6.0: return "Tue"
+            default: return ""
+            }
+        case 4:
+            switch value {
+            case 0.0: return "Thu"
+            case 1.0: return "Fri"
+            case 2.0: return "Sat"
+            case 3.0: return "Sun"
+            case 4.0: return "Mon"
+            case 5.0: return "Tue"
+            case 6.0: return "Wed"
+            default: return ""
+            }
+        case 5:
+            switch value {
+            case 0.0: return "Fri"
+            case 1.0: return "Sat"
+            case 2.0: return "Sun"
+            case 3.0: return "Mon"
+            case 4.0: return "Tue"
+            case 5.0: return "Wed"
+            case 6.0: return "Thu"
+            default: return ""
+            }
+        case 6:
+            switch value {
+            case 0.0: return "Sat"
+            case 1.0: return "Sun"
+            case 2.0: return "Mon"
+            case 3.0: return "Tue"
+            case 4.0: return "Wed"
+            case 5.0: return "Thu"
+            case 6.0: return "Fri"
+            default: return ""
+            }
+        default: return ""
         }
     }
 }
@@ -106,7 +175,7 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
             self.balanceLabel.isHidden = false
             self.deltaLabel.isHidden = false
             self.lineChart.isHidden = false
-            self.balanceLabel.text = self.dashboardPrimary.yourAccount.totalBalance.currencyFormat
+            self.balanceLabel.text = self.dashboardPrimary.yourAccount.balance.currencyFormat
             
             // Update deltaLabel
             self.updateDeltaLabel()
@@ -115,7 +184,8 @@ class DashboardPrimaryContentViewController: UIViewController, ChartViewDelegate
             self.spinner.stopAnimating()
             
             // update lineChart
-            self.updateChart(withData: dummyYouChartData)
+            self.updateChart(withData: self.dashboardPrimary.yourAccount.weekGraphData)
+            print(self.dashboardPrimary.yourAccount.weekGraphData)
         }
     }
     
@@ -260,6 +330,12 @@ extension Int64 {
         formatter.locale = Locale(identifier: "id_ID")
         formatter.numberStyle = .currency
         return formatter.string(from: self as NSNumber)!
+    }
+}
+
+extension Date {
+    func dayNumberOfWeek() -> Int {
+        return Calendar.current.dateComponents([.weekday], from: self).weekday!
     }
 }
 

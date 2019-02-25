@@ -10,14 +10,49 @@ import UIKit
 import GoogleSignIn
 
 class AccountViewController: UIViewController {
-
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        logoutButton.layer.cornerRadius = 15
+        nameLabel.text = UserDefaults.user?.name
+        emailLabel.text = UserDefaults.user?.email
+        profileImage.isHidden = true
+        
+        fetchImage()
     }
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    private func fetchImage() {
+        if let url = UserDefaults.user?.imageURL {
+            print(url)
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    if let imageData = urlContents {
+                        self?.profileImage.image = UIImage(data: imageData)
+                        self?.spinner.stopAnimating()
+                        self?.profileImage.isHidden = false
+                    } else {
+                        self?.profileImage.image = UIImage(named: "user")
+                        self?.spinner.stopAnimating()
+                        self?.profileImage.isHidden = false
+                    }
+                }
+            }
+        } else {
+            self.profileImage.image = UIImage(named: "user")
+            self.spinner.stopAnimating()
+            self.profileImage.isHidden = false
+        }
+    }
+    
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signOut()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -25,6 +60,10 @@ class AccountViewController: UIViewController {
 //        UIApplication.shared.keyWindow?.rootViewController = initial
         UIApplication.setRootView(initial!, options: UIApplication.logoutAnimation)
         UserDefaults.isLoggedIn = false
+    }
+    
+    @IBAction func questionsButtonTapped(_ sender: UIButton) {
+        
     }
     
     /*

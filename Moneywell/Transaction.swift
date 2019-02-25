@@ -11,7 +11,6 @@ import Foundation
 struct Transaction {
     var date: Date
     var title: String
-    var accountName: String
     var amount: Int64
     var category: String
 }

@@ -21,6 +21,10 @@ class CompassViewController: UIViewController {
         set { UserDefaults.standard.currentLocation = newValue }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
         $0.desiredAccuracy = kCLLocationAccuracyBest

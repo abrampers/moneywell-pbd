@@ -1,5 +1,5 @@
 //
-//  PayViewController.swift
+//  ShakeViewController.swift
 //  Moneywell
 //
 //  Created by Abram Situmorang on 25/02/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PayViewController: UIViewController {
+class ShakeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,16 @@ class PayViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
             return .lightContent
+        }
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            self.performSegue(withIdentifier: "shakeDetected", sender: self)
         }
     }
     

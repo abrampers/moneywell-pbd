@@ -22,10 +22,7 @@ class DashboardDrawer {
         
         familyAccounts = [
             Account(
-                number: "--",
-                name: "--",
-                activeBalance: 0,
-                totalBalance: 0,
+                balance: 0,
                 weekDelta: 0
             )
         ]
@@ -34,7 +31,6 @@ class DashboardDrawer {
             Transaction(
                 date: Date(timeIntervalSince1970: 0),
                 title: "--",
-                accountName: "--",
                 amount: 0,
                 category: "--"
             )
@@ -42,51 +38,14 @@ class DashboardDrawer {
     }
     
     func updateData() {
-        let updateFamilyAccountsRequest = HTTPRequest(
-            url: "\(Constants.url)/families?accountNumber=\(2558408)",
-            completionHandler: updateFamilyAccounts
-        )
-        updateFamilyAccountsRequest.resume()
-        
         let updateRecentFamilyTransactionsRequest = HTTPRequest(
-            url: "\(Constants.url)/allTransactions?accountNumber=\(2558408)",
-            completionHandler: updateRecentFamilyTransactions
+            url: "\(Constants.url)/transactions?email=\(UserDefaults.user!.email)",
+            completionHandler: updateRecentTransactions
         )
         updateRecentFamilyTransactionsRequest.resume()
     }
     
-    func updateFamilyAccounts(response: [String: Any]) {
-        let adults = response["adults"] as! Array<Any>
-        let childs = response["childs"] as! Array<Any>
-
-        self.familyAccounts = []
-        for case let account as Dictionary<String, Any> in adults {
-            familyAccounts.append(Account(
-                number: account["accountNumber"] as! String,
-                name: account["name"] as! String,
-                activeBalance: account["activeBalance"] as! Int64,
-                totalBalance: account["totalBalance"] as! Int64,
-                weekDelta: account["weekDelta"] as! Int64
-            ))
-        }
-
-        for case let account as Dictionary<String, Any> in childs {
-            familyAccounts.append(Account(
-                number: account["accountNumber"] as! String,
-                name: account["name"] as! String,
-                activeBalance: account["activeBalance"] as! Int64,
-                totalBalance: account["totalBalance"] as! Int64,
-                weekDelta: account["weekDelta"] as! Int64,
-                isChild: true
-            ))
-        }
-        
-        self.isFamilyAccountsInitialized = true
-        
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardDrawerFamilyAccountsUpdated"), object: self)
-    }
-    
-    func updateRecentFamilyTransactions(response: [String: Any]) {
+    func updateRecentTransactions(response: [String: Any]) {
         let transactions = response["data"] as! Array<Any>
         
         self.recentFamilyTransactions = []
@@ -94,13 +53,12 @@ class DashboardDrawer {
             self.recentFamilyTransactions.append(Transaction(
                 date: Date(timeIntervalSince1970: (transaction["timestamp"] as! Double) / 1000),
                 title: transaction["title"] as! String,
-                accountName: transaction["accountName"] as! String,
                 amount: transaction["amount"] as! Int64,
                 category: transaction["category"] as! String
             ))
         }
         self.isRecentFamilyTransactionsInitialized = true
         
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardDrawerRecentFamilyTransactionsUpdated"), object: self)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "DashboardDrawerRecentTransactionsUpdated"), object: self)
     }
 }
