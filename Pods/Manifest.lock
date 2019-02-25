@@ -2,21 +2,41 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GTMSessionFetcher/Core (1.2.1)
   - Pulley (2.6.3)
 
 DEPENDENCIES:
   - Charts
+  - GoogleSignIn
   - Pulley
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
     - Pulley
 
 SPEC CHECKSUMS:
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   Pulley: af7d2347deadc38ef78406579995568f2d6ee158
 
-PODFILE CHECKSUM: 8e4aca79df06f5f56418dc9d234f46f7d9ed0ed0
+PODFILE CHECKSUM: 39b43a117ce1e2f7d8c8c0b58b545275ced9a147
 
 COCOAPODS: 1.6.0

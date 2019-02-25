@@ -8,4 +8,5 @@ target 'Moneywell' do
   # Pods for Moneywell
   pod 'Pulley'
   pod 'Charts'
+  pod 'GoogleSignIn'
 end
