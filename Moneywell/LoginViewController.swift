@@ -40,8 +40,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
             UserDefaults.isLoggedIn = true
             
             self.performSegue(withIdentifier: "loginSuccess", sender: self)
-            
-            // ...
         }
     }
     

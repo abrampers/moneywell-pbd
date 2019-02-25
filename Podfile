@@ -9,4 +9,6 @@ target 'Moneywell' do
   pod 'Pulley'
   pod 'Charts'
   pod 'GoogleSignIn'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end
