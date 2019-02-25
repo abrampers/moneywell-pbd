@@ -39,6 +39,7 @@
 		C31C9DD6222129E2006D7CC6 /* Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD5222129E2006D7CC6 /* Mutation.swift */; };
 		C31C9DD822213C6F006D7CC6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */; };
 		C31C9DDA22217E43006D7CC6 /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C9DD922217E43006D7CC6 /* SavingsPage.swift */; };
+		C389A4B92223DB1E0094867E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4B82223DB1E0094867E /* PayViewController.swift */; };
 		C389A4BF2223E3080094867E /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389A4BE2223E3080094867E /* CLLocationExtension.swift */; };
 		D33932F17FC5861A7F9A6304 /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115A138BDB414BC9C4E6F647 /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
@@ -82,9 +83,11 @@
 		C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		C31C9DD922217E43006D7CC6 /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
 		C389A4B62223D9CA0094867E /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		C389A4B82223DB1E0094867E /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		C389A4BC2223E2D70094867E /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		C389A4BE2223E3080094867E /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		C389A4C02223E35A0094867E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		C389A4C4222430920094867E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 				2133546C2223C7AE00582588 /* AccountViewController.swift */,
 				C389A4B62223D9CA0094867E /* CompassViewController.swift */,
 				213354662223B9AE00582588 /* LoginViewController.swift */,
+				C389A4B82223DB1E0094867E /* PayViewController.swift */,
 				2140AC3A221F06E700897CD6 /* MoneywellTabBarController.swift */,
 				21273A0E221A8C770094933D /* DashboardDrawerContentViewController.swift */,
 				21273A0A221A8BC40094933D /* DashboardPrimaryContentViewController.swift */,
@@ -152,6 +156,7 @@
 				C31C9DBD22211392006D7CC6 /* Transaction.swift */,
 				C31C9DD5222129E2006D7CC6 /* Mutation.swift */,
 				C31C9DC1222115D2006D7CC6 /* Account.swift */,
+				C389A4C4222430920094867E /* User.swift */,
 				C31C9DD722213C6F006D7CC6 /* HTTPRequest.swift */,
 				21DCB0D82221A0B4002F2FB9 /* Constants.swift */,
 				C389A4BC2223E2D70094867E /* LocationDelegate.swift */,
@@ -346,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31C9DC422211D9E006D7CC6 /* DashboardPrimary.swift in Sources */,
+				C389A4B92223DB1E0094867E /* PayViewController.swift in Sources */,
 				2140AC3B221F06E700897CD6 /* MoneywellTabBarController.swift in Sources */,
 				212CFFDC2223EAE500862826 /* User.swift in Sources */,
 				C31C9DBA22210813006D7CC6 /* DashboardDrawer.swift in Sources */,
@@ -518,13 +524,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				DEVELOPMENT_TEAM = HX9DU84ERF;
 				INFOPLIST_FILE = Moneywell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ffahleraz.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,13 +543,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				DEVELOPMENT_TEAM = HX9DU84ERF;
 				INFOPLIST_FILE = Moneywell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ffahleraz.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
